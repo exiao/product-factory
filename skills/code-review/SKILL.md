@@ -98,7 +98,7 @@ Write for a technical PM or engineer who does not know this domain:
 - Prefer one or two concise paragraphs for a simple change, roughly under 150 words when the facts fit. Follow the repository template and expand when the change needs it; brevity must not hide risk or scope.
 - Omit chronological debugging history, abandoned approaches, defensive essays, and test-name inventories unless they explain a real tradeoff.
 
-When the existing text materially obscures or misstates the change, include a ready-to-use replacement title/body. If the text is already clear, do not rewrite it just to demonstrate the skill. PR writing is functional prose; it does not need the separate [$writer](../writer/SKILL.md) skill.
+When the existing text materially obscures or misstates the change, include a ready-to-use replacement title/body. If the text is already clear, do not rewrite it just to demonstrate the skill. PR writing is functional prose; it does not need a separate author-voice skill.
 
 ## Finish the review
 

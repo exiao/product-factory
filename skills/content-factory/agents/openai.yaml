@@ -1,4 +1,0 @@
-interface:
-  display_name: "Content Factory"
-  short_description: "Turn source material into finished content and ads"
-  default_prompt: "Use $content-factory to turn my source material into a focused batch of finished organic content and paid-ad assets."

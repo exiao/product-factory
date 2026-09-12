@@ -21,8 +21,6 @@ The installer copies all bundled skills into `$CODEX_HOME/skills` (default `~/.c
 python3 install.py --dest ./preview-skills
 ```
 
-A standalone preview directory does not contain Codex’s built-in `.system/skill-creator`, so those two optional links will not resolve there.
-
 Start a new Codex task after installation. In your project, try:
 
 ```text
@@ -38,7 +36,7 @@ Keep project permissions, credentials, and deployment targets in your own enviro
 
 ## What's included
 
-`skills/` contains the two entrypoints, discovery and product planning, design and prototyping, synthetic studies, code review, runtime verification, and linked supporting content workflows. The broader skills are optional branches: installing them does not run them. Each skill includes its local references, scripts, and existing attribution files. See [BUNDLE.md](BUNDLE.md) for the inventory and portability changes.
+`skills/` contains 25 skills: the two entrypoints plus supporting product discovery, design, implementation, and verification skills. Content production, marketing, publishing, and skill-authoring workflows are excluded. Needed standalone references are kept without importing their original parent workflows. All relative Markdown file links resolve inside the bundle. See [BUNDLE.md](BUNDLE.md) for the inventory and portability changes.
 
 ## Runtime requirements and limits
 
@@ -46,9 +44,8 @@ These are agent instructions, not a standalone application or a bundle of model 
 
 - Use an agent runtime with filesystem and shell access. Research needs web access; browser/native QA needs the appropriate browser or simulator tools.
 - Make It Work expects goal tracking, subagents, and recurring checks when waiting on PRs. If a capability is unavailable, report it and track the equivalent work explicitly; do not claim an independent review ran. Model names in supporting guidance may need mapping to models available in your account.
-- Codex's built-in `skill-creator` is referenced by the optional skill-audit/improvement workflows at `../.system/skill-creator/SKILL.md`. It is not overwritten or redistributed here. Other runtimes must provide an equivalent or report that branch unavailable.
 - Impeccable includes its upstream launcher and supporting files. On first use it may download its pinned platform engine from upstream GitHub releases. It needs network access for that download; see its launcher and skill for supported platforms and fallback behavior.
-- Image generation, hosted user studies, social publishing, analytics, and deployment tools require your own available tools/accounts. No credentials or paid subscriptions are included. Missing optional tools only block the operation that needs them.
+- Image generation, hosted user studies, and deployment tools require your own available tools/accounts. No credentials or paid subscriptions are included. Missing optional tools only block the operation that needs them.
 
 Verified packaging and installation are separate from proving that every downstream workflow works with your accounts and runtime.
 
@@ -56,11 +53,13 @@ Verified packaging and installation are separate from proving that every downstr
 
 | Branch | Additional requirements |
 | --- | --- |
-| Social publishing (`typefully`) | Node.js 18+, your own `TYPEFULLY_API_KEY` or interactive setup |
-| Video editing | `ffmpeg` and `ffprobe`, source media |
 | Image creation | Runtime image-generation tool |
 | Native iOS QA | macOS, Xcode/simulator and available automation tools |
 | Browser QA | Runtime browser/computer tools or the skill’s documented alternative |
-| Analytics / deployment | Your own provider tools, authenticated accounts and explicit task scope |
+| Deployment | Your own provider tools, authenticated accounts and explicit task scope |
 
 Read the selected skill’s prerequisites before running an optional branch; this table does not provision tools or accounts.
+
+## Updating an earlier installation
+
+`git pull` updates this checkout, not previously installed copies. If you installed the original 55-skill bundle, back up its installed folders outside your skill directory before reinstalling this 25-skill version. Only move folders you installed from this bundle; preserve unrelated or customized skills. The installer deliberately does not delete or overwrite existing skills.

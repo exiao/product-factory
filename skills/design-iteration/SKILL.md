@@ -5,7 +5,7 @@ description: "Revise existing designs from critique or user feedback, preserving
 
 # Design Iteration
 
-The loop step between **testing** a design and **re-testing** it. Something else generated the feedback (a [$design-review](../design-review/SKILL.md), a marketing-psychology / persuasion review, an [$another-perspective](../another-perspective/SKILL.md) council, a [$synthetic-userstudies](../synthetic-userstudies/SKILL.md) run, a [$ui-lint](../ui-lint/SKILL.md) report, or the user's own notes). Your job is to turn that feedback into a **revised version** without losing the plot: every change is traceable to the critique that drove it, so the next test can measure improvement instead of just noticing the design changed.
+The loop step between **testing** a design and **re-testing** it. Something else generated the feedback (a design critique, an independent review, a [$synthetic-userstudies](../synthetic-userstudies/SKILL.md) run, a [$ui-lint](../ui-lint/SKILL.md) report, or the user's own notes). Your job is to turn that feedback into a **revised version** without losing the plot: every change is traceable to the critique that drove it, so the next test can measure improvement instead of just noticing the design changed.
 
 ## Choose the scope
 
@@ -22,7 +22,7 @@ When critique is missing, inspect the artifact and obtain a focused review with 
 For an explicitly requested full test-revise-retest loop:
 
 1. Inspect the artifact and its existing design system before review; preserve an unchanged baseline.
-2. Gather relevant critique. Independent review tasks can use available subagents when delegation is authorized; otherwise run the scoped reviews sequentially. [$another-perspective](../another-perspective/SKILL.md) is useful for a disputed decision, not mandatory for every mockup.
+2. Gather relevant critique. Independent review tasks can use available subagents when delegation is authorized; otherwise run the scoped reviews sequentially. Seek independent perspectives for a disputed decision when useful; a council is not mandatory for every mockup.
 3. Triage combined feedback, revise the real source, and log the decisions.
 4. Use [$synthetic-userstudies](../synthetic-userstudies/SKILL.md) when a simulated persona panel is requested or appropriate to the agreed loop. Label simulated reactions as hypotheses and distinguish them from real user observations. Repeated persona complaints help prioritize questions but do not prove frequency or demand; a single reproducible blocker can justify a fix.
 5. Re-test the changed interactions and assess regressions against the baseline. Use an independent reviewer when useful for subjective judgments, and stop when the requested issues are resolved or remaining questions require new evidence. Do not create an indefinite optimization loop.
@@ -113,7 +113,7 @@ Verify the changed artifact: render or open it, exercise affected interactions w
 A typical loop, with this skill as the recurring node:
 
 ```
-design-mode + design-system  →  design-review + marketing-psychology review + another-perspective (parallel)
+design-mode + design-system  →  ui-lint + independent critique
       →  DESIGN-ITERATION  →  synthetic-userstudies  →  DESIGN-ITERATION  →  UI-polish pass
 ```
 
@@ -122,7 +122,7 @@ Keep the reviewed baseline stable during feedback collection, then record the re
 ## What this skill is NOT
 
 - **Not a standalone review method.** It consumes feedback and invokes an appropriate review skill when feedback is missing.
-- **Not from-scratch design.** For exploring new layout paradigms use a UI-prototype-exploration workflow; for building a fresh interface use the [$frontend-design](../frontend-design/SKILL.md) skill or your usual UI-building workflow.
+- **Not from-scratch design.** For exploring new layout paradigms use a UI-prototype-exploration workflow; for building a fresh interface use the [$impeccable](../impeccable/SKILL.md) skill or your usual UI-building workflow.
 - **Not final polish.** The last-mile motion/typography/spacing sweep belongs to a dedicated UI lint/polish pass. This skill makes the substantive revisions between tests; that pass makes the shipped version feel finished.
 
 ## Gotchas

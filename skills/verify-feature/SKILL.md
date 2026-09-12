@@ -15,7 +15,7 @@ Use `shot-scraper` or the in-app browser for browser verification. Do not instal
 
 Probe at least one realistic edge case or failure path. Record method, exact route/command, evidence paths, what was not tested, and a verdict of PASS, FAIL, BLOCKED, or INCONCLUSIVE. Preserve the user's requested review/fix/publish scope: verification does not authorize changing code, pushing, or publishing.
 
-When a consequential or recurring failure can be replayed, preserve its minimal request, relevant starting state, observed failure, verifier, and reset instructions using the [failure-to-eval handoff](../skill-improver/references/failure-to-eval.md). Reuse existing fixtures; ordinary one-off verification does not require a new harness or case library. Keep expected answers and failure diagnoses out of the executor's inputs.
+When a consequential or recurring failure can be replayed, preserve its minimal request, relevant starting state, observed failure, verifier, and reset instructions using the [failure-to-eval handoff](references/failure-to-eval.md). Reuse existing fixtures; ordinary one-off verification does not require a new harness or case library. Keep expected answers and failure diagnoses out of the executor's inputs.
 
 For a comparative improvement claim, run baseline and candidate with equivalent starting state, tool access, and evaluator configuration; retain both outcomes and material time/cost differences. An after-only check proves the observed behavior, not improvement over the baseline. A replay or simulation supports only the behavior it exercises; retain real-surface verification for live claims.
 

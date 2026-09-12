@@ -30,7 +30,7 @@ Adapt reviews to the product's actual surface. Use deterministic checks for fixe
 
 For each review, record what passed, what failed, and the evidence. Reproduce disputed findings.
 
-For consequential or recurring failures, have verification preserve a replayable regression case using the [failure-to-eval handoff](../skill-improver/references/failure-to-eval.md) when practical. Give reviewers the task, safe starting environment, and evidence needed to run it; keep expected answers and prior diagnoses separate from executors. Reuse relevant cases on the final version. Do not create a suite for every small fix or start a skill-optimization loop unless that work is in scope.
+For consequential or recurring failures, have verification preserve a replayable regression case using the [failure-to-eval handoff](../verify-feature/references/failure-to-eval.md) when practical. Give reviewers the task, safe starting environment, and evidence needed to run it; keep expected answers and prior diagnoses separate from executors. Reuse relevant cases on the final version. Do not create a suite for every small fix or start a skill-optimization loop unless that work is in scope.
 
 Keep ownership of authorized fixes when invoking other skills: their review reports feed this fix-and-recheck loop. Fix failures that prevent the agreed outcome, including pre-existing defects in that path, then have reviewers recheck the fixes and anything else they affect. Keep repeating until every relevant review passes on the final version. Don't lower the success criteria to get a pass.
 

@@ -1,73 +1,52 @@
 # Bundle inventory
 
-Snapshot: 2026-09-12. Source: the locally installed skills selected by following cross-skill Markdown links from software-factory and make-it-work.
+25 skills selected for the Software Factory and Make It Work product-development workflows. Snapshot: 2026-09-12. Optional mentions and file-level references do not imply that an entire additional workflow belongs in this bundle.
 
-## Portability changes
+## Selection and portability
 
-- Excluded the project-specific Bloom design system; generic guidance uses the current project design system.
-- Removed two optional references to machine-local source/example paths.
-- Replaced personal author samples with guidance to use the recipient’s own samples; removed product-specific marketing copy examples.
-- Generalized the writer entrypoint and image-generation environment wording. Some supporting design/editorial defaults retain their attribution to Eric; treat these as customizable preferences, subordinate to the current user’s brief.
-- Kept Codex’s built-in skill-creator as a documented runtime prerequisite for optional skill authoring workflows.
-- Replaced two optional Product Design audit routes with bundled UI lint guidance.
-- Optional named integrations (including iOS Simulator and Product Design audit) are not included; use available equivalents or report those branches unavailable.
+- Keep the two entrypoints and their product discovery, design, implementation, and verification support. Conditional product steps remain available without becoming mandatory.
+- Exclude content-factory and content production, marketing/growth, ads, social publishing, video production, personal writing, and skill-authoring workflows.
+- Retain the failure-to-eval handoff from skill-improver at `skills/verify-feature/references/failure-to-eval.md`; both callers use that shared file. Adapt its final instruction to recheck the product instead of invoking the removed parent workflow.
+- Storyboards already contain the notebook-style reference; no separate notebook-sketch skill is needed.
+- Use bundled design/QA guidance or direct focused work in place of optional copywriting, positioning, interview, and alternate review skills. Detailed marketing/packaging work remains outside this bundle.
+- Exclude Bloom-specific material and machine-local paths. Design preferences retain their attribution to Eric and remain subordinate to the current user's brief.
+- All relative Markdown file links resolve within this repository; no built-in skill-creator dependency remains.
 
-This is a snapshot, not an automatic sync of the original installation. Existing upstream source links and license notices are preserved; no blanket license is assigned to third-party material. Impeccable is upstream tooling from pbakaus/impeccable, with its pinned engine downloaded by the included launcher.
+This is a curated snapshot, not an automatic sync. Existing upstream source links and license notices are preserved; no blanket license is assigned to third-party material. Impeccable is upstream tooling from pbakaus/impeccable, with its pinned engine downloaded by the included launcher. Optional browser, image, study and deployment capabilities still depend on the recipient's runtime and accounts.
 
-## Skills
+## Entrypoints
 
-- [acceptance-criteria](skills/acceptance-criteria/SKILL.md)
-- [ad-creative](skills/ad-creative/SKILL.md)
-- [ads-diagnostics](skills/ads-diagnostics/SKILL.md)
-- [another-perspective](skills/another-perspective/SKILL.md)
-- [character-creation](skills/character-creation/SKILL.md)
-- [ci-slopgate](skills/ci-slopgate/SKILL.md)
-- [code-review](skills/code-review/SKILL.md)
-- [content-factory](skills/content-factory/SKILL.md)
-- [content-strategy](skills/content-strategy/SKILL.md)
-- [copywriting](skills/copywriting/SKILL.md)
-- [create-app-onboarding](skills/create-app-onboarding/SKILL.md)
-- [customer-research](skills/customer-research/SKILL.md)
-- [design-iteration](skills/design-iteration/SKILL.md)
-- [design-mode](skills/design-mode/SKILL.md)
-- [design-review](skills/design-review/SKILL.md)
-- [desirability-study](skills/desirability-study/SKILL.md)
-- [domain-modeling](skills/domain-modeling/SKILL.md)
-- [empathy-maps](skills/empathy-maps/SKILL.md)
-- [evaluate-content](skills/evaluate-content/SKILL.md)
-- [frontend-design](skills/frontend-design/SKILL.md)
-- [grilling](skills/grilling/SKILL.md)
-- [growth](skills/growth/SKILL.md)
-- [hooks](skills/hooks/SKILL.md)
-- [idea-validation](skills/idea-validation/SKILL.md)
-- [image-generation-guide](skills/image-generation-guide/SKILL.md)
-- [impeccable](skills/impeccable/SKILL.md)
-- [interaction-design](skills/interaction-design/SKILL.md)
-- [journey-mapping](skills/journey-mapping/SKILL.md)
-- [last30days](skills/last30days/SKILL.md)
-- [make-it-work](skills/make-it-work/SKILL.md)
-- [marketing-loops](skills/marketing-loops/SKILL.md)
-- [notebook-sketch](skills/notebook-sketch/SKILL.md)
-- [people-problems](skills/people-problems/SKILL.md)
-- [positioning-angles](skills/positioning-angles/SKILL.md)
-- [posthog-instrumentation](skills/posthog-instrumentation/SKILL.md)
-- [pricing](skills/pricing/SKILL.md)
-- [product-vision](skills/product-vision/SKILL.md)
-- [program-design](skills/program-design/SKILL.md)
-- [quick-brainstorm](skills/quick-brainstorm/SKILL.md)
-- [reference-style-video](skills/reference-style-video/SKILL.md)
-- [skill-audit](skills/skill-audit/SKILL.md)
-- [skill-improver](skills/skill-improver/SKILL.md)
 - [software-factory](skills/software-factory/SKILL.md)
-- [storyboards](skills/storyboards/SKILL.md)
+- [make-it-work](skills/make-it-work/SKILL.md)
+
+## Product discovery and behavior
+
+- [product-vision](skills/product-vision/SKILL.md)
+- [people-problems](skills/people-problems/SKILL.md)
+- [acceptance-criteria](skills/acceptance-criteria/SKILL.md)
+- [empathy-maps](skills/empathy-maps/SKILL.md)
 - [strategy-kernel](skills/strategy-kernel/SKILL.md)
+- [quick-brainstorm](skills/quick-brainstorm/SKILL.md)
+- [idea-validation](skills/idea-validation/SKILL.md)
+- [desirability-study](skills/desirability-study/SKILL.md)
+- [journey-mapping](skills/journey-mapping/SKILL.md)
+- [interaction-design](skills/interaction-design/SKILL.md)
+
+## Design and product experiments
+
+- [design-mode](skills/design-mode/SKILL.md)
+- [impeccable](skills/impeccable/SKILL.md)
+- [design-iteration](skills/design-iteration/SKILL.md)
+- [storyboards](skills/storyboards/SKILL.md)
+- [image-generation-guide](skills/image-generation-guide/SKILL.md)
 - [synthetic-userstudies](skills/synthetic-userstudies/SKILL.md)
-- [trend-research](skills/trend-research/SKILL.md)
-- [typefully](skills/typefully/SKILL.md)
+
+## Implementation and verification
+
+- [program-design](skills/program-design/SKILL.md)
+- [domain-modeling](skills/domain-modeling/SKILL.md)
+- [code-review](skills/code-review/SKILL.md)
+- [ci-slopgate](skills/ci-slopgate/SKILL.md)
 - [ui-lint](skills/ui-lint/SKILL.md)
-- [verify-deploy](skills/verify-deploy/SKILL.md)
 - [verify-feature](skills/verify-feature/SKILL.md)
-- [video-direction](skills/video-direction/SKILL.md)
-- [video-editor](skills/video-editor/SKILL.md)
-- [video-script](skills/video-script/SKILL.md)
-- [writer](skills/writer/SKILL.md)
+- [verify-deploy](skills/verify-deploy/SKILL.md)

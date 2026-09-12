@@ -19,7 +19,7 @@ Inspect the existing implementation and similar capabilities first. Reuse may el
 
 When ambiguous requirements, unfamiliar code, a reference port, or a risky assumption could change the design, use [uncertainty mapping](references/uncertainty-mapping.md). Record established facts, open questions, tacit assumptions, and discovered risks in the existing design note. Resolve what the evidence can answer, ask only for material missing decisions, and continue authorized work without mandatory stages or quizzes. Skip this mode when the change is already understood.
 
-Use [$domain-modeling](../domain-modeling/SKILL.md) when the uncertainty concerns business terminology, concept boundaries, or domain rules rather than code structure. Use [$grilling](../grilling/SKILL.md) for an explicitly requested interview.
+Use [$domain-modeling](../domain-modeling/SKILL.md) when the uncertainty concerns business terminology, concept boundaries, or domain rules rather than code structure. For an explicitly requested interview, ask focused questions about the unresolved design decisions; a separate interview skill is optional.
 
 ## Draft the useful artifacts
 

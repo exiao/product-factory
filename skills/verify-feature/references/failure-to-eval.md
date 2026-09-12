@@ -17,7 +17,7 @@ Use this when a consequential or recurring failure is worth replaying. Reuse the
 3. Replay the baseline and confirm the case captures the observed defect. If reproduction is unavailable or intermittent, record that limit and observed frequency; do not call the case a proven regression test. Preserve enough context to avoid simplifying the bug away.
 4. Check the verifier against known-good and plausible-but-bad outcomes. Use trusted/reference labels when available; provisional labels remain provisional. An error-free tool trace is not proof that the requested outcome happened.
 5. Deduplicate by failure mechanism, preserving variants only when they exercise materially different behavior. Include representative successful cases so the suite does not reward avoiding the task. Cases used to diagnose or tune a change belong in training or regression coverage, never a sealed test set. A newly discovered failure from held-out data is no longer sealed once inspected for tuning.
-6. Try the smallest change supported by the diagnosis: repair context, tool contracts, routing, or instructions before escalating complexity. Model changes remain candidates to measure; do not add infrastructure or fine-tuning without evidence and scope. Continue with the bounded baseline/candidate loop in the parent skill.
+6. Try the smallest change supported by the diagnosis: repair context, tool contracts, routing, or instructions before escalating complexity. Model changes remain candidates to measure; do not add infrastructure or fine-tuning without evidence and scope. Recheck the repaired workflow against this case and the original success criteria.
 
 ## Example: stale evidence in a research answer
 
