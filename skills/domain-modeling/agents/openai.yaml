@@ -1,0 +1,6 @@
+interface:
+  display_name: "Domain Modeling"
+  short_description: "Clarify domain concepts, boundaries, and decisions"
+  default_prompt: "Use $domain-modeling to clarify this project's domain concepts and record the agreed definitions."
+policy:
+  allow_implicit_invocation: true

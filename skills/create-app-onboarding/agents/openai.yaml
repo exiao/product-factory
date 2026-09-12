@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create App Onboarding"
+  short_description: "Design and build native app onboarding flows"
+  default_prompt: "Use $create-app-onboarding to design and implement onboarding in this app."

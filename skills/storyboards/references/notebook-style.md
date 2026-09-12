@@ -1,0 +1,7 @@
+# Notebook-sketch default
+
+This is an intentionally frozen, self-contained default based on the notebook-sketch visual language. It does not automatically track that skill; update it only when intentionally changing the storyboard default. Use it when no different style is requested:
+
+> Hand-drawn sketch on a warm off-white cream page with a faint light-gray dot grid, like a bullet journal. Fine-point fineliner linework, clean and controlled with a subtle human wobble. Exactly two ink colors: matte black for outlines and royal blue for accents and labels. Outline-only rendering, no gradients, drop shadows, or shaded fills; sparse short hatch marks only where useful. Neat, legible print handwriting with a spaced uppercase title and short mixed-case labels. Thin single-stroke leaders and hand underlines. Generous margins, whitespace, and grid-aligned composition. Flat top-down notebook scan, even lighting, no perspective distortion.
+
+For a six-panel journey, use rounded panel frames in a three-by-two grid, the same described person in each panel, and one blue focal detail per panel. Give labels explicitly, such as `1. Before work`, rather than asking the generator to invent text. Keep labels to a few words. Simplify incidental UI to low-fidelity shapes; specify exact words for any essential screen content. Use edits to preserve a good character and composition while correcting a label or action.
