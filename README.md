@@ -30,7 +30,13 @@ Use $make-it-work to implement and verify [specific outcome].
 
 If copying fails, the installer removes the skill folders created by that attempt. Fix the reported permissions or disk-space problem and rerun. An abrupt process kill or failed cleanup may require moving those newly created folders to a backup manually; never remove unrelated skills.
 
-Choose only the workflow stages relevant to the task; reuse settled decisions. Adapt reviews to the actual surface (for example, installation instructions and CLI recovery for a skill bundle).
+For product outcomes, Software Factory follows a fixed default sequence:
+
+**Vision → research and empathy maps → outcome criteria → alternatives and illustrated storyboards → low-fi prototype → synthetic study and fixes → refined design and detailed criteria → build and verify.**
+
+Start at the earliest incomplete stage and reuse inspected artifacts and settled decisions. Required outputs cannot be casually skipped or substituted; an explicit scope change or earlier requested finish line still takes precedence. Checkpoints need an answer only for consequential unresolved choices.
+
+Focused operations remain available when you want a specific step, such as comparing approaches, critiquing an idea, tracing evidence, or sharpening criteria. Journey mapping, strategy, commercial validation, and desirability work remain conditional additions. Clear contained fixes go directly to implementation and verification. Adapt reviews to the actual surface (for example, installation instructions and CLI recovery for a skill bundle).
 
 Keep project permissions, credentials, and deployment targets in your own environment. Installing these skills grants no authorization to publish, spend, or contact people.
 

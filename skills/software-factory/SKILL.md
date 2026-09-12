@@ -1,6 +1,6 @@
 ---
 name: software-factory
-description: Coordinate product discovery through implementation and verification, or perform a focused comparison, evidence trace, or artifact review. Use for unresolved product decisions; clear contained fixes go directly to the relevant implementation skill.
+description: Run product work through a fixed sequence from vision and research to prototypes, implementation and verification; also support focused operations on individual artifacts. Use for unresolved product decisions; clear contained fixes go directly to the relevant implementation skill.
 ---
 
 # Software Factory
@@ -12,9 +12,30 @@ Turn product judgment into an implemented and verified outcome without losing ag
 Commands below are conversational operations, not shell commands or standalone skills. Infer the operation from ordinary language; users need not memorize names.
 
 - **Focused request:** run only the selected operation on the named artifact. Read its linked playbook and relevant specialist guidance. Do not launch discovery, maps, prototypes or implementation as a side effect. Review-only work reports findings without editing. A request to revise or fix authorizes the bounded change and appropriate verification.
-- **Delegated outcome:** use [product workflow](references/product-workflow.md) when audience, promise, behavior or direction is unresolved. Start by stating or reusing the short vision. Sequence work by dependencies and uncertainty, reuse agreements, and continue through the authorized finish line. An intermediate focused operation does not cancel the larger assignment.
+- **Delegated outcome:** use [product workflow](references/product-workflow.md) when audience, promise, behavior or direction is unresolved. Start by stating or reusing the short vision. Follow the default sequence below, reuse agreements, and continue through the authorized finish line. An intermediate focused operation does not cancel the larger assignment.
 - **Settled implementation or clear fix:** go directly to the relevant design, implementation or verification skill; do not reopen discovery.
 - **Advice or bare invocation:** recommend up to three context-relevant next operations and explain the leading choice. Advice does not execute them. If the surrounding conversation already supplies an actionable request, follow it rather than showing a menu.
+
+## Default sequence
+
+For a product outcome, follow this sequence in order. Read [product workflow](references/product-workflow.md) for execution detail and the linked specialist skills at their stages. Focused operations above remain available when the user asks for a specific step; do not turn a product assignment into a menu of optional operations.
+
+| Stage | Required result before advancing |
+|---|---|
+| 1. Vision | Person, situation, promised outcome, scope and exclusions. |
+| 2. Research and problem framing | Linked desk research, human problem statements and grounded empathy maps. Present the problem checkpoint; resolve consequential audience or job ambiguity. |
+| 3. Outcome criteria | Observable success criteria and the evidence needed to judge them. |
+| 4. Alternatives and storyboards | Different mechanisms for an unresolved direction, illustrated storyboards, and a same-input worked sample when output quality matters. Present the direction checkpoint; use the user's selection or an explicitly delegated choice. |
+| 5. Interaction prototype | One core loop, exclusions, wireflow and a working clickable low-fi prototype with simulated behavior labeled. |
+| 6. Prototype study and revision | Synthetic UX walkthrough of the first usable prototype, annotated screenshots for visual products, fixes and affected-interaction rechecks. Present the first-prototype checkpoint before substantial polish. |
+| 7. Design and detailed criteria | Refined design and behavior, error and recovery criteria before implementing each slice. |
+| 8. Build and verify | Implement, review, exercise the real workflow against the original criteria, fix and recheck; report evidence and limits. |
+
+Start at the earliest incomplete stage. A stage is satisfied only by an inspected artifact or evidence covering the current scope; naming it in a plan does not complete it. Reuse sufficient work by linking it, without regenerating it or asking for approval again. At handoffs, state the stage, its result and the next stage in the existing record; no separate tracking system is needed.
+
+The required outputs are not discretionary suggestions. Do not skip or replace one merely because another experiment seems more informative. Honor an explicit user omission or scope change, and stop at a requested earlier deliverable. If an output cannot be produced, disclose the gap and continue independent work without claiming that stage complete or starting work that depends on it. Journey mapping remains optional for sequence and handoff questions; strategy, commercial validation and desirability work supplement this sequence when their stated conditions apply.
+
+Checkpoints are progress updates unless a consequential unresolved choice requires the user's answer. Delegation authorizes choosing within scope; it does not erase required outputs. A focused request during ongoing product work returns to the next incomplete stage afterward unless the user changes the assignment.
 
 ## One useful loop, removal first
 
@@ -33,7 +54,7 @@ Explicitly requested alternatives remain separate focused experiments. Preserve 
 | `trace [promise/artifact]` | Inspect | Links from problem and evidence through intervention, criterion and observed result; [focused work](references/focused-work.md) |
 | `critique [idea/storyboard]` | Inspect | Identify unexplained benefits and hidden work; propose a test; [focused work](references/focused-work.md) |
 | `question`, `check`, `reframe` | Inspect / Revise | [$people-problems](../people-problems/SKILL.md) |
-| `inspect`, `critique`, `audit` | Inspect / Revise | [$interaction-design](../interaction-design/SKILL.md) |
+| `inspect`, `critique`, `audit [flow/surface]` | Inspect / Revise | [$interaction-design](../interaction-design/SKILL.md) |
 | `sharpen`, `assess`, `define` | Revise / Evaluate | [$acceptance-criteria](../acceptance-criteria/SKILL.md) |
 | `develop [product]` | Coordinate | [Product workflow](references/product-workflow.md) |
 

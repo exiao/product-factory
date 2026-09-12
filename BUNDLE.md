@@ -4,7 +4,7 @@
 
 ## Selection and portability
 
-- Keep the two entrypoints and their product discovery, design, implementation, and verification support. Conditional product steps remain available without becoming mandatory.
+- Keep the two entrypoints and their product discovery, design, implementation, and verification support. Software Factory uses a fixed default product sequence while retaining focused operations and conditional specialist steps.
 - Exclude content-factory and content production, marketing/growth, ads, social publishing, video production, personal writing, and skill-authoring workflows.
 - Retain the failure-to-eval handoff from skill-improver at `skills/verify-feature/references/failure-to-eval.md`; both callers use that shared file. Adapt its final instruction to recheck the product instead of invoking the removed parent workflow.
 - Storyboards already contain the notebook-style reference; no separate notebook-sketch skill is needed.
