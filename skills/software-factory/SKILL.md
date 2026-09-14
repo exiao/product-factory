@@ -47,7 +47,7 @@ Explicitly requested alternatives remain separate focused experiments. Preserve 
 
 ## Review artifacts with the user
 
-Use [artifact-review](../artifact-review/SKILL.md) when creating an interactive site for the user to judge generated work. It owns concise artifact-centered cards, question-specific primary controls, and the always-available further-work, comment and dismiss/archive actions. Software Factory retains the fixed stage order, project record and execution responsibility. Specialized review mechanisms remain available without becoming a mandatory questionnaire. Carry responses back into the artifact and next authorized step; a local save alone is not executed work.
+Use [artifact-review](../artifact-review/SKILL.md) when creating an interactive site for the user to judge generated work. It owns concise artifact-centered cards, question-specific primary controls, and context-appropriate revision, research, annotation and archive actions. Software Factory retains the fixed stage order, project record and execution responsibility. Specialized review mechanisms remain available without becoming a mandatory questionnaire. Carry responses back into the artifact and next authorized step; a local save alone is not executed work.
 
 ## Operations
 

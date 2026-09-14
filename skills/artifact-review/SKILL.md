@@ -17,13 +17,15 @@ Remove repeated vision statements, eyebrows, progress narration, scope recaps an
 
 ## CTA contract
 
-Every active review card exposes these three secondary actions, in a consistent compact action row. Keep them visually quiet beside the primary next action in one footer, not a second bank of boxed buttons. Omit unavailable navigation, such as Back on the first card. Put export at page level rather than repeating it on every card. Remove instructional subtitles and About-this-example disclosures when the controls and artifact already communicate the task; show a short source excerpt directly when it is needed for comparison. Do not hide them in an overflow menu or replace them with generic chat:
+Choose actions for the actual judgment; do not stamp the same action bar onto every card. Use one primary next action and only secondary actions that add a distinct capability. Keep them quiet in one footer. Omit unavailable navigation and put export at page level.
 
-| Action | Label and behavior |
-|---|---|
-| Extend the work | **Research further** when missing evidence could change the judgment; **New option** when the presented alternatives are insufficient. Use both when both are useful. Capture an optional specific request; keep existing work and choices. Return a new sourced finding or a distinct option when execution is connected. |
-| Comment | **Add comment** opens one small anchored popover beside the widget. One entry point per widget, not separate text/image buttons or a full sidebar. Associate the comment with the artifact ID and version. Preserve drafts, replies and resolution where the task needs them. |
-| Remove from attention | **Dismiss** removes a pending card from the current feed; **Archive** retains completed work outside it. Neither approves, rejects or deletes the underlying artifact. Provide immediate Undo and a way to revisit archived cards. |
+- For an editable proposal with an open feedback field, use **Keep and continue** and **Request revision**. The field already supplies comments; omit a duplicate Add comment control. Revision requests do not approve the proposal.
+- Use **New option** for genuinely distinct alternatives, **Research further** for missing evidence, and **Request revision** for changing the current artifact. Reuse visible feedback instead of opening a second input form.
+- Use **Add comment** when annotation adds a distinct capability, such as a note anchored to an image or passage. Keep it in a small nonmodal popover, not a sidebar.
+- Use **Dismiss/Archive** only when removing an optional item from attention is meaningful; provide undo/revisit. Do not hide a prerequisite decision behind Dismiss or let dismissal count as approval.
+- Remove incidental scope notes, instructional subtitles and About-this-example prose. A consequential boundary belongs in the artifact being reviewed or its own decision, never in small print that approval silently accepts.
+
+A successful approval must show the next available review artifact, preserve Back and reload behavior, and identify the next stage. If agent work is required first, explain exactly what is saved and how the user resumes it. Do not imply generation is running or the workflow has advanced when only a response was saved.
 
 Do not manufacture a forced choice. Exploration defaults to selecting any useful directions, including all; use single selection only when the next action truly requires mutually exclusive alternatives. Explain a real constraint briefly when it forces a tradeoff. Offer a visible free-text path for the creator's own direction or correction, usable with several options or without choosing a supplied option. Comments supplement this path; a generic comment button alone does not replace an open answer. Carry the full selected set and free-text intent through the next step, artifact revisions, persistence and export; do not silently reduce it to the first selection or merge distinct directions.
 
