@@ -19,7 +19,7 @@ Remove repeated vision statements, eyebrows, progress narration, scope recaps an
 
 Choose actions for the actual judgment; do not stamp the same action bar onto every card. Use one primary next action and only secondary actions that add a distinct capability. Keep them quiet in one footer. Omit unavailable navigation and put export at page level.
 
-- For an editable proposal with an open feedback field, use **Keep and continue** and **Request revision**. The field already supplies comments; omit a duplicate Add comment control. Revision requests do not approve the proposal.
+- For an editable proposal with an open feedback field, use **Keep and continue** and **Request revision**. The field already supplies comments; omit a duplicate Add comment control. Revision requests do not approve the proposal. Text in an optional notes field must not disable approval: Keep saves the approval with its note; Request revision asks for a change. Let the explicit action determine intent.
 - Use **New option** for genuinely distinct alternatives, **Research further** for missing evidence, and **Request revision** for changing the current artifact. Reuse visible feedback instead of opening a second input form.
 - Use **Add comment** when annotation adds a distinct capability, such as a note anchored to an image or passage. Keep it in a small nonmodal popover, not a sidebar.
 - Use **Dismiss/Archive** only when removing an optional item from attention is meaningful; provide undo/revisit. Do not hide a prerequisite decision behind Dismiss or let dismissal count as approval.
@@ -32,6 +32,8 @@ Do not manufacture a forced choice. Exploration defaults to selecting any useful
 The primary action answers the actual question: choose an option, keep an edit, rank priorities, rate against a named criterion, or confirm a concrete recommendation. Do not add a redundant confirmation for a reversible local selection. Keep a path to reject all options or ask for another. Name any consequential action explicitly; review approval is not permission to publish or send messages.
 
 Use native buttons and labeled fields, keyboard access, visible focus and useful empty/error states. Popovers dismiss with Escape and return focus to their trigger. Do not call interactive comment forms tooltips in their accessibility semantics; use a labeled nonmodal dialog.
+
+Show a minimal position indicator (for example, 1 / 2) when several review cards are available. Count actual prepared cards in the current review batch, not imagined future stages or total project completion. Update it on forward/back navigation and restore it on reload.
 
 ## Connect responses to the work
 
