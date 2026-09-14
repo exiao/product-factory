@@ -1,6 +1,6 @@
 # Bundle inventory
 
-25 skills selected for the Software Factory and Make It Work product-development workflows. Snapshot: 2026-09-12. Optional mentions and file-level references do not imply that an entire additional workflow belongs in this bundle.
+26 skills selected for the Software Factory and Make It Work product-development workflows. Snapshot: 2026-09-12. Optional mentions and file-level references do not imply that an entire additional workflow belongs in this bundle.
 
 ## Selection and portability
 
@@ -50,3 +50,7 @@ This is a curated snapshot, not an automatic sync. Existing upstream source link
 - [ui-lint](skills/ui-lint/SKILL.md)
 - [verify-feature](skills/verify-feature/SKILL.md)
 - [verify-deploy](skills/verify-deploy/SKILL.md)
+
+## Artifact review
+
+- [artifact-review](skills/artifact-review/SKILL.md): create concise review sites with further-work requests, comments and reversible dismissal.

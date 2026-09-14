@@ -45,16 +45,9 @@ Demonstrate the useful transformation on concrete starting material before broad
 
 Explicitly requested alternatives remain separate focused experiments. Preserve requested product scope and established behavior; a local improvement does not authorize deleting unrelated features. This is a decision rule within existing work, not another document, discovery phase, or approval gate.
 
-## Present decisions with minimal reading
+## Review artifacts with the user
 
-When presenting agent-produced artifacts for user judgment, lead with the actual work and one short question. Choose the response control from the unresolved decision; do not turn a widget catalog into a mandatory sequence. Surface unresolved preferences and consequential tradeoffs, while handling routine authorized implementation work directly.
-
-- Keep the relevant artifact or comparison inside the card. Show alternatives together when comparison is the task. Use a real excerpt, before/after or legible sketch only when it clarifies what the choice changes; do not add decorative diagrams or unsupported claims.
-- Remove repeated vision statements, eyebrows, progress narration, scope recaps and explanations that merely paraphrase an option. Aim for the artifact, one short prompt, necessary labels and the response controls. Keep detailed rationale and provenance available on demand; retain a visible limitation when it materially changes the decision.
-- A feed contains prepared decisions, not every status update. Do not invent questions for completed work or routine recovery. Keep specialized feedback methods available for focused use without exposing a selector in the normal decision flow.
-- Preserve rejection, revision and back navigation. Use one contextual comment entry point per widget with a small anchored composer. Do not add receipt dumps or redundant save/confirm steps for reversible local choices.
-- Make each response change the associated artifact, scope or next action, and show that consequence. Distinguish local preference storage from execution; never imply that saving an answer carried out the work.
-- Before presenting, personally inspect every distinct rendered widget and its important result/recovery states at the intended viewport. Check whether the work, choice and consequence are understandable without accompanying narration. Fix ambiguous examples and repeated text, then recheck affected interactions. Functional tests alone do not establish comprehension.
+Use [artifact-review](../artifact-review/SKILL.md) when creating an interactive site for the user to judge generated work. It owns concise artifact-centered cards, question-specific primary controls, and the always-available further-work, comment and dismiss/archive actions. Software Factory retains the fixed stage order, project record and execution responsibility. Specialized review mechanisms remain available without becoming a mandatory questionnaire. Carry responses back into the artifact and next authorized step; a local save alone is not executed work.
 
 ## Operations
 

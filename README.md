@@ -42,7 +42,7 @@ Keep project permissions, credentials, and deployment targets in your own enviro
 
 ## What's included
 
-`skills/` contains 25 skills: the two entrypoints plus supporting product discovery, design, implementation, and verification skills. Content production, marketing, publishing, and skill-authoring workflows are excluded. Needed standalone references are kept without importing their original parent workflows. All relative Markdown file links resolve inside the bundle. See [BUNDLE.md](BUNDLE.md) for the inventory and portability changes.
+`skills/` contains 26 skills: the two entrypoints plus supporting product discovery, design, implementation, and verification skills. Content production, marketing, publishing, and skill-authoring workflows are excluded. Needed standalone references are kept without importing their original parent workflows. All relative Markdown file links resolve inside the bundle. See [BUNDLE.md](BUNDLE.md) for the inventory and portability changes.
 
 ## Runtime requirements and limits
 
@@ -68,4 +68,4 @@ Read the selected skill’s prerequisites before running an optional branch; thi
 
 ## Updating an earlier installation
 
-`git pull` updates this checkout, not previously installed copies. If you installed the original 55-skill bundle, back up its installed folders outside your skill directory before reinstalling this 25-skill version. Only move folders you installed from this bundle; preserve unrelated or customized skills. The installer deliberately does not delete or overwrite existing skills.
+`git pull` updates this checkout, not previously installed copies. If you installed the original 55-skill bundle, back up its installed folders outside your skill directory before reinstalling this 26-skill version. Only move folders you installed from this bundle; preserve unrelated or customized skills. The installer deliberately does not delete or overwrite existing skills.
