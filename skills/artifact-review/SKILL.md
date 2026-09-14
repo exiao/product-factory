@@ -17,7 +17,7 @@ Remove repeated vision statements, eyebrows, progress narration, scope recaps an
 
 ## CTA contract
 
-Every active review card exposes these three secondary actions, in a consistent compact action row. Do not hide them in an overflow menu or replace them with generic chat:
+Every active review card exposes these three secondary actions, in a consistent compact action row. Keep them visually quiet beside the primary next action in one footer, not a second bank of boxed buttons. Omit unavailable navigation, such as Back on the first card. Put export at page level rather than repeating it on every card. Remove instructional subtitles and About-this-example disclosures when the controls and artifact already communicate the task; show a short source excerpt directly when it is needed for comparison. Do not hide them in an overflow menu or replace them with generic chat:
 
 | Action | Label and behavior |
 |---|---|
