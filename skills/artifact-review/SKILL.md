@@ -17,6 +17,8 @@ Remove repeated vision statements, eyebrows, progress narration, scope recaps an
 
 For a proposal card, default to question → artifact → Notes or changes → optional Evidence → footer. Place Back and the card count on the footer’s left, and revision and primary actions on the right; keep the title’s width available. Put evidence qualifications with their evidence, while keeping decision-critical limitations beside the artifact. Adapt this arrangement when the medium or an established site requires it.
 
+For product prototypes, launch a separate standalone product experience in its own tab or window. The review card links to the prototype and collects judgment afterward. Do not substitute a worksheet, configuration questionnaire, embedded review widget, or iframe for the actual product experience. Keep review navigation, progress and approval controls outside the prototype's working surface. Preserve the user's work when returning to review and include relevant prototype state in the submitted feedback.
+
 ## CTA contract
 
 Choose actions for the actual judgment; do not stamp the same action bar onto every card. Use one primary next action and only secondary actions that add a distinct capability. Keep them quiet in one footer. Omit unavailable navigation and put export at page level.
