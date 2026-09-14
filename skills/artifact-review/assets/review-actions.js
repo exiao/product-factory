@@ -1,7 +1,17 @@
 // Mount once per active artifact. Host owns persistence and further-work execution.
-export function mountReviewActions(container,{onAction,extension='option',extensions=[extension],connected=false,completed=false}={}){
+// Usage: mountReviewActions(container,{onAction,actions:['option','comment']});
+export function mountReviewActions(container,{onAction,actions=[],connected=false}={}){
  const bar=document.createElement('div');bar.className='ar-actions';
- for(const [kind,label] of [...extensions.map(kind=>[kind,connected?(kind==='research'?'Research further':'New option'):(kind==='research'?'Request research':'Request new option')]),['comment','Add comment'],[completed?'archive':'dismiss',completed?'Archive':'Dismiss']]){
+ const labels={
+  option:connected?'New option':'Request new option',
+  research:connected?'Research further':'Request research',
+  comment:'Add comment',
+  dismiss:'Dismiss',
+  archive:'Archive'
+ };
+ for(const kind of actions){
+  if(!Object.hasOwn(labels,kind))continue;
+  const label=labels[kind];
   const button=document.createElement('button');button.type='button';button.textContent=label;
   button.onclick=()=>{if(kind==='dismiss'||kind==='archive'){onAction({kind});return}open(button,kind)};bar.append(button);
  }
@@ -16,5 +26,5 @@ export function mountReviewActions(container,{onAction,extension='option',extens
  const cancel=document.createElement('button');cancel.type='button';cancel.textContent='Cancel';cancel.onclick=close;
  popup.append(input,status,submit,cancel);popup.onkeydown=e=>{if(e.key==='Escape'){e.preventDefault();close()}};container.append(popup);const rect=trigger.getBoundingClientRect();popup.style.left=Math.max(16,Math.min(innerWidth-popup.offsetWidth-16,rect.left))+'px';popup.style.top=Math.max(16,Math.min(innerHeight-popup.offsetHeight-16,rect.bottom+8))+'px';input.focus();
  }
- container.append(bar);return ()=>{popup?.remove();bar.remove()};
+ if(bar.children.length)container.append(bar);return ()=>{popup?.remove();bar.remove()};
 }

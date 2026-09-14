@@ -22,16 +22,16 @@ For a product outcome, follow this sequence in order. Read [product workflow](re
 
 | Stage | Required result before advancing |
 |---|---|
-| 1. Vision | Person, situation, promised outcome, scope and exclusions. |
+| 1. Vision | Person, situation, promised outcome, scope and exclusions; resolve consequential concept ambiguity before dependent decisions. |
 | 2. Research and problem framing | Linked desk research, human problem statements and grounded empathy maps. Present the problem checkpoint; resolve consequential audience or job ambiguity. |
 | 3. Outcome criteria | Observable success criteria and the evidence needed to judge them. |
 | 4. Alternatives and storyboards | Different mechanisms for an unresolved direction, illustrated storyboards, and a same-input worked sample when output quality matters. Present the direction checkpoint; use the user's selection or an explicitly delegated choice. |
-| 5. Interaction prototype | One core loop, exclusions, wireflow and a working clickable low-fi prototype with simulated behavior labeled. |
+| 5. Interaction prototype | One core loop, exclusions, wireflow and a standalone playable prototype with simulated behavior labeled. |
 | 6. Prototype study and revision | Synthetic UX walkthrough of the first usable prototype, annotated screenshots for visual products, fixes and affected-interaction rechecks. Present the first-prototype checkpoint before substantial polish. |
 | 7. Design and detailed criteria | Refined design and behavior, error and recovery criteria before implementing each slice. |
 | 8. Build and verify | Implement, review, exercise the real workflow against the original criteria, fix and recheck; report evidence and limits. |
 
-Start at the earliest incomplete stage. A stage is satisfied only by an inspected artifact or evidence covering the current scope; naming it in a plan does not complete it. Reuse sufficient work by linking it, without regenerating it or asking for approval again. At handoffs, state the stage, its result and the next stage in the existing record; no separate tracking system is needed.
+Start at the earliest incomplete stage. A stage is satisfied only by an inspected artifact or evidence whose scope and decisions apply to this assignment; naming it in a plan does not complete it. Treat another project’s approvals as proposed carryover. For an explicit fresh run, begin with unapproved artifacts and do not import prior decisions. Reuse sufficient work within the current agreement by linking it, without regenerating it or asking for approval again. At handoffs, state the stage, its result and the next stage in the existing record; no separate tracking system is needed.
 
 The required outputs are not discretionary suggestions. Do not skip or replace one merely because another experiment seems more informative. Honor an explicit user omission or scope change, and stop at a requested earlier deliverable. If an output cannot be produced, disclose the gap and continue independent work without claiming that stage complete or starting work that depends on it. Journey mapping remains optional for sequence and handoff questions; strategy, commercial validation and desirability work supplement this sequence when their stated conditions apply.
 
@@ -47,7 +47,9 @@ Explicitly requested alternatives remain separate focused experiments. Preserve 
 
 ## Review artifacts with the user
 
-Use [artifact-review](../artifact-review/SKILL.md) when creating an interactive site for the user to judge generated work. It owns concise artifact-centered cards, question-specific primary controls, and context-appropriate revision, research, annotation and archive actions. Software Factory retains the fixed stage order, project record and execution responsibility. Specialized review mechanisms remain available without becoming a mandatory questionnaire. Carry responses back into the artifact and next authorized step; a local save alone is not executed work.
+Use [artifact-review](../artifact-review/SKILL.md) when creating an interactive site for the user to judge generated work. Product prototypes must open as standalone working experiences with their own URL and product interface; the review site launches them and gathers feedback afterward. Let the user work on the artifact and exercise the core loop, including accepting, rejecting and revising results, rather than filling out a form describing the product. It owns concise artifact-centered cards, question-specific primary controls, and context-appropriate revision, research, annotation and archive actions. Software Factory retains the fixed stage order, project record and execution responsibility. Specialized review mechanisms remain available without becoming a mandatory questionnaire. Prepare each review artifact from the earliest unresolved prerequisite, moving from purpose and concepts toward mechanisms and interaction details. A downstream card must not silently settle an upstream choice. Required stage outputs do not each require a separate approval card; surface only judgments that need this person.
+
+On submitted feedback, read the snapshot and apply the latest explicit response to its matching artifact and version. Preserve approvals, revisions, and unresolved responses as distinct states. Revise affected dependencies, continue from the earliest incomplete stage, and make the next appropriate artifact available in the review site. Retain the current assignment and its fresh-start or reuse constraints. A saved response or acknowledged dispatch alone is not completed downstream work.
 
 ## Operations
 
