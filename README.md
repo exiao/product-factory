@@ -4,13 +4,15 @@
 
 ![Artifact Review: compare concepts, keep useful parts, and direct the next revision.](docs/assets/artifact-review.svg)
 
-Let your agent research, prototype, and build. Bring your customer context, taste, and judgment to the work it produces. Artifact Review gives you a place to compare approaches, combine ideas, and ask for changes.
+An agent can build a polished answer to the wrong question. Start with what you know: customer conversations, existing evidence, constraints, and questions worth investigating. The agent gathers more evidence, exposes gaps, and makes alternatives you can inspect.
+
+Use that work to challenge assumptions, weigh tradeoffs, and decide what to leave out. Artifact Review carries your corrections into the next version before the agent builds further on a mistaken premise.
 
 ## How it works
 
-![Four stages connect agent work to your judgment: Define, Explore, Try, and Deliver. Artifact Review carries feedback into revised work throughout.](docs/assets/workflow.svg)
+![Four stages connect agent work to your judgment: Define, Explore, Test, and Deliver. Artifact Review carries feedback into revised work throughout.](docs/assets/workflow.svg)
 
-Start at the earliest incomplete stage and carry agreed decisions forward. Try prototypes as standalone experiences before committing to the build.
+Research starts with your evidence and questions, then adds sources and identifies gaps. Test a standalone prototype against real tasks: what can someone complete, where do they get stuck, and what needs to change? Carry those decisions into the build.
 
 ## The main skills
 
@@ -26,12 +28,12 @@ Skills guide how the agent works. Plugins can bundle skills, tools, and service 
 
 ## Setup
 
-Requires Git and Python 3.8+.
+Paste this into Codex:
 
-```sh
-git clone https://github.com/exiao/product-factory.git
-cd product-factory
-python3 install.py
+```text
+Install the skills from https://github.com/exiao/product-factory
+using its installer. Check the prerequisites first and preserve
+any existing or customized skills. Tell me if there are conflicts.
 ```
 
 Start a new Codex task in your project:
