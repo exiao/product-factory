@@ -10,9 +10,9 @@ Use that work to challenge assumptions, weigh tradeoffs, and decide what to leav
 
 ## How it works
 
-![Four stages connect agent work to your judgment: Define, Explore, Test, and Deliver. Artifact Review carries feedback into revised work throughout.](docs/assets/workflow.svg)
+![Four stages connect agent work to your judgment: Define, Explore, Decide, and Deliver. Artifact Review carries feedback into revised work throughout.](docs/assets/workflow.svg)
 
-Research starts with your evidence and questions, then adds sources and identifies gaps. Test a standalone prototype against real tasks: what can someone complete, where do they get stuck, and what needs to change? Carry those decisions into the build.
+Give the agent your evidence, questions, and constraints. It turns them into directions you can compare and prototypes you can try. You choose what moves forward, combine the useful parts, and cut the rest. Each choice gives the next round of work a clearer target.
 
 ## The main skills
 
@@ -32,15 +32,29 @@ Paste this into Codex:
 
 ```text
 Install the skills from https://github.com/exiao/product-factory
-using its installer. Check the prerequisites first and preserve
-any existing or customized skills. Tell me if there are conflicts.
 ```
 
-Start a new Codex task in your project:
+Start a new Codex task in your project, then try:
+
+**Develop an idea**
 
 ```text
 Use $software-factory to develop [your product idea].
-Stop at a playable prototype.
+Show me different directions before building a prototype.
+```
+
+**Review the options**
+
+```text
+Use $artifact-review to compare these concepts with me.
+Let me combine ideas and ask for changes.
+```
+
+**Build the chosen direction**
+
+```text
+Use $make-it-work to implement the agreed design
+and verify the core workflow.
 ```
 
 Installs into `~/.codex/skills` or `$CODEX_HOME/skills`. Existing skills are never overwritten. See [setup, updates, and runtime requirements](docs/setup.md).

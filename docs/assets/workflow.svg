@@ -1,18 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="530" viewBox="0 0 1040 530" role="img" aria-labelledby="title desc"><title id="title">Agent work and your judgment, connected by Artifact Review</title><desc id="desc">Define: research, sources and gaps, guided by evidence and questions you supply. Explore: alternatives and storyboards, guided by direction. Test: playable prototype and task checks, guided by hands-on trials and challenges to assumptions. Deliver: code and test results, guided by scope and acceptance. Artifact Review connects work to inspect, your feedback, and revised work.</desc><rect width="1040" height="530" rx="16" fill="#f5f6f2"/><g font-family="Arial,sans-serif"><text x="32" y="46" font-size="22" font-weight="700" fill="#253b2e">From an idea to a product you can use.</text><text x="32" y="153" font-size="14" font-weight="700" fill="#526858">Agent</text><text x="32" y="259" font-size="14" font-weight="700" fill="#526858">You</text>
-<text x="222" y="92" text-anchor="middle" font-size="18" font-weight="700" fill="#314c3a">Define</text><rect x="118" y="111" width="208" height="82" rx="8" fill="#fff" stroke="#c2d0c5"/>
-<text x="222" y="144" text-anchor="middle" font-size="17" fill="#3b5343">Research</text>
-<text x="222" y="169" text-anchor="middle" font-size="17" fill="#3b5343">Sources &amp; gaps</text>
-<path d="M222 202v25" stroke="#b6c6b9" stroke-dasharray="4 4"/><circle cx="222" cy="231" r="3" fill="#5c8067"/><text x="222" y="253" text-anchor="middle" font-size="16" fill="#354d3c">Share evidence</text><text x="222" y="276" text-anchor="middle" font-size="16" fill="#354d3c">Set questions</text>
-<text x="446" y="92" text-anchor="middle" font-size="18" font-weight="700" fill="#314c3a">Explore</text><rect x="342" y="111" width="208" height="82" rx="8" fill="#fff" stroke="#c2d0c5"/>
-<text x="446" y="144" text-anchor="middle" font-size="17" fill="#3b5343">Alternatives</text>
-<text x="446" y="169" text-anchor="middle" font-size="17" fill="#3b5343">&amp; storyboards</text>
-<path d="M446 202v25" stroke="#b6c6b9" stroke-dasharray="4 4"/><circle cx="446" cy="231" r="3" fill="#5c8067"/><text x="446" y="260" text-anchor="middle" font-size="16" fill="#354d3c">Direction</text>
-<text x="670" y="92" text-anchor="middle" font-size="18" font-weight="700" fill="#314c3a">Test</text><rect x="566" y="111" width="208" height="82" rx="8" fill="#fff" stroke="#c2d0c5"/>
-<text x="670" y="144" text-anchor="middle" font-size="17" fill="#3b5343">Playable prototype</text>
-<text x="670" y="169" text-anchor="middle" font-size="17" fill="#3b5343">Task checks</text>
-<path d="M670 202v25" stroke="#b6c6b9" stroke-dasharray="4 4"/><circle cx="670" cy="231" r="3" fill="#5c8067"/><text x="670" y="253" text-anchor="middle" font-size="16" fill="#354d3c">Try it</text><text x="670" y="276" text-anchor="middle" font-size="16" fill="#354d3c">Challenge assumptions</text>
-<text x="894" y="92" text-anchor="middle" font-size="18" font-weight="700" fill="#314c3a">Deliver</text><rect x="790" y="111" width="208" height="82" rx="8" fill="#fff" stroke="#c2d0c5"/>
-<text x="894" y="144" text-anchor="middle" font-size="17" fill="#3b5343">Code</text>
-<text x="894" y="169" text-anchor="middle" font-size="17" fill="#3b5343">&amp; test results</text>
-<path d="M894 202v25" stroke="#b6c6b9" stroke-dasharray="4 4"/><circle cx="894" cy="231" r="3" fill="#5c8067"/><text x="894" y="260" text-anchor="middle" font-size="16" fill="#354d3c">Scope &amp; acceptance</text>
-<rect x="118" y="305" width="880" height="169" rx="10" fill="#e8efe8"/><text x="558" y="341" text-anchor="middle" font-size="18" font-weight="700" fill="#31523c">Artifact Review · throughout the process</text><g font-size="17" fill="#36513f"><text x="256" y="387" text-anchor="middle">Work to inspect</text><text x="558" y="387" text-anchor="middle">Your feedback</text><text x="859" y="387" text-anchor="middle">Revised work</text></g><g stroke="#769680" stroke-width="1.5" fill="none"><path d="M352 381h108m-6-5 6 5-6 5M651 381h110m-6-5 6 5-6 5M859 408v28H256v-28m-5 6 5-6 5 6"/></g><rect x="445" y="423" width="226" height="26" fill="#e8efe8"/><text x="558" y="441" text-anchor="middle" font-size="14" fill="#496950">Revisit any earlier decision</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="560" viewBox="0 0 1040 560" role="img" aria-labelledby="title desc"><title id="title">The agent creates options. You choose what moves forward.</title><desc id="desc">Define: many visions and directions, one chosen vision. Explore: many ideas, wireframes and storyboards, one chosen approach. Decide: many prototypes and designs, one chosen design. Deliver: working code with test results, one accepted release. Artifact Review carries feedback into revised options.</desc><rect width="1040" height="560" rx="16" fill="#f5f6f2"/><g font-family="Arial,sans-serif"><text x="32" y="47" font-size="23" font-weight="700" fill="#253b2e">The agent creates options. You choose what moves forward.</text><text x="26" y="175" font-size="14" font-weight="700" fill="#526858">Agent</text><text x="26" y="330" font-size="14" font-weight="700" fill="#526858">You</text>
+<text x="216" y="95" text-anchor="middle" font-size="18" font-weight="700" fill="#314c3a">Define</text>
+<rect x="126" y="110" width="204" height="99" rx="7" fill="#edf2ed" stroke="#d0dcd1"/>
+<rect x="120" y="116" width="204" height="99" rx="7" fill="#edf2ed" stroke="#d0dcd1"/>
+<rect x="114" y="122" width="204" height="99" rx="7" fill="white" stroke="#b9cbbd"/>
+<text x="216" y="163" text-anchor="middle" font-size="16" fill="#3b5343">Many visions</text>
+<text x="216" y="188" text-anchor="middle" font-size="16" fill="#3b5343">&amp; directions</text>
+<path d="M156 235l60 44 60-44" fill="none" stroke="#becdc1" stroke-width="1.5"/><path d="M216 279v16m-4-5 4 5 4-5" stroke="#819e89" fill="none"/><rect x="129" y="307" width="174" height="40" rx="6" fill="#e6eee5"/><text x="216" y="332" text-anchor="middle" font-size="17" font-weight="700" fill="#34513c">One vision</text>
+<text x="441" y="95" text-anchor="middle" font-size="18" font-weight="700" fill="#314c3a">Explore</text>
+<rect x="351" y="110" width="204" height="99" rx="7" fill="#edf2ed" stroke="#d0dcd1"/>
+<rect x="345" y="116" width="204" height="99" rx="7" fill="#edf2ed" stroke="#d0dcd1"/>
+<rect x="339" y="122" width="204" height="99" rx="7" fill="white" stroke="#b9cbbd"/>
+<text x="441" y="163" text-anchor="middle" font-size="16" fill="#3b5343">Many ideas, wireframes</text>
+<text x="441" y="188" text-anchor="middle" font-size="16" fill="#3b5343">&amp; storyboards</text>
+<path d="M381 235l60 44 60-44" fill="none" stroke="#becdc1" stroke-width="1.5"/><path d="M441 279v16m-4-5 4 5 4-5" stroke="#819e89" fill="none"/><rect x="354" y="307" width="174" height="40" rx="6" fill="#e6eee5"/><text x="441" y="332" text-anchor="middle" font-size="17" font-weight="700" fill="#34513c">One approach</text>
+<text x="666" y="95" text-anchor="middle" font-size="18" font-weight="700" fill="#314c3a">Decide</text>
+<rect x="576" y="110" width="204" height="99" rx="7" fill="#edf2ed" stroke="#d0dcd1"/>
+<rect x="570" y="116" width="204" height="99" rx="7" fill="#edf2ed" stroke="#d0dcd1"/>
+<rect x="564" y="122" width="204" height="99" rx="7" fill="white" stroke="#b9cbbd"/>
+<text x="666" y="163" text-anchor="middle" font-size="16" fill="#3b5343">Many prototypes</text>
+<text x="666" y="188" text-anchor="middle" font-size="16" fill="#3b5343">&amp; designs</text>
+<path d="M606 235l60 44 60-44" fill="none" stroke="#becdc1" stroke-width="1.5"/><path d="M666 279v16m-4-5 4 5 4-5" stroke="#819e89" fill="none"/><rect x="579" y="307" width="174" height="40" rx="6" fill="#e6eee5"/><text x="666" y="332" text-anchor="middle" font-size="17" font-weight="700" fill="#34513c">One design</text>
+<text x="891" y="95" text-anchor="middle" font-size="18" font-weight="700" fill="#314c3a">Deliver</text>
+<rect x="789" y="122" width="204" height="99" rx="7" fill="white" stroke="#b9cbbd"/>
+<text x="891" y="163" text-anchor="middle" font-size="16" fill="#3b5343">Working code</text>
+<text x="891" y="188" text-anchor="middle" font-size="16" fill="#3b5343">with test results</text>
+<path d="M831 235l60 44 60-44" fill="none" stroke="#becdc1" stroke-width="1.5"/><path d="M891 279v16m-4-5 4 5 4-5" stroke="#819e89" fill="none"/><rect x="804" y="307" width="174" height="40" rx="6" fill="#e6eee5"/><text x="891" y="332" text-anchor="middle" font-size="17" font-weight="700" fill="#34513c">One release</text>
+<rect x="114" y="388" width="879" height="130" rx="10" fill="#e8efe8"/><text x="553" y="421" text-anchor="middle" font-size="18" font-weight="700" fill="#31523c">Artifact Review · throughout the process</text><g font-size="16" fill="#36513f"><text x="255" y="463" text-anchor="middle">Compare options</text><text x="553" y="463" text-anchor="middle">Give direction</text><text x="855" y="463" text-anchor="middle">Review the revision</text></g><g stroke="#769680" stroke-width="1.5" fill="none"><path d="M350 457h111m-6-5 6 5-6 5M645 457h104m-6-5 6 5-6 5M855 478v22H255v-22m-4 5 4-5 4 5"/></g></g></svg>
