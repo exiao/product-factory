@@ -1,71 +1,48 @@
-# Software Factory + Make It Work
+# Product Factory
 
-A portable snapshot of two Codex workflows and their supporting skills:
+**Turn a product idea into something you can try, review, and ship.**
 
-- **`$software-factory`**: product discovery, decisions, implementation, and verification; also supports focused critiques and comparisons.
-- **`$make-it-work`**: own an agreed outcome through implementation, independent reviews, fixes, and runtime verification.
+A collection of Codex skills for product discovery, design, implementation, and verification. Start with the person and problem. Explore the approach. Play with a standalone prototype before committing to the build.
+
+![Product Factory workflow: define the product, try a prototype, then build and verify. Review and revise at consequential decisions.](docs/assets/workflow.svg)
+
+## Pick your starting point
+
+| You want to… | Use |
+| --- | --- |
+| Develop an idea from vision through a working product | [`$software-factory`](skills/software-factory/SKILL.md) |
+| Review generated work and request changes | [`$artifact-review`](skills/artifact-review/SKILL.md) |
+| Implement an agreed outcome and prove it works | [`$make-it-work`](skills/make-it-work/SKILL.md) |
+
+Software Factory starts at the earliest incomplete stage and carries agreed decisions forward. Clear fixes go straight to implementation. You can also ask for one focused step, such as comparing approaches or reviewing a flow.
 
 ## Install
 
-Requires GitHub access to this private repository, Git, and Python 3.8 or newer. Authenticate Git with your own GitHub account first, or download and extract the repository ZIP while signed in.
+You need Git and Python 3.8+.
 
 ```sh
-git clone https://github.com/exiao/software-factory-skills.git
-cd software-factory-skills
+git clone https://github.com/exiao/product-factory.git
+cd product-factory
 python3 install.py
 ```
 
-The installer copies all bundled skills into `$CODEX_HOME/skills` (default `~/.codex/skills`). It checks for name conflicts before copying and refuses to overwrite existing skills. Back up conflicting folders outside the skills directory, then rerun. To inspect the bundle without changing your installation:
+Skills install into `~/.codex/skills`, or `$CODEX_HOME/skills` if configured. Existing skills are never overwritten. See [setup and updates](docs/setup.md) if you have conflicts or an earlier installation.
 
-```sh
-python3 install.py --dest ./preview-skills
-```
-
-Start a new Codex task after installation. In your project, try:
+Start a new Codex task in your project:
 
 ```text
-Use $software-factory to develop this idea: [person, problem, desired outcome].
-Use $make-it-work to implement and verify [specific outcome].
+Use $software-factory to develop a joke-writing tool for beginners.
+Start from scratch and stop at a playable prototype.
 ```
 
-If copying fails, the installer removes the skill folders created by that attempt. Fix the reported permissions or disk-space problem and rerun. An abrupt process kill or failed cleanup may require moving those newly created folders to a backup manually; never remove unrelated skills.
+## Try the product. Review the work.
 
-For product outcomes, Software Factory follows a fixed default sequence:
+Artifact Review creates a concise review site for the decisions that need your judgment. Product prototypes open at their own URL so you can use the actual interaction, then return with feedback. Requests for revisions stay separate from approvals.
 
-**Vision → research and empathy maps → outcome criteria → alternatives and illustrated storyboards → low-fi prototype → synthetic study and fixes → refined design and detailed criteria → build and verify.**
+Make It Work carries an agreed outcome through implementation, independent review, fixes, and runtime checks. Completion comes with observed evidence and any remaining limits.
 
-Start at the earliest incomplete stage and reuse inspected artifacts and settled decisions. Required outputs cannot be casually skipped or substituted; an explicit scope change or earlier requested finish line still takes precedence. Checkpoints need an answer only for consequential unresolved choices.
+## Inside the bundle
 
-Focused operations remain available when you want a specific step, such as comparing approaches, critiquing an idea, tracing evidence, or sharpening criteria. Journey mapping, strategy, commercial validation, and desirability work remain conditional additions. Clear contained fixes go directly to implementation and verification. Adapt reviews to the actual surface (for example, installation instructions and CLI recovery for a skill bundle).
+26 skills cover research, problem framing, storyboards, interaction design, prototypes, reviews, and verification. Browse the [full inventory](BUNDLE.md) or the [detailed product workflow](skills/software-factory/references/product-workflow.md).
 
-Keep project permissions, credentials, and deployment targets in your own environment. Installing these skills grants no authorization to publish, spend, or contact people.
-
-## What's included
-
-`skills/` contains 26 skills: the two entrypoints plus supporting product discovery, design, implementation, and verification skills. Content production, marketing, publishing, and skill-authoring workflows are excluded. Needed standalone references are kept without importing their original parent workflows. All relative Markdown file links resolve inside the bundle. See [BUNDLE.md](BUNDLE.md) for the inventory and portability changes.
-
-## Runtime requirements and limits
-
-These are agent instructions, not a standalone application or a bundle of model access:
-
-- Use an agent runtime with filesystem and shell access. Research needs web access; browser/native QA needs the appropriate browser or simulator tools.
-- Make It Work expects goal tracking, subagents, and recurring checks when waiting on PRs. If a capability is unavailable, report it and track the equivalent work explicitly; do not claim an independent review ran. Model names in supporting guidance may need mapping to models available in your account.
-- Impeccable includes its upstream launcher and supporting files. On first use it may download its pinned platform engine from upstream GitHub releases. It needs network access for that download; see its launcher and skill for supported platforms and fallback behavior.
-- Image generation, hosted user studies, and deployment tools require your own available tools/accounts. No credentials or paid subscriptions are included. Missing optional tools only block the operation that needs them.
-
-Verified packaging and installation are separate from proving that every downstream workflow works with your accounts and runtime.
-
-### Optional branch prerequisites
-
-| Branch | Additional requirements |
-| --- | --- |
-| Image creation | Runtime image-generation tool |
-| Native iOS QA | macOS, Xcode/simulator and available automation tools |
-| Browser QA | Runtime browser/computer tools or the skill’s documented alternative |
-| Deployment | Your own provider tools, authenticated accounts and explicit task scope |
-
-Read the selected skill’s prerequisites before running an optional branch; this table does not provision tools or accounts.
-
-## Updating an earlier installation
-
-`git pull` updates this checkout, not previously installed copies. If you installed the original 55-skill bundle, back up its installed folders outside your skill directory before reinstalling this 26-skill version. Only move folders you installed from this bundle; preserve unrelated or customized skills. The installer deliberately does not delete or overwrite existing skills.
+These are instructions for your agent. Browser tools, image generation, model access, and deployment accounts come from your environment. See [runtime requirements](docs/setup.md#runtime-requirements-and-limits).
