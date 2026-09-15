@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="382" viewBox="0 0 1040 382" role="img" aria-labelledby="title desc">
+<title id="title">From product idea to verified outcome</title><desc id="desc">Define: vision, research and problem framing, outcome criteria. Try: alternatives and storyboards, standalone prototype, synthetic study and revision. Build: refined design and criteria, implementation and review, runtime verification. Review and revise at consequential decisions.</desc>
+<rect width="1040" height="382" rx="20" fill="#f5f5f0"/>
+<rect x="30" y="28" width="300" height="266" rx="12" fill="white" stroke="#d9ded5"/>
+<text x="52" y="65" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#32614e">01 / DEFINE</text>
+<text x="52" y="110" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#21382e">Who is it for?</text>
+<path d="M52 135h256" stroke="#e4e8e0"/>
+<circle cx="56" cy="165" r="3" fill="#6c8978"/><text x="72" y="170" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Vision</text>
+<circle cx="56" cy="207" r="3" fill="#6c8978"/><text x="72" y="212" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Research &amp; problem framing</text>
+<circle cx="56" cy="249" r="3" fill="#6c8978"/><text x="72" y="254" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Outcome criteria</text>
+<rect x="370" y="28" width="300" height="266" rx="12" fill="white" stroke="#d9ded5"/>
+<text x="392" y="65" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#32614e">02 / TRY</text>
+<text x="392" y="110" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#21382e">Does the approach work?</text>
+<path d="M392 135h256" stroke="#e4e8e0"/>
+<circle cx="396" cy="165" r="3" fill="#6c8978"/><text x="412" y="170" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Alternatives &amp; storyboards</text>
+<circle cx="396" cy="207" r="3" fill="#6c8978"/><text x="412" y="212" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Standalone prototype</text>
+<circle cx="396" cy="249" r="3" fill="#6c8978"/><text x="412" y="254" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Synthetic study &amp; revision</text>
+<rect x="710" y="28" width="300" height="266" rx="12" fill="white" stroke="#d9ded5"/>
+<text x="732" y="65" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#32614e">03 / BUILD</text>
+<text x="732" y="110" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#21382e">Can you prove it works?</text>
+<path d="M732 135h256" stroke="#e4e8e0"/>
+<circle cx="736" cy="165" r="3" fill="#6c8978"/><text x="752" y="170" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Refined design &amp; criteria</text>
+<circle cx="736" cy="207" r="3" fill="#6c8978"/><text x="752" y="212" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Implementation &amp; review</text>
+<circle cx="736" cy="249" r="3" fill="#6c8978"/><text x="752" y="254" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Runtime verification</text>
+<path d="M342 159h15m-5-5 5 5-5 5" fill="none" stroke="#799182" stroke-width="2"/>
+<path d="M682 159h15m-5-5 5 5-5 5" fill="none" stroke="#799182" stroke-width="2"/>
+<path d="M54 326h932" stroke="#cbd5c8"/>
+<rect x="280" y="311" width="480" height="31" rx="15" fill="#e5ecdf"/>
+<text x="520" y="332" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#32614e">Review and revise at consequential decisions</text>
+</svg>
