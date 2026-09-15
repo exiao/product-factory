@@ -1,48 +1,60 @@
 # Product Factory
 
-**Turn a product idea into something you can try, review, and ship.**
+**Hand over the generating. Keep the thinking.**
 
-A collection of Codex skills for product discovery, design, implementation, and verification. Start with the person and problem. Explore the approach. Play with a standalone prototype before committing to the build.
+![Artifact Review: compare concepts, keep useful parts, and direct the next revision.](docs/assets/artifact-review.svg)
 
-![Product Factory workflow: define the product, try a prototype, then build and verify. Review and revise at consequential decisions.](docs/assets/workflow.svg)
+An agent can build a polished answer to the wrong question. Start with what you know: customer conversations, existing evidence, constraints, and questions worth investigating. The agent gathers more evidence, exposes gaps, and makes alternatives you can inspect.
 
-## Pick your starting point
+Use that work to challenge assumptions, weigh tradeoffs, and decide what to leave out. Artifact Review carries your corrections into the next version before the agent builds further on a mistaken premise.
 
-| You want to… | Use |
+## How it works
+
+![Four stages connect agent work to your judgment: Define, Explore, Decide, and Deliver. Artifact Review carries feedback into revised work throughout.](docs/assets/workflow.svg)
+
+Give the agent your evidence, questions, and constraints. It turns them into directions you can compare and prototypes you can try. You choose what moves forward, combine the useful parts, and cut the rest. Each choice gives the next round of work a clearer target.
+
+## The main skills
+
+| Skill | What it does |
 | --- | --- |
-| Develop an idea from vision through a working product | [`$software-factory`](skills/software-factory/SKILL.md) |
-| Review generated work and request changes | [`$artifact-review`](skills/artifact-review/SKILL.md) |
-| Implement an agreed outcome and prove it works | [`$make-it-work`](skills/make-it-work/SKILL.md) |
+| [`software-factory`](skills/software-factory/SKILL.md) | Coordinates vision, research, design, implementation, and verification. |
+| [`artifact-review`](skills/artifact-review/SKILL.md) | Presents the work for your judgment and carries your feedback into the next revision. |
+| [`make-it-work`](skills/make-it-work/SKILL.md) | Implements an agreed outcome, runs independent reviews, fixes issues, and checks the real workflow. |
 
-Software Factory starts at the earliest incomplete stage and carries agreed decisions forward. Clear fixes go straight to implementation. You can also ask for one focused step, such as comparing approaches or reviewing a flow.
+Skills guide how the agent works. Plugins can bundle skills, tools, and service connections. This repository supplies **26 skills**; model access, browsers, and deployment accounts come from your environment.
 
-## Install
+[Browse all skills](BUNDLE.md) · [Detailed product workflow](skills/software-factory/references/product-workflow.md)
 
-You need Git and Python 3.8+.
+## Setup
 
-```sh
-git clone https://github.com/exiao/product-factory.git
-cd product-factory
-python3 install.py
-```
-
-Skills install into `~/.codex/skills`, or `$CODEX_HOME/skills` if configured. Existing skills are never overwritten. See [setup and updates](docs/setup.md) if you have conflicts or an earlier installation.
-
-Start a new Codex task in your project:
+Paste this into Codex:
 
 ```text
-Use $software-factory to develop a joke-writing tool for beginners.
-Start from scratch and stop at a playable prototype.
+Install the skills from https://github.com/exiao/product-factory
 ```
 
-## Try the product. Review the work.
+Start a new Codex task in your project, then try:
 
-Artifact Review creates a concise review site for the decisions that need your judgment. Product prototypes open at their own URL so you can use the actual interaction, then return with feedback. Requests for revisions stay separate from approvals.
+**Develop an idea**
 
-Make It Work carries an agreed outcome through implementation, independent review, fixes, and runtime checks. Completion comes with observed evidence and any remaining limits.
+```text
+Use $software-factory to develop [your product idea].
+Show me different directions before building a prototype.
+```
 
-## Inside the bundle
+**Review the options**
 
-26 skills cover research, problem framing, storyboards, interaction design, prototypes, reviews, and verification. Browse the [full inventory](BUNDLE.md) or the [detailed product workflow](skills/software-factory/references/product-workflow.md).
+```text
+Use $artifact-review to compare these concepts with me.
+Let me combine ideas and ask for changes.
+```
 
-These are instructions for your agent. Browser tools, image generation, model access, and deployment accounts come from your environment. See [runtime requirements](docs/setup.md#runtime-requirements-and-limits).
+**Build the chosen direction**
+
+```text
+Use $make-it-work to implement the agreed design
+and verify the core workflow.
+```
+
+Installs into `~/.codex/skills` or `$CODEX_HOME/skills`. Existing skills are never overwritten. See [setup, updates, and runtime requirements](docs/setup.md).
