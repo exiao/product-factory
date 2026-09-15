@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="592" viewBox="0 0 1040 592" role="img" aria-labelledby="title desc"><title id="title">Artifact Review</title><desc id="desc">Simplified interface illustration. Compare three abstract design concepts, select A and C, then ask for a revision using your feedback.</desc><rect width="1040" height="592" rx="18" fill="#f5f7f6"/><rect x="32" y="28" width="976" height="536" rx="12" fill="#fff" stroke="#d9e1dd"/><g font-family="Arial, sans-serif"><text x="60" y="67" font-size="18" font-weight="700" fill="#2b4437">Artifact Review</text><path d="M32 88h976" stroke="#e5eae7"/><text x="60" y="125" font-size="23" font-weight="700" fill="#243e30">Which concepts should the agent develop?</text>
+<rect x="60" y="149" width="294" height="212" rx="9" fill="#f5f9f6" stroke="#65927a"/>
+<rect x="77" y="166" width="17" height="17" rx="4" fill="#3b7254" stroke="#3b7254"/>
+<path d="M81 174l3 4 7-8" fill="none" stroke="white" stroke-width="2"/>
+<text x="105" y="180" font-size="15" font-weight="700" fill="#4c6658">Concept A</text>
+<rect x="77" y="198" width="260" height="146" rx="5" fill="#fafcfb" stroke="#e1e8e3"/>
+<rect x="90" y="213" width="42" height="115" rx="3" fill="#e4ebe6"/>
+<rect x="145" y="215" width="110" height="6" rx="3" fill="#d9e3dc"/>
+<rect x="145" y="231" width="155" height="6" rx="3" fill="#d9e3dc"/>
+<rect x="145" y="247" width="125" height="6" rx="3" fill="#d9e3dc"/>
+<rect x="145" y="269" width="48" height="58" rx="3" fill="#eaf0ec"/>
+<rect x="202" y="269" width="48" height="58" rx="3" fill="#eaf0ec"/>
+<rect x="259" y="269" width="48" height="58" rx="3" fill="#eaf0ec"/>
+<rect x="373" y="149" width="294" height="212" rx="9" fill="#ffffff" stroke="#dce3df"/>
+<rect x="390" y="166" width="17" height="17" rx="4" fill="#fff" stroke="#bac8bf"/>
+<text x="418" y="180" font-size="15" font-weight="700" fill="#4c6658">Concept B</text>
+<rect x="390" y="198" width="260" height="146" rx="5" fill="#fafcfb" stroke="#e1e8e3"/>
+<rect x="403" y="213" width="98" height="6" rx="3" fill="#e2e8e4"/>
+<rect x="403" y="231" width="206" height="6" rx="3" fill="#e2e8e4"/>
+<rect x="403" y="253" width="234" height="18" rx="3" fill="#edf1ef"/>
+<rect x="403" y="280" width="234" height="18" rx="3" fill="#edf1ef"/>
+<rect x="403" y="307" width="234" height="18" rx="3" fill="#edf1ef"/>
+<rect x="686" y="149" width="294" height="212" rx="9" fill="#f5f9f6" stroke="#65927a"/>
+<rect x="703" y="166" width="17" height="17" rx="4" fill="#3b7254" stroke="#3b7254"/>
+<path d="M707 174l3 4 7-8" fill="none" stroke="white" stroke-width="2"/>
+<text x="731" y="180" font-size="15" font-weight="700" fill="#4c6658">Concept C</text>
+<rect x="703" y="198" width="260" height="146" rx="5" fill="#fafcfb" stroke="#e1e8e3"/>
+<rect x="716" y="213" width="234" height="53" rx="3" fill="#e0e9e2"/>
+<rect x="716" y="281" width="111" height="46" rx="3" fill="#eaf0ec"/>
+<rect x="839" y="281" width="111" height="46" rx="3" fill="#eaf0ec"/>
+<text x="60" y="397" font-size="14" font-weight="700" fill="#4b6255">Your direction</text><rect x="60" y="410" width="920" height="61" rx="7" fill="#fbfcfb" stroke="#d8e1da"/><text x="78" y="446" font-size="17" fill="#3a5545">Combine A's structure with C's layout. Make the next version.</text><rect x="621" y="493" width="175" height="43" rx="7" fill="white" stroke="#b9ccbf"/><text x="708" y="520" text-anchor="middle" font-size="15" fill="#3b5948">Request revision</text><rect x="811" y="493" width="169" height="43" rx="7" fill="#34674d"/><text x="895" y="520" text-anchor="middle" font-size="15" fill="white">Keep selections</text></g></svg>

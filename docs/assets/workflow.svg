@@ -1,30 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="382" viewBox="0 0 1040 382" role="img" aria-labelledby="title desc">
-<title id="title">From product idea to verified outcome</title><desc id="desc">Define: vision, research and problem framing, outcome criteria. Try: alternatives and storyboards, standalone prototype, synthetic study and revision. Build: refined design and criteria, implementation and review, runtime verification. Review and revise at consequential decisions.</desc>
-<rect width="1040" height="382" rx="20" fill="#f5f5f0"/>
-<rect x="30" y="28" width="300" height="266" rx="12" fill="white" stroke="#d9ded5"/>
-<text x="52" y="65" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#32614e">01 / DEFINE</text>
-<text x="52" y="110" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#21382e">Who is it for?</text>
-<path d="M52 135h256" stroke="#e4e8e0"/>
-<circle cx="56" cy="165" r="3" fill="#6c8978"/><text x="72" y="170" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Vision</text>
-<circle cx="56" cy="207" r="3" fill="#6c8978"/><text x="72" y="212" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Research &amp; problem framing</text>
-<circle cx="56" cy="249" r="3" fill="#6c8978"/><text x="72" y="254" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Outcome criteria</text>
-<rect x="370" y="28" width="300" height="266" rx="12" fill="white" stroke="#d9ded5"/>
-<text x="392" y="65" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#32614e">02 / TRY</text>
-<text x="392" y="110" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#21382e">Does the approach work?</text>
-<path d="M392 135h256" stroke="#e4e8e0"/>
-<circle cx="396" cy="165" r="3" fill="#6c8978"/><text x="412" y="170" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Alternatives &amp; storyboards</text>
-<circle cx="396" cy="207" r="3" fill="#6c8978"/><text x="412" y="212" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Standalone prototype</text>
-<circle cx="396" cy="249" r="3" fill="#6c8978"/><text x="412" y="254" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Synthetic study &amp; revision</text>
-<rect x="710" y="28" width="300" height="266" rx="12" fill="white" stroke="#d9ded5"/>
-<text x="732" y="65" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#32614e">03 / BUILD</text>
-<text x="732" y="110" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#21382e">Can you prove it works?</text>
-<path d="M732 135h256" stroke="#e4e8e0"/>
-<circle cx="736" cy="165" r="3" fill="#6c8978"/><text x="752" y="170" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Refined design &amp; criteria</text>
-<circle cx="736" cy="207" r="3" fill="#6c8978"/><text x="752" y="212" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Implementation &amp; review</text>
-<circle cx="736" cy="249" r="3" fill="#6c8978"/><text x="752" y="254" font-family="Arial,sans-serif" font-size="17" fill="#41584c">Runtime verification</text>
-<path d="M342 159h15m-5-5 5 5-5 5" fill="none" stroke="#799182" stroke-width="2"/>
-<path d="M682 159h15m-5-5 5 5-5 5" fill="none" stroke="#799182" stroke-width="2"/>
-<path d="M54 326h932" stroke="#cbd5c8"/>
-<rect x="280" y="311" width="480" height="31" rx="15" fill="#e5ecdf"/>
-<text x="520" y="332" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#32614e">Review and revise at consequential decisions</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="530" viewBox="0 0 1040 530" role="img" aria-labelledby="title desc"><title id="title">Agent work and your judgment, connected by Artifact Review</title><desc id="desc">Define: research and evidence, guided by customer context. Explore: alternatives and storyboards, guided by direction. Try: prototypes and findings, guided by taste and feedback. Deliver: code and test results, guided by scope and acceptance. Artifact Review connects work to inspect, your feedback, and revised work.</desc><rect width="1040" height="530" rx="16" fill="#f5f6f2"/><g font-family="Arial,sans-serif"><text x="32" y="46" font-size="22" font-weight="700" fill="#253b2e">From an idea to a product you can use.</text><text x="32" y="153" font-size="14" font-weight="700" fill="#526858">Agent</text><text x="32" y="259" font-size="14" font-weight="700" fill="#526858">You</text>
+<text x="222" y="92" text-anchor="middle" font-size="18" font-weight="700" fill="#314c3a">Define</text><rect x="118" y="111" width="208" height="82" rx="8" fill="#fff" stroke="#c2d0c5"/>
+<text x="222" y="144" text-anchor="middle" font-size="17" fill="#3b5343">Research</text>
+<text x="222" y="169" text-anchor="middle" font-size="17" fill="#3b5343">&amp; evidence</text>
+<path d="M222 202v25" stroke="#b6c6b9" stroke-dasharray="4 4"/><circle cx="222" cy="231" r="3" fill="#5c8067"/><text x="222" y="260" text-anchor="middle" font-size="16" fill="#354d3c">Customer context</text>
+<text x="446" y="92" text-anchor="middle" font-size="18" font-weight="700" fill="#314c3a">Explore</text><rect x="342" y="111" width="208" height="82" rx="8" fill="#fff" stroke="#c2d0c5"/>
+<text x="446" y="144" text-anchor="middle" font-size="17" fill="#3b5343">Alternatives</text>
+<text x="446" y="169" text-anchor="middle" font-size="17" fill="#3b5343">&amp; storyboards</text>
+<path d="M446 202v25" stroke="#b6c6b9" stroke-dasharray="4 4"/><circle cx="446" cy="231" r="3" fill="#5c8067"/><text x="446" y="260" text-anchor="middle" font-size="16" fill="#354d3c">Direction</text>
+<text x="670" y="92" text-anchor="middle" font-size="18" font-weight="700" fill="#314c3a">Try</text><rect x="566" y="111" width="208" height="82" rx="8" fill="#fff" stroke="#c2d0c5"/>
+<text x="670" y="144" text-anchor="middle" font-size="17" fill="#3b5343">Prototypes</text>
+<text x="670" y="169" text-anchor="middle" font-size="17" fill="#3b5343">&amp; findings</text>
+<path d="M670 202v25" stroke="#b6c6b9" stroke-dasharray="4 4"/><circle cx="670" cy="231" r="3" fill="#5c8067"/><text x="670" y="260" text-anchor="middle" font-size="16" fill="#354d3c">Taste &amp; feedback</text>
+<text x="894" y="92" text-anchor="middle" font-size="18" font-weight="700" fill="#314c3a">Deliver</text><rect x="790" y="111" width="208" height="82" rx="8" fill="#fff" stroke="#c2d0c5"/>
+<text x="894" y="144" text-anchor="middle" font-size="17" fill="#3b5343">Code</text>
+<text x="894" y="169" text-anchor="middle" font-size="17" fill="#3b5343">&amp; test results</text>
+<path d="M894 202v25" stroke="#b6c6b9" stroke-dasharray="4 4"/><circle cx="894" cy="231" r="3" fill="#5c8067"/><text x="894" y="260" text-anchor="middle" font-size="16" fill="#354d3c">Scope &amp; acceptance</text>
+<rect x="118" y="305" width="880" height="169" rx="10" fill="#e8efe8"/><text x="558" y="341" text-anchor="middle" font-size="18" font-weight="700" fill="#31523c">Artifact Review · throughout the process</text><g font-size="17" fill="#36513f"><text x="256" y="387" text-anchor="middle">Work to inspect</text><text x="558" y="387" text-anchor="middle">Your feedback</text><text x="859" y="387" text-anchor="middle">Revised work</text></g><g stroke="#769680" stroke-width="1.5" fill="none"><path d="M352 381h108m-6-5 6 5-6 5M651 381h110m-6-5 6 5-6 5M859 408v28H256v-28m-5 6 5-6 5 6"/></g><rect x="445" y="423" width="226" height="26" fill="#e8efe8"/><text x="558" y="441" text-anchor="middle" font-size="14" fill="#496950">Revisit any earlier decision</text></g></svg>
