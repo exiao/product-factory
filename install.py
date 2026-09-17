@@ -84,6 +84,11 @@ def save_receipt(destination, skills, files):
     atomic_write(destination / RECEIPT, content.encode(), 0o600)
 
 
+def parent_directories(files):
+    return {parent.as_posix() for relative in files
+            for parent in PurePosixPath(relative).parents if parent != PurePosixPath('.')}
+
+
 def install(destination, skills, files):
     conflicts = [p.name for p in skills if os.path.lexists(destination / p.name)]
     if os.path.lexists(destination / RECEIPT):
@@ -111,6 +116,7 @@ def update(destination, source_root, skills, files):
     receipt = read_receipt(destination)
     old = receipt['files']
     owned = set(receipt['skills'])
+    owned_dirs = parent_directories(old) | owned
     incoming = {p.name for p in skills}
     blocked = {name for name in incoming - owned if os.path.lexists(destination / name)}
     conflicts = [f'{name}: existing skill is not managed by this installation' for name in sorted(blocked)]
@@ -120,6 +126,12 @@ def update(destination, source_root, skills, files):
         if relative.split('/')[0] in blocked:
             continue
         target = safe_path(destination, relative)
+        unowned_parent = next((parent for parent in PurePosixPath(relative).parents
+                               if parent != PurePosixPath('.') and parent.as_posix() not in owned_dirs
+                               and (destination / parent).exists()), None)
+        if unowned_parent is not None:
+            conflicts.append(f'{relative}: existing directory {unowned_parent} is not managed')
+            continue
         desired = files.get(relative)
         previous = old.get(relative)
         if target.exists() and not target.is_file():
@@ -170,6 +182,12 @@ def update(destination, source_root, skills, files):
         for parent in reversed(created_dirs):
             parent.rmdir()
         raise
+    # Remove only obsolete empty managed folders, leaving local additions intact.
+    for relative in sorted(owned_dirs - parent_directories(next_files), key=lambda p: p.count('/'), reverse=True):
+        try:
+            (destination / relative).rmdir()
+        except OSError:
+            pass  # Nonempty or inaccessible folders stay in place.
     print(f'Updated {len(changes)} files in {destination}. Local customizations preserved.')
     if conflicts:
         print('Conflicts (left unchanged):\n' + '\n'.join(conflicts))

@@ -123,6 +123,28 @@ class InstallerTests(unittest.TestCase):
         self.assertNotIn('beta', self.receipt()['skills'])
         self.assertEqual((self.dest / 'beta/notes.txt').read_text(), 'Unrelated beta')
 
+    def test_update_preserves_nested_unowned_folders(self):
+        self.run_cli()
+        local = self.dest / 'alpha/local-folder'
+        local.mkdir()
+        (local / 'notes.txt').write_text('Local notes')
+        self.write('alpha/local-folder/new.txt', 'Upstream addition')
+        self.write('alpha/SKILL.md', 'Safe change')
+        self.assertIn('directory alpha/local-folder is not managed', self.run_cli('--update', code=1))
+        self.assertEqual(list(local.iterdir()), [local / 'notes.txt'])
+        self.assertEqual((local / 'notes.txt').read_text(), 'Local notes')
+        self.assertEqual((self.dest / 'alpha/SKILL.md').read_text(), 'Safe change')
+        self.assertNotIn('alpha/local-folder/new.txt', self.receipt()['files'])
+
+    def test_obsolete_empty_managed_folder_can_be_reintroduced(self):
+        self.run_cli()
+        (self.source / 'skills/alpha/references/guide.md').unlink()
+        self.run_cli('--update')
+        self.assertFalse((self.dest / 'alpha/references').exists())
+        self.write('alpha/references/new.md', 'New guide')
+        self.run_cli('--update')
+        self.assertEqual((self.dest / 'alpha/references/new.md').read_text(), 'New guide')
+
     def test_legacy_invalid_receipt_and_symlink_refusal(self):
         self.dest.mkdir()
         self.assertIn('No installation receipt', self.run_cli('--update', code=1))

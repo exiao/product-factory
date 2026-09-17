@@ -55,7 +55,7 @@ python3 install.py --update
 
 Use the same `--dest` for custom locations, for example `python3 install.py --update --dest ./preview-skills`.
 
-Updates replace unmodified managed files and add new bundle files. Files removed upstream are deleted only when their installed contents still match the receipt. Local additions, modified files and local deletions are preserved; conflicts are reported with a nonzero exit status even when other files update successfully. A new skill cannot be mixed into an existing unowned skill folder. Symlinks at managed paths are refused before updating.
+Updates replace unmodified managed files and add new bundle files. Files removed upstream are deleted only when their installed contents still match the receipt; obsolete empty managed folders are then removed. Local additions, modified files and local deletions are preserved; conflicts are reported with a nonzero exit status even when other files update successfully. New files cannot be mixed into existing unowned folders, including locally created folders inside a managed skill. Symlinks at managed paths are refused before updating.
 
 Back up each customization outside the skills directory before resolving a conflict. To accept upstream for a managed file, copy the current checkout version to its installed path and rerun `--update`. For an unowned file or folder collision, move it to your backup location first. To keep a custom version, leave the conflict in place; it will keep being reported. Retrying never adopts a conflicting custom file as the new baseline.
 
