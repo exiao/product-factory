@@ -1,8 +1,8 @@
 # Optional office-hours lenses
 
-Use the section that changes the current decision. These are adapted methods from the exported Sahil Office Hours and YC Office Hours skills, not simulated access to either advisor and not endorsements. The Sahil source attributes its approach to Sahil Lavingia's *The Minimalist Entrepreneur* and `slavingia/skills`. The YC-style source combines discovery questions with ambitious product thinking; treat it as a framework, not official YC advice.
+Use the section that changes the current decision. These optional lenses cover bootstrapping, first customers, discovery and scope. The YC-style section combines discovery questions with ambitious product thinking; treat it as a framework, not official YC advice or an endorsement.
 
-## Bootstrap and first customers: Sahil-inspired
+## Bootstrap and first customers
 
 Start from people whose problem you understand and can realistically reach. Existing community membership can help, but is not a prerequisite. Use specific buyer segments and observed workarounds; do not invent named prospects or equate friends' enthusiasm with demand.
 
