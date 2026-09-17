@@ -18,13 +18,13 @@ Give the agent your evidence, questions, and constraints. It turns them into dir
 
 | Skill | What it does |
 | --- | --- |
-| [`software-factory`](skills/software-factory/SKILL.md) | Coordinates vision, research, design, implementation, and verification. |
+| [`software-factory`](skills/software-factory/SKILL.md) | Coordinates vision, research, criteria and design, then hands delivery to Make It Work. |
 | [`artifact-review`](skills/artifact-review/SKILL.md) | Presents the work for your judgment and carries your feedback into the next revision. |
-| [`make-it-work`](skills/make-it-work/SKILL.md) | Implements an agreed outcome, runs independent reviews, fixes issues, and checks the real workflow. |
+| [`make-it-work`](skills/make-it-work/SKILL.md) | Implements an agreed outcome, selects relevant reviews, fixes issues and verifies the real workflow; uses independent reviewers when available and authorized. |
 
 Skills guide how the agent works. Plugins can bundle skills, tools, and service connections. This repository supplies **26 skills**; model access, browsers, and deployment accounts come from your environment.
 
-[Browse all skills](BUNDLE.md) · [Detailed product workflow](skills/software-factory/references/product-workflow.md)
+[Browse all skills](BUNDLE.md) · [Workflow ownership](docs/workflow.md) · [Detailed product workflow](skills/software-factory/references/product-workflow.md)
 
 ## Setup
 
@@ -57,4 +57,4 @@ Use $make-it-work to implement the agreed design
 and verify the core workflow.
 ```
 
-Installs into `~/.codex/skills` or `$CODEX_HOME/skills`. Existing skills are never overwritten. See [setup, updates, and runtime requirements](docs/setup.md).
+Installs into `~/.codex/skills` or `$CODEX_HOME/skills`. Fresh installs refuse existing skill folders; updates preserve customizations. See [setup, updates, and runtime requirements](docs/setup.md).

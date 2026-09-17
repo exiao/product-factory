@@ -1,10 +1,10 @@
 # Bundle inventory
 
-26 skills selected for the Software Factory and Make It Work product-development workflows. Snapshot: 2026-09-12. Optional mentions and file-level references do not imply that an entire additional workflow belongs in this bundle.
+26 skills selected for the Product Factory workflow. Optional mentions and file-level references do not imply that an entire additional workflow belongs in this bundle.
 
 ## Selection and portability
 
-- Keep the two entrypoints and their product discovery, design, implementation, and verification support. Software Factory uses a fixed default product sequence while retaining focused operations and conditional specialist steps.
+- Keep the three entrypoints and their specialist support. Software Factory owns product direction and the fixed discovery sequence, Artifact Review carries human feedback, and Make It Work owns implementation and verification. See [workflow ownership](docs/workflow.md).
 - Exclude content-factory and content production, marketing/growth, ads, social publishing, video production, personal writing, and skill-authoring workflows.
 - Retain the failure-to-eval handoff from skill-improver at `skills/verify-feature/references/failure-to-eval.md`; both callers use that shared file. Adapt its final instruction to recheck the product instead of invoking the removed parent workflow.
 - Storyboards already contain the notebook-style reference; no separate notebook-sketch skill is needed.
@@ -17,6 +17,7 @@ This is a curated snapshot, not an automatic sync. Existing upstream source link
 ## Entrypoints
 
 - [software-factory](skills/software-factory/SKILL.md)
+- [artifact-review](skills/artifact-review/SKILL.md)
 - [make-it-work](skills/make-it-work/SKILL.md)
 
 ## Product discovery and behavior
@@ -50,7 +51,3 @@ This is a curated snapshot, not an automatic sync. Existing upstream source link
 - [ui-lint](skills/ui-lint/SKILL.md)
 - [verify-feature](skills/verify-feature/SKILL.md)
 - [verify-deploy](skills/verify-deploy/SKILL.md)
-
-## Artifact review
-
-- [artifact-review](skills/artifact-review/SKILL.md): create concise review sites with further-work requests, comments and reversible dismissal.

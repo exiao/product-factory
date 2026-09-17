@@ -1,6 +1,6 @@
 ---
 name: software-factory
-description: Run product work through a fixed sequence from vision and research to prototypes, implementation and verification; also support focused operations on individual artifacts. Use for unresolved product decisions; clear contained fixes go directly to the relevant implementation skill.
+description: Coordinate unresolved product decisions through vision, research and design, then hand delivery to Make It Work. Also support focused operations on individual artifacts; settled implementation and clear fixes go directly to Make It Work.
 ---
 
 # Software Factory
@@ -13,7 +13,7 @@ Commands below are conversational operations, not shell commands or standalone s
 
 - **Focused request:** run only the selected operation on the named artifact. Read its linked playbook and relevant specialist guidance. Do not launch discovery, maps, prototypes or implementation as a side effect. Review-only work reports findings without editing. A request to revise or fix authorizes the bounded change and appropriate verification.
 - **Delegated outcome:** use [product workflow](references/product-workflow.md) when audience, promise, behavior or direction is unresolved. Start by stating or reusing the short vision. Follow the default sequence below, reuse agreements, and continue through the authorized finish line. An intermediate focused operation does not cancel the larger assignment.
-- **Settled implementation or clear fix:** go directly to the relevant design, implementation or verification skill; do not reopen discovery.
+- **Settled implementation or clear fix:** hand delivery to [$make-it-work](../make-it-work/SKILL.md); focused design or verification requests use their specialist directly. Do not reopen discovery.
 - **Advice or bare invocation:** recommend up to three context-relevant next operations and explain the leading choice. Advice does not execute them. If the surrounding conversation already supplies an actionable request, follow it rather than showing a menu.
 
 ## Default sequence
@@ -29,7 +29,7 @@ For a product outcome, follow this sequence in order. Read [product workflow](re
 | 5. Interaction prototype | One core loop, exclusions, wireflow and a standalone playable prototype with simulated behavior labeled. |
 | 6. Prototype study and revision | Synthetic UX walkthrough of the first usable prototype, annotated screenshots for visual products, fixes and affected-interaction rechecks. Present the first-prototype checkpoint before substantial polish. |
 | 7. Design and detailed criteria | Refined design and behavior, error and recovery criteria before implementing each slice. |
-| 8. Build and verify | Implement, review, exercise the real workflow against the original criteria, fix and recheck; report evidence and limits. |
+| 8. Build and verify | Hand agreed criteria and artifacts to [$make-it-work](../make-it-work/SKILL.md), which owns implementation, review selection, fixes and completion evidence. |
 
 Start at the earliest incomplete stage. A stage is satisfied only by an inspected artifact or evidence whose scope and decisions apply to this assignment; naming it in a plan does not complete it. Treat another project’s approvals as proposed carryover. For an explicit fresh run, begin with unapproved artifacts and do not import prior decisions. Reuse sufficient work within the current agreement by linking it, without regenerating it or asking for approval again. At handoffs, state the stage, its result and the next stage in the existing record; no separate tracking system is needed.
 
@@ -47,7 +47,7 @@ Explicitly requested alternatives remain separate focused experiments. Preserve 
 
 ## Review artifacts with the user
 
-Use [artifact-review](../artifact-review/SKILL.md) when creating an interactive site for the user to judge generated work. Product prototypes must open as standalone working experiences with their own URL and product interface; the review site launches them and gathers feedback afterward. Let the user work on the artifact and exercise the core loop, including accepting, rejecting and revising results, rather than filling out a form describing the product. It owns concise artifact-centered cards, question-specific primary controls, and context-appropriate revision, research, annotation and archive actions. Software Factory retains the fixed stage order, project record and execution responsibility. Specialized review mechanisms remain available without becoming a mandatory questionnaire. Prepare each review artifact from the earliest unresolved prerequisite, moving from purpose and concepts toward mechanisms and interaction details. A downstream card must not silently settle an upstream choice. Required stage outputs do not each require a separate approval card; surface only judgments that need this person.
+Use [artifact-review](../artifact-review/SKILL.md) when creating an interactive site for the user to judge generated work. Product prototypes must open as standalone working experiences with their own URL and product interface; the review site launches them and gathers feedback afterward. Let the user work on the artifact and exercise the core loop, including accepting, rejecting and revising results, rather than filling out a form describing the product. It owns concise artifact-centered cards, question-specific primary controls, and context-appropriate revision, research, annotation and archive actions. Software Factory owns product direction, stage order and the project record; Make It Work owns delivery after handoff. Specialized review mechanisms remain available without becoming a mandatory questionnaire. Prepare each review artifact from the earliest unresolved prerequisite, moving from purpose and concepts toward mechanisms and interaction details. A downstream card must not silently settle an upstream choice. Required stage outputs do not each require a separate approval card; surface only judgments that need this person.
 
 On submitted feedback, read the snapshot and apply the latest explicit response to its matching artifact and version. Preserve approvals, revisions, and unresolved responses as distinct states. Revise affected dependencies, continue from the earliest incomplete stage, and make the next appropriate artifact available in the review site. Retain the current assignment and its fresh-start or reuse constraints. A saved response or acknowledged dispatch alone is not completed downstream work.
 
@@ -68,7 +68,7 @@ A lens reveals something about the current artifact; an action changes it. Choos
 
 ## Preserve evidence across operations
 
-Use the existing project record for scope, decisions, criteria, artifacts and open questions. No new schema, dashboard or duplicate ledger is required. Give problems and criteria stable identifiers when they must survive multiple handoffs; reuse existing IDs and source links.
+Use the existing project record for scope, decisions, criteria, artifacts and open questions. At the design handoff, use [design-mode's product context handoff](../design-mode/SKILL.md#product-context-handoff) to populate Impeccable's PRODUCT.md from accepted decisions; link it from the record rather than maintaining a second copy of product truth. No additional dashboard or ledger is required. Give problems and criteria stable identifiers when they must survive multiple handoffs; reuse existing IDs and source links.
 
 Carry reported experience, observed behavior, inference and simulation as distinct evidence types. Approval selects a direction; it does not verify an assumption. Passing a narrower technical check does not pass the full user promise. Check the underlying source or execution result before strengthening a claim; if unavailable, retain uncertainty.
 
