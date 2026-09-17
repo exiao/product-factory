@@ -4,27 +4,25 @@
 
 ![Artifact Review: compare concepts, keep useful parts, and direct the next revision.](docs/assets/artifact-review.svg)
 
-An agent can build a polished answer to the wrong question. Start with what you know: customer conversations, existing evidence, constraints, and questions worth investigating. The agent gathers more evidence, exposes gaps, and makes alternatives you can inspect.
-
-Use that work to challenge assumptions, weigh tradeoffs, and decide what to leave out. Artifact Review carries your corrections into the next version before the agent builds further on a mistaken premise.
+An agent can build a polished answer to the wrong question. Start with your customer conversations, research, and constraints. Product Factory helps the agent investigate the problem and turn possible solutions into concepts and prototypes you can inspect.
 
 ## How it works
 
 ![Four stages connect agent work to your judgment: Define, Explore, Decide, and Deliver. Artifact Review carries feedback into revised work throughout.](docs/assets/workflow.svg)
 
-Give the agent your evidence, questions, and constraints. It turns them into directions you can compare and prototypes you can try. You choose what moves forward, combine the useful parts, and cut the rest. Each choice gives the next round of work a clearer target.
+Use Artifact Review to decide what to keep, combine, revise or leave out. Once you agree on the design, Make It Work implements it and checks the real workflow against your criteria. If new evidence changes the problem, return to that decision.
 
 ## The main skills
 
 | Skill | What it does |
 | --- | --- |
-| [`software-factory`](skills/software-factory/SKILL.md) | Coordinates vision, research, design, implementation, and verification. |
-| [`artifact-review`](skills/artifact-review/SKILL.md) | Presents the work for your judgment and carries your feedback into the next revision. |
-| [`make-it-work`](skills/make-it-work/SKILL.md) | Implements an agreed outcome, runs independent reviews, fixes issues, and checks the real workflow. |
+| [`software-factory`](skills/software-factory/SKILL.md) | Guides research and design, then hands implementation to Make It Work. |
+| [`artifact-review`](skills/artifact-review/SKILL.md) | Lets you compare work, leave feedback and request revisions. |
+| [`make-it-work`](skills/make-it-work/SKILL.md) | Implements an agreed outcome, fixes issues and verifies the real workflow. |
 
-Skills guide how the agent works. Plugins can bundle skills, tools, and service connections. This repository supplies **26 skills**; model access, browsers, and deployment accounts come from your environment.
+This repository supplies **26 skills** that guide how the agent works. Model access, browser tools, and deployment accounts come from your environment.
 
-[Browse all skills](BUNDLE.md) · [Detailed product workflow](skills/software-factory/references/product-workflow.md)
+[Browse all skills](BUNDLE.md) · [Workflow ownership](docs/workflow.md) · [Detailed product workflow](skills/software-factory/references/product-workflow.md)
 
 ## Setup
 
@@ -57,4 +55,4 @@ Use $make-it-work to implement the agreed design
 and verify the core workflow.
 ```
 
-Installs into `~/.codex/skills` or `$CODEX_HOME/skills`. Existing skills are never overwritten. See [setup, updates, and runtime requirements](docs/setup.md).
+Installs into `~/.codex/skills` or `$CODEX_HOME/skills`. Fresh installs refuse existing skill folders; updates preserve customizations. See [setup, updates, and runtime requirements](docs/setup.md).

@@ -6,7 +6,15 @@
 
 Requires Git and Python 3.8 or newer. You can also download and extract the repository ZIP.
 
-The installer copies skills into `$CODEX_HOME/skills` (default `~/.codex/skills`). It checks all destination names before copying and refuses to overwrite existing folders. Back up conflicting folders outside the skills directory before reinstalling; preserve unrelated or customized skills.
+The installer copies skills into `$CODEX_HOME/skills` (default `~/.codex/skills`). Run it from this checkout:
+
+```sh
+python3 install.py
+```
+
+A fresh install checks destination skill names before copying and refuses existing folders. It saves `.product-factory-install.json` in the destination with hashes of the files it installed. Keep this receipt: it lets later updates distinguish bundle files from local customizations.
+
+The installer writes version 2 receipts and can update version 1 installations. Older installer revisions cannot read version 2 receipts; use the current checkout when updating.
 
 To inspect the bundle without changing your installation:
 
@@ -14,14 +22,14 @@ To inspect the bundle without changing your installation:
 python3 install.py --dest ./preview-skills
 ```
 
-If copying fails, the installer removes the folders created by that attempt. Fix the reported permissions or disk-space problem and rerun. An abrupt process kill or failed cleanup may require moving those newly created folders to a backup manually.
+If copying fails, the installer removes the folders created by that attempt. Fix the reported permissions or disk-space problem and rerun. The destination must be outside the source `skills/` directory. An abrupt process kill or failed cleanup needs inspection before retrying: back up affected files and remove `.product-factory-install.lock` only after confirming no installer is running.
 
 ## Runtime requirements and limits
 
 These are agent instructions, not a standalone application or a bundle of model access:
 
 - Use an agent runtime with filesystem and shell access. Research needs web access; browser/native QA needs the appropriate browser or simulator tools.
-- Make It Work expects goal tracking, subagents, and recurring checks when waiting on PRs. If a capability is unavailable, report it and track the equivalent work explicitly; do not claim an independent review ran. Model names in supporting guidance may need mapping to models available in your account.
+- Make It Work selects reviews for the changed surface and uses independent subagents when available and authorized. Without them, run the applicable checks directly and disclose the review limit. Goal tracking and recurring follow-ups require an explicit user request and runtime support; ordinary delivery uses the existing task record. Model names in supporting guidance may need mapping to models available in your account.
 - Impeccable includes its upstream launcher and supporting files. On first use it may download its pinned platform engine from upstream GitHub releases. It needs network access for that download; see its launcher and skill for supported platforms and fallback behavior.
 - Image generation, hosted user studies, and deployment tools require your own available tools/accounts. No credentials or paid subscriptions are included. Missing optional tools only block the operation that needs them.
 
@@ -40,6 +48,30 @@ Read the selected skill’s prerequisites before running an optional branch; thi
 
 ## Updating an earlier installation
 
-`git pull` updates this checkout, not previously installed copies. If you installed the original 55-skill bundle, back up its installed folders outside your skill directory before reinstalling this 26-skill version. Only move folders you installed from this bundle; preserve unrelated or customized skills. The installer deliberately does not delete or overwrite existing skills.
+`git pull` updates this checkout, not installed copies. For an installation with a receipt:
+
+```sh
+git pull --ff-only
+python3 install.py --update
+```
+
+Use the same `--dest` for custom locations, for example `python3 install.py --update --dest ./preview-skills`.
+
+Updates replace unmodified managed files and add new bundle files. Files removed upstream are deleted only when their installed contents still match the receipt; obsolete empty managed folders are then removed. Local additions, modified files and local deletions are preserved; conflicts are reported with a nonzero exit status even when other files update successfully. New files cannot be mixed into existing unowned folders, including locally created folders inside a managed skill. Symlinks at managed paths are refused before updating.
+
+Back up each customization outside the skills directory before resolving a conflict. To accept upstream for a managed file, copy the current checkout version to its installed path and rerun `--update`. For an unowned file or folder collision, move it to your backup location first. To keep a custom version, leave the conflict in place; it will keep being reported. Retrying never adopts a conflicting custom file as the new baseline.
+
+Older installations without a receipt cannot be updated automatically. Install into an empty preview directory, compare against your installed skills, and back up only the bundle folders you intend to replace before performing a fresh install. Preserve unrelated skills and customizations, including any skills from the original 55-skill bundle. Do not fabricate a receipt for an older installation.
+
+## Repository checks
+
+Run the same checks as CI before publishing changes:
+
+```sh
+python3 scripts/validate.py
+python3 -m unittest discover -s tests -v
+```
+
+These check Markdown file links, skill metadata, inventory consistency and the installer against temporary destinations. They do not install into your real skills directory or prove downstream product behavior. See [workflow ownership](workflow.md) for the handoffs these skills implement.
 
 Installing these skills grants no authorization to publish, spend, or contact people. Keep credentials and deployment targets in your own environment.

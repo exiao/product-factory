@@ -2,7 +2,7 @@
 
 Optional brand-inspired visual references for design-mode. Read this index when the user names a reference brand or an open visual brief benefits from one, then load only the selected brand file. Do not load the whole library.
 
-These are third-party snapshots and interpretations, not official design systems or guarantees of a site's current appearance. Use them for palette, typography, spacing, and component ideas. For an exact or current match, inspect the supplied reference or live site. Preserve the user's brief and established project tokens; Bloom's design system remains authoritative for Bloom work.
+These are third-party snapshots and interpretations, not official design systems or guarantees of a site's current appearance. Use them for palette, typography, spacing, and component ideas. For an exact or current match, inspect the supplied reference or live site. Preserve the user's brief and established project tokens; The current project's design system remains authoritative.
 
 Design-mode and Impeccable own implementation and verification. Adapt reference patterns to the current stack, accessibility needs, and available fonts. Font substitutes are approximations. This library does not require additional skills, automatic hosting, or publication.
 

@@ -1,6 +1,6 @@
 ---
 name: make-it-work
-description: Own an outcome end to end when the user says make it work or handle this. Use goal mode, independent reviews, and fixes until the product works.
+description: Own delivery of an agreed outcome through implementation, scoped reviews, fixes and runtime verification. Use for make-it-work requests and Software Factory delivery handoffs; unresolved product direction stays with Software Factory.
 ---
 
 # Make it work
@@ -9,22 +9,25 @@ Build the full agreed outcome, prove it works, and fix it until it passes.
 
 ## Build
 
-Define what the user needs to accomplish and what useful result would demonstrate success. Map the original requirements to evidence from the actual configured workflow and its downstream result. For new products or uncertain solutions, demonstrate the core benefit with realistic inputs before broad implementation. Build the full agreed outcome and run the implementation checks.
+Reuse the agreed outcome, original and detailed criteria, evidence plan, current artifacts, exclusions and authorization from the request or Software Factory handoff. Own implementation, integration, review selection, fixes and completion reporting in the same task. Map each requirement to evidence from the actual configured workflow and its downstream result. Use [$program-design](../program-design/SKILL.md) only when code structure needs a decision. Build coherent slices and run the implementation checks.
 
-Use goal mode for the whole job, including reviews and fixes. Reuse a matching goal; don't overwrite an unrelated one. If goal mode can't be used, explain why and track progress in the task.
+If evidence or feedback reopens the audience, problem, mechanism or agreed scope, return that specific decision to [$software-factory](../software-factory/SKILL.md), then resume delivery from its updated agreement. Do not repeat settled discovery or treat missing evidence as approval. A new product's prototype does not prove the implemented outcome.
+
+Use goal tracking only when available and explicitly requested under the runtime's rules; reuse a matching goal. Otherwise track criteria and completion in the existing task record. Do not create another task, board or automation as a side effect of delivery.
 
 ## Review
 
-Once the product is ready to test, assign each review to a separate subagent. Give them the original request, success criteria, and what they need to run the product. Let them judge the result without coaching them toward a pass.
+Select reviews from the changed behavior and original criteria, not a fixed quota. State the selected coverage briefly in the existing record. Reuse still-applicable evidence and combine overlapping checks; changes or unresolved failures require affected-path rechecks.
 
-Run reviews in parallel where possible. Reviewers sharing a browser or computer session should take turns.
+| Change | Required coverage |
+|---|---|
+| Contained code, CLI, backend or configuration change | [$code-review](../code-review/SKILL.md), relevant repository checks, and [$verify-feature](../verify-feature/SKILL.md) on the actual affected workflow, including a realistic failure or recovery path. |
+| Interface or interaction change | The coverage above plus relevant usability, accessibility and visual checks through [$ui-lint](../ui-lint/SKILL.md) or [$impeccable](../impeccable/SKILL.md). Inspect the changed states and exercise their controls; a backend-only fix does not need a visual review. |
+| New user-facing product or substantially new user journey | Applicable coverage above plus a representative end-to-end task and [$synthetic-userstudies](../synthetic-userstudies/SKILL.md) for comprehension and usefulness hypotheses. Reuse a sufficient walkthrough of the current version; preserve an explicitly requested alternative method and report its limits. |
 
-1. **Synthetic users:** Have simulated users attempt a realistic task from start to finish with representative inputs, without guidance. Can they finish the job, and is the resulting output useful? Record where they get confused, need workarounds, or give up.
-2. **Heuristic evaluation:** Check usability, accessibility, and polish using [$ui-lint](../ui-lint/SKILL.md), [$impeccable](../impeccable/SKILL.md), and Nielsen Norman heuristics. Show the specific screen or interaction and the obstacle behind each finding. Preserve approved design choices while fixing the obstacle.
-3. **Agentic QA:** Use the browser or computer to test the actual product. For CLI or backend work, run the commands or call the endpoints. Check the main flow, transitions after completed actions, errors, recovery, and whether changes persist. Use [$verify-feature](../verify-feature/SKILL.md), and capture steps and screenshots or logs. Unit tests alone aren't enough.
-4. **Slop gate/code review:** Use [$code-review](../code-review/SKILL.md) to find bugs, unnecessary complexity, duplication, dead code, and weak tests. Run existing quality checks; use [$ci-slopgate](../ci-slopgate/SKILL.md) if a gate needs repair.
+Use independent reviewers for selected reviews when subagents are available and delegation is authorized. Give them the original request, criteria, artifact version and execution setup without coaching a verdict. Delegate bounded independent work in parallel; reviewers sharing a browser or computer session take turns. If independent review is unavailable, perform the applicable checks directly and disclose the limit instead of blocking unrelated work or claiming an independent pass.
 
-Adapt reviews to the product's actual surface. Use deterministic checks for fixed contracts, browser automation for repeatable interactions, and agents for exploration and judgment. Reuse existing checks. Don't count an unrun review as a pass.
+Use deterministic checks for fixed contracts, browser automation for repeatable interactions, and agents for exploration and judgment. Synthetic reactions remain hypotheses, not customer evidence. Preserve approved design choices while fixing observed obstacles. Use [$ci-slopgate](../ci-slopgate/SKILL.md) only if a quality gate needs repair. Unit tests alone do not prove the configured workflow; record screenshots or logs from actual execution. Do not count an unrun review as a pass.
 
 ## Fix and recheck
 
@@ -36,8 +39,8 @@ Keep ownership of authorized fixes when invoking other skills: their review repo
 
 If something blocks a review, explain what is missing and keep working on what you can.
 
-When waiting for a PR to turn green, set a recurring 15-minute check-in to inspect the latest checks and fix failures. Stop it once the failures are fixed and the checks pass.
+When waiting for a PR, inspect checks within the active task and fix authorized failures. Schedule recurring checks only when the user explicitly requests follow-up and the runtime supports it; follow that cadence and stop condition. A pending CI run remains pending, not passed.
 
 For improvement claims, compare equivalent workloads over the requested scope, including failures and retries; distinguish component gains from whole-job results.
 
-Complete the goal only when the agreed outcome is delivered and the reviews pass. If deployment is part of the job, verify it with [$verify-deploy](../verify-deploy/SKILL.md). Report what works, how it was tested, and any remaining limitations.
+Finish when the agreed outcome is delivered and all applicable reviews pass on the final version; complete an active matching goal only under the runtime's rules. Deployment is required only when it is part of the agreed finish line; verify it with [$verify-deploy](../verify-deploy/SKILL.md). Report criterion status, evidence links or artifact paths, and remaining limitations. Existing tests and CI count for what they demonstrate; do not require production deployment for a local change.

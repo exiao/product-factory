@@ -19,6 +19,14 @@ Apply the preferences below to the requested production UI or reviewable artifac
 
 Inspect the current source, supplied screenshots, design files, tokens, and relevant assets. Existing visual evidence matters even without a DESIGN.md. Use the current project's design system and [$impeccable](../impeccable/SKILL.md) for frontend design workflow and commands. Keep Impeccable unmodified: this skill owns personal preferences and local references, while Impeccable owns its upstream workflow and tooling. Use its public skill entrypoint rather than depending on internal reference paths. Apply these personal defaults within the requested scope; explicit briefs and established systems win. Combine overlapping steps into one workflow, including one shared review budget. Preserve the brief and established product behavior; a small change does not authorize a redesign.
 
+## Product context handoff
+
+When arriving from Software Factory, reuse its accepted vision, person and job, mechanism, constraints, evidence and explicit or delegated decisions. Use [$impeccable](../impeccable/SKILL.md)'s context setup once per session, reusing a completed setup, and follow its init record-writing format, including its schema marker and platform value. Create or update the resolved PRODUCT.md from accepted facts before visual work, preserving confirmed content and linking the original criteria and evidence. Keep visual decisions in DESIGN.md and decision history in the existing project record; link PRODUCT.md there instead of duplicating its facts.
+
+For this handoff, existing explicit answers and approvals satisfy product-truth confirmation; this reuse rule takes precedence over requiring a new init interview merely because PRODUCT.md is missing. Ask only about consequential gaps or contradictions that remain unresolved. Product approval does not settle an unanswered platform, stack or design-workflow choice. Keep assumptions and open questions labeled; a file's existence does not turn an inference into an approval. Preserve Impeccable's upstream files, record format and scope limits on drift repair. Resume its applicable design workflow once the record is ready.
+
+## Design and artifact checks
+
 Apply these checks directly; they do not depend on loading a reference:
 
 - For an open brief, explore structurally different concepts briefly, then turn the user's taste and reactions into a concrete direction. A fixed brief or narrow change proceeds directly.
