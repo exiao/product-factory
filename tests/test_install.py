@@ -65,7 +65,7 @@ class InstallerTests(unittest.TestCase):
                 self.assertEqual(path.read_bytes(), (self.dest / path.relative_to(self.source / 'skills')).read_bytes())
         self.assertFalse((self.dest / '.DS_Store').exists())
         receipt = self.receipt()
-        self.assertEqual(receipt['skills'], ['alpha'])
+        self.assertEqual({p.split('/')[0] for p in receipt['files']}, {'alpha'})
         self.write('beta/SKILL.md', 'new skill')
         self.run_cli(code=1)
         self.assertFalse((self.dest / 'beta').exists())
@@ -120,7 +120,7 @@ class InstallerTests(unittest.TestCase):
         (self.dest / 'beta/notes.txt').write_text('Unrelated beta')
         self.run_cli('--update', code=1)
         self.assertFalse((self.dest / 'beta/SKILL.md').exists())
-        self.assertNotIn('beta', self.receipt()['skills'])
+        self.assertFalse(any(p.startswith('beta/') for p in self.receipt()['files']))
         self.assertEqual((self.dest / 'beta/notes.txt').read_text(), 'Unrelated beta')
 
     def test_update_preserves_nested_unowned_folders(self):
@@ -144,6 +144,26 @@ class InstallerTests(unittest.TestCase):
         self.write('alpha/references/new.md', 'New guide')
         self.run_cli('--update')
         self.assertEqual((self.dest / 'alpha/references/new.md').read_text(), 'New guide')
+
+    def test_removed_skill_with_only_local_files_is_not_adopted_again(self):
+        self.write('beta/SKILL.md', 'Keep another skill in the bundle')
+        self.run_cli()
+        (self.dest / 'alpha/local.txt').write_text('User-owned work')
+        shutil.rmtree(self.source / 'skills/alpha')
+        self.run_cli('--update')
+        self.write('alpha/SKILL.md', 'Reintroduced upstream skill')
+        self.run_cli('--update', code=1)
+        self.assertFalse((self.dest / 'alpha/SKILL.md').exists())
+        self.assertEqual((self.dest / 'alpha/local.txt').read_text(), 'User-owned work')
+
+    def test_prior_receipt_with_extra_skills_field_can_update(self):
+        self.run_cli()
+        receipt = self.receipt()
+        receipt['skills'] = ['alpha']
+        (self.dest / RECEIPT).write_text(json.dumps(receipt))
+        self.write('alpha/SKILL.md', 'New content')
+        self.run_cli('--update')
+        self.assertEqual((self.dest / 'alpha/SKILL.md').read_text(), 'New content')
 
     def test_legacy_invalid_receipt_and_symlink_refusal(self):
         self.dest.mkdir()
@@ -185,7 +205,7 @@ class InstallerTests(unittest.TestCase):
         skills, files = module.inventory(self.source / 'skills')
         with patch.object(module, 'save_receipt', side_effect=OSError('disk error')):
             with self.assertRaises(OSError):
-                module.update(self.dest, self.source / 'skills', skills, files)
+                module.update(self.dest, self.source / 'skills', files)
         after = {p.relative_to(self.dest): p.read_bytes() for p in self.dest.rglob('*') if p.is_file()}
         self.assertEqual(before, after)
         self.assertFalse((self.dest / 'alpha/new').exists())

@@ -49,16 +49,11 @@ def read_receipt(destination):
                          'compare/back up older skills before reinstalling; see docs/setup.md.')
     receipt = json.loads(path.read_text())
     if (not isinstance(receipt, dict) or receipt.get('version') != 1
-            or not isinstance(receipt.get('skills'), list)
             or not isinstance(receipt.get('files'), dict)):
         raise ValueError('Invalid or unsupported installation receipt.')
-    names = receipt['skills']
-    if not all(isinstance(name, str) and re.fullmatch(r'[a-z0-9][a-z0-9-]*', name)
-               for name in names):
-        raise ValueError('Invalid skill names in installation receipt.')
     for relative, checksum in receipt['files'].items():
         parts = relative.split('/')
-        if (len(parts) < 2 or parts[0] not in names
+        if (len(parts) < 2 or not re.fullmatch(r'[a-z0-9][a-z0-9-]*', parts[0])
                 or any(part in ('', '.', '..') or '\\' in part or ':' in part for part in parts)
                 or not isinstance(checksum, str) or not re.fullmatch(r'[0-9a-f]{64}', checksum)):
             raise ValueError(f'Invalid receipt file entry: {relative}')
@@ -78,8 +73,8 @@ def atomic_write(path, content, mode):
             os.unlink(temporary)
 
 
-def save_receipt(destination, skills, files):
-    content = json.dumps({'version': 1, 'skills': sorted(skills), 'files': files},
+def save_receipt(destination, files):
+    content = json.dumps({'version': 1, 'files': files},
                          indent=2, sort_keys=True) + '\n'
     atomic_write(destination / RECEIPT, content.encode(), 0o600)
 
@@ -103,7 +98,7 @@ def install(destination, skills, files):
             target.mkdir()
             created.append(target)
             shutil.copytree(source, target, dirs_exist_ok=True)
-        save_receipt(destination, [p.name for p in skills], files)
+        save_receipt(destination, files)
     except (OSError, KeyboardInterrupt):
         for target in reversed(created):
             shutil.rmtree(target)
@@ -112,19 +107,13 @@ def install(destination, skills, files):
     return 0
 
 
-def update(destination, source_root, skills, files):
-    receipt = read_receipt(destination)
-    old = receipt['files']
-    owned = set(receipt['skills'])
-    owned_dirs = parent_directories(old) | owned
-    incoming = {p.name for p in skills}
-    blocked = {name for name in incoming - owned if os.path.lexists(destination / name)}
-    conflicts = [f'{name}: existing skill is not managed by this installation' for name in sorted(blocked)]
+def update(destination, source_root, files):
+    old = read_receipt(destination)['files']
+    owned_dirs = parent_directories(old)
+    conflicts = []
     next_files = dict(old)
     changes = []
     for relative in sorted(set(old) | set(files)):
-        if relative.split('/')[0] in blocked:
-            continue
         target = safe_path(destination, relative)
         unowned_parent = next((parent for parent in PurePosixPath(relative).parents
                                if parent != PurePosixPath('.') and parent.as_posix() not in owned_dirs
@@ -171,7 +160,7 @@ def update(destination, source_root, skills, files):
                     created_dirs.append(parent)
                 atomic_write(target, source.read_bytes(), mode if mode is not None
                              else stat.S_IMODE(source.stat().st_mode))
-        save_receipt(destination, owned | (incoming - blocked), next_files)
+        save_receipt(destination, next_files)
     except (OSError, KeyboardInterrupt):
         for target, original, mode in reversed(undo):
             if original is None:
@@ -217,7 +206,7 @@ def main():
             raise ValueError(f'Installation lock exists: {lock}. If no installer is running, '
                              'inspect an interrupted installation before removing this lock.')
         try:
-            return update(destination, source_root, skills, files) if args.update else install(destination, skills, files)
+            return update(destination, source_root, files) if args.update else install(destination, skills, files)
         finally:
             lock.rmdir()
     except (OSError, ValueError, KeyboardInterrupt) as error:
