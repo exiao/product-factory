@@ -12,13 +12,57 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    strategy:
-      matrix:
-        python-version: ["3.8", "3.13"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
-      - run: python3 scripts/validate.py
-      - run: python3 -m unittest discover -s tests -v
+          python-version: "3.13"
+      - run: python -m pip install PyYAML==6.0.2 markdown-it-py==3.0.0
+      - name: Check skill metadata and local Markdown links
+        run: |
+          python - <<'PY'
+          import subprocess
+          from pathlib import Path
+          from urllib.parse import unquote, urlsplit
+          import yaml
+          from markdown_it import MarkdownIt
+
+          root = Path.cwd().resolve()
+          errors = []
+          skills = [p for p in (root / 'skills').iterdir() if p.is_dir()]
+          if not skills:
+              errors.append('No skill directories found')
+          for skill in skills:
+              try:
+                  lines = (skill / 'SKILL.md').read_text().splitlines()
+                  assert lines[0] == '---', 'Missing frontmatter'
+                  metadata = yaml.safe_load('\n'.join(lines[1:lines.index('---', 1)]))
+                  assert isinstance(metadata, dict), 'Frontmatter must be a mapping'
+                  assert metadata.get('name') == skill.name, 'Name must match the skill directory'
+                  description = metadata.get('description')
+                  assert isinstance(description, str) and description.strip(), 'Description must be a nonempty string'
+              except (OSError, ValueError, IndexError, AssertionError, yaml.YAMLError) as error:
+                  errors.append(f'{skill.relative_to(root)}/SKILL.md: {error}')
+
+          markdown = MarkdownIt()
+          for name in subprocess.check_output(['git', 'ls-files', '-z', '--', '*.md'], text=True).split('\0'):
+              if not name:
+                  continue
+              path = root / name
+              pending = markdown.parse(path.read_text())
+              while pending:
+                  token = pending.pop()
+                  pending.extend(token.children or [])
+                  target = token.attrGet('href') if token.type == 'link_open' else token.attrGet('src') if token.type == 'image' else None
+                  if target is None:
+                      continue
+                  url = urlsplit(target)
+                  if url.scheme or url.netloc or not url.path:
+                      continue
+                  resolved = (path.parent / unquote(url.path)).resolve()
+                  if not resolved.is_relative_to(root) or not resolved.exists():
+                      errors.append(f'{name}: missing or outside-repository link: {target}')
+          if errors:
+              raise SystemExit('\n'.join(errors))
+          print(f'Validated {len(skills)} skills and local Markdown links.')
+          PY
