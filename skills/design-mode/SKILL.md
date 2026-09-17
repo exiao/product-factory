@@ -42,7 +42,7 @@ For optional exploration techniques, read [creative exploration](references/crea
 
 For custom text geometry, such as prose flowing around moving shapes or measured canvas typography, read [Pretext](references/pretext.md). Use it only when the requested behavior needs text measurement before rendering; prefer ordinary HTML/CSS otherwise.
 
-For brand-inspired styling, use the [popular web design reference library](references/popular-web-designs/index.md). Load its index and only the selected brand reference when requested or useful for an open brief. Treat these as visual inspiration; the user's brief and established project design system take precedence. Design-mode and Impeccable continue to own implementation and verification.
+For brand-inspired styling, consult the relevant reference in [VoltAgent's awesome-design-md](https://github.com/VoltAgent/awesome-design-md) on demand; no local copy is bundled. For an exact or current match, inspect the user's supplied reference or the live site. Use references as visual inspiration within the user's brief and established project design system. Design-mode and Impeccable continue to own implementation and verification.
 
 For structured UI reviews or rule-linked code polish, use [$ui-lint](../ui-lint/SKILL.md) when relevant; do not add a separate audit to every design task. For dashboards, navigation changes, charts, layout choices, or component specifications, read the applicable section of [review playbooks](references/review-playbooks.md).
 

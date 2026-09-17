@@ -1,6 +1,6 @@
 ---
 name: idea-validation
-description: Triage business and product ideas using concrete buyer, placement, pitch, proposed price, and a demand-test plan. Use for which idea to build, idea comparisons, and willingness-to-pay hypotheses; includes optional Sahil-style bootstrapping and YC-style discovery lenses, not measured market sizing.
+description: Triage business and product ideas using concrete buyer, placement, pitch, proposed price, and a demand-test plan. Use for which idea to build, idea comparisons, and willingness-to-pay hypotheses; includes optional bootstrapping and YC-style discovery lenses, not measured market sizing.
 ---
 
 # Idea validation
@@ -24,7 +24,7 @@ Assess the founder's practical advantage: access to a buyer, domain knowledge, t
 
 If asked about existing app opportunities, use dated, available research sources and verify rankings, reviews, pricing, and the actual differentiated product experience. Prometheus may help when available. Viral hooks and top-grossing charts can identify leads; they do not establish profitability, replicability, or a guaranteed distribution advantage. Adapt legitimate product patterns and customer needs without copying protected assets or inventing endorsements.
 
-For first-customer, manual-service, or bootstrap questions, read the Sahil-inspired section of [references/office-hours.md](references/office-hours.md). For problem discovery, scope reduction, or explicitly requested ambitious exploration, read its YC-style section. Reuse the current brief; these lenses do not add a mandatory interview or expansion phase. Detailed packaging and growth optimization are optional extensions outside this bundle. If needed, use an available specialist or address the narrow question directly with explicit assumptions; do not expand product validation into a marketing workflow.
+For first-customer, manual-service, or bootstrap questions, read the bootstrap and first-customer section of [references/office-hours.md](references/office-hours.md). For problem discovery, scope reduction, or explicitly requested ambitious exploration, read its YC-style section. Reuse the current brief; these lenses do not add a mandatory interview or expansion phase. Detailed packaging and growth optimization are optional extensions outside this bundle. If needed, use an available specialist or address the narrow question directly with explicit assumptions; do not expand product validation into a marketing workflow.
 
 For a build/no-build proposal, make the decision useful without imposing a fixed template. Reuse the stated audience and pitch, then identify the evidence that the problem exists, the current workaround, why it merits attention now, the smallest useful change or demand test, and what competing work it would displace. Separate observed demand from founder intuition or a persuasive mock ad. If evidence is missing, name the gap rather than inventing customer signals.
 

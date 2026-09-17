@@ -77,8 +77,19 @@ Have your agent copy the skill folders into `$CODEX_HOME/skills` (default `~/.co
 
 Research needs web access; browser QA, image generation and deployment need your own tools and accounts. Native iOS testing needs macOS and Xcode. Missing optional tools limit the work that depends on them. Installing skills does not authorize publishing, spending or contacting people.
 
-## Maintenance and sources
+## Maintenance
 
 GitHub Actions checks skill names/descriptions and local Markdown links directly in [the validation workflow](.github/workflows/validate.yml). These checks do not measure how well an agent performs product work.
 
-Impeccable includes upstream tooling from [pbakaus/impeccable](https://github.com/pbakaus/impeccable); its launcher may download a pinned engine on first use and needs network access for that download. Third-party source links and license notices remain with the skills. This repository does not relicense that material.
+The bundled Impeccable launcher may download a pinned engine on first use and needs network access for that download.
+
+## Credits
+
+Product Factory includes and adapts work from these projects and authors:
+
+| Source | Used here |
+| --- | --- |
+| [Impeccable](https://github.com/pbakaus/impeccable) by [Paul Bakaus](https://github.com/pbakaus) | The bundled [Impeccable skill and tooling](skills/impeccable/SKILL.md), used by the design workflow. |
+| Anshu Chimala's [How to turn your AI into a world-class designer](https://www.lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world) | Design-mode's [creative exploration guidance](skills/design-mode/references/creative-exploration.md), adapted from the accessible portion of the article. |
+
+Further method references are documented alongside the relevant skills. Original source links and license notices remain with the material; this repository does not relicense it or imply endorsement by its authors.
