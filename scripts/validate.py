@@ -137,8 +137,6 @@ def validate_inventory(root, skill_dirs):
             match = re.fullmatch(r"skills/([^/]+)/SKILL\.md", destination)
             if match:
                 bundle_skills.append(match.group(1))
-    if len(bundle_skills) != len(actual):
-        errors.append(f"BUNDLE.md: lists {len(bundle_skills)} skills; found {len(actual)} skill directories")
     duplicates = sorted(name for name in set(bundle_skills) if bundle_skills.count(name) > 1)
     if duplicates:
         errors.append("BUNDLE.md: duplicate skills: " + ", ".join(duplicates))
@@ -150,8 +148,7 @@ def validate_inventory(root, skill_dirs):
         errors.append("BUNDLE.md: unknown skills: " + ", ".join(extra))
     for document in (bundle, readme):
         if not document.exists():
-            if document == readme:
-                errors.append("README.md: file is missing")
+            errors.append(f"{document.name}: file is missing")
             continue
         advertised = [int(value) for value in COUNT.findall(document.read_text(encoding="utf-8"))]
         if not advertised:

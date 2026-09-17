@@ -48,7 +48,7 @@ def read_receipt(destination):
         raise ValueError('No installation receipt. Install into an empty --dest and '
                          'compare/back up older skills before reinstalling; see docs/setup.md.')
     receipt = json.loads(path.read_text())
-    if (not isinstance(receipt, dict) or receipt.get('version') != 1
+    if (not isinstance(receipt, dict) or receipt.get('version') not in (1, 2)
             or not isinstance(receipt.get('files'), dict)):
         raise ValueError('Invalid or unsupported installation receipt.')
     for relative, checksum in receipt['files'].items():
@@ -74,7 +74,7 @@ def atomic_write(path, content, mode):
 
 
 def save_receipt(destination, files):
-    content = json.dumps({'version': 1, 'files': files},
+    content = json.dumps({'version': 2, 'files': files},
                          indent=2, sort_keys=True) + '\n'
     atomic_write(destination / RECEIPT, content.encode(), 0o600)
 

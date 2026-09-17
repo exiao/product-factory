@@ -14,6 +14,8 @@ python3 install.py
 
 A fresh install checks destination skill names before copying and refuses existing folders. It saves `.product-factory-install.json` in the destination with hashes of the files it installed. Keep this receipt: it lets later updates distinguish bundle files from local customizations.
 
+The installer writes version 2 receipts and can update version 1 installations. Older installer revisions cannot read version 2 receipts; use the current checkout when updating.
+
 To inspect the bundle without changing your installation:
 
 ```sh

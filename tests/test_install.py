@@ -159,11 +159,13 @@ class InstallerTests(unittest.TestCase):
     def test_prior_receipt_with_extra_skills_field_can_update(self):
         self.run_cli()
         receipt = self.receipt()
+        receipt['version'] = 1
         receipt['skills'] = ['alpha']
         (self.dest / RECEIPT).write_text(json.dumps(receipt))
         self.write('alpha/SKILL.md', 'New content')
         self.run_cli('--update')
         self.assertEqual((self.dest / 'alpha/SKILL.md').read_text(), 'New content')
+        self.assertEqual(self.receipt()['version'], 2)
 
     def test_legacy_invalid_receipt_and_symlink_refusal(self):
         self.dest.mkdir()
