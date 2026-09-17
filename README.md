@@ -90,7 +90,6 @@ Product Factory includes and adapts work from these projects and authors:
 | Source | Used here |
 | --- | --- |
 | [Impeccable](https://github.com/pbakaus/impeccable) by [Paul Bakaus](https://github.com/pbakaus) | The bundled [Impeccable skill and tooling](skills/impeccable/SKILL.md), used by the design workflow. |
-| VoltAgent's [awesome-design-md](https://github.com/VoltAgent/awesome-design-md) | The source collection credited by the [brand-reference library](skills/design-mode/references/popular-web-designs/index.md). |
 | Sahil Lavingia's [skills](https://github.com/slavingia/skills) and *The Minimalist Entrepreneur* | The optional bootstrap and first-customer lens in [idea-validation](skills/idea-validation/references/office-hours.md). |
 | Anshu Chimala's [How to turn your AI into a world-class designer](https://www.lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world) | Design-mode's [creative exploration guidance](skills/design-mode/references/creative-exploration.md), adapted from the accessible portion of the article. |
 
