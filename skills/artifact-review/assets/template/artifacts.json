@@ -1,0 +1,16 @@
+{
+  "id": "example-review",
+  "title": "Example review",
+  "artifacts": [
+    {
+      "id": "proposal",
+      "version": 1,
+      "type": "Proposal",
+      "title": "Review example",
+      "question": "Does this proposal solve the problem?",
+      "content": [
+        "Replace this example with the actual artifact to review."
+      ]
+    }
+  ]
+}

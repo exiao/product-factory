@@ -1,29 +1,8 @@
-# Optional office-hours lenses
+# Office-hours routing and discovery
 
-Use the section that changes the current decision. These optional lenses cover bootstrapping, first customers, discovery and scope. The YC-style section combines discovery questions with ambitious product thinking; treat it as a framework, not official YC advice or an endorsement.
+For Sahil-style bootstrapping, use minimalist-entrepreneur (optional, when installed). It owns the explicit community-first, paid manual delivery, first-customer, and sustainable-growth recommendations. This replaces the former softened Sahil summary here; keep that guidance in one place.
 
-## Bootstrap and first customers
-
-Start from people whose problem you understand and can realistically reach. Existing community membership can help, but is not a prerequisite. Use specific buyer segments and observed workarounds; do not invent named prospects or equate friends' enthusiasm with demand.
-
-Ask whether a small manual service can test the value before investing in automation. If useful, sketch:
-
-1. The trigger and what the customer supplies.
-2. The actual steps, tools, and judgment required.
-3. The result delivered and its quality standard.
-4. Time and cost per customer, including support and founder labor.
-5. The proposed price or commitment and what would justify repeating the process.
-6. Which proven step would be worth automating next.
-
-Manual delivery is a test option, not a universal requirement. Some products need software to demonstrate their core value; some manual pilots test a different service entirely. Identify what the pilot can and cannot establish. Do not require a weekend build, ten interviews, or a fixed paying-customer count as a universal gate.
-
-A paid pilot can test willingness to pay more directly than praise. Free trials, freemium, public goods, and other models can still be appropriate. Judge price together with fulfillment costs and buyer value; do not mandate starting cheap or always charging. Track evidence of repeat use and sustainable delivery separately from a first sale.
-
-For finding initial customers, choose qualified, reachable people and a relevant channel. Warm introductions may help, but friends and family are neither required buyers nor a representative market. Draft outreach only when helpful to the request; contacting people, collecting payment, or delivering a service requires that authorization. No bulk-contact quotas or automatic sending.
-
-For a bootstrap decision, examine customer benefit, simplest viable delivery, reversibility, time versus money, economics, and fit with the founder's goals. Profitability can preserve control, but does not make runway literally unlimited. Ads, hiring, fundraising, and launch timing are contextual choices, not prohibited until arbitrary milestones.
-
-Useful output: the smallest credible offer, delivery sketch, biggest risk, and one test to run next. A fixed launch threshold or a broad marketing calendar is unnecessary for a narrow validation question.
+The YC-style section below is adapted from the exported YC Office Hours skill. It combines discovery questions with ambitious product thinking; it is a framework, not official YC advice or access to an advisor.
 
 ## Discovery and scope: YC-style
 

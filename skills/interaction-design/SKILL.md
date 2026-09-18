@@ -1,6 +1,6 @@
 ---
 name: interaction-design
-description: Design product information architecture, navigation, grouping, and action placement; translate accepted stories into wireflows and clickable prototypes. Use for unresolved behavior or confusing existing navigation and settings; not for visual polish alone.
+description: "Design product navigation, information grouping, action placement, and interaction behavior. Use for unresolved flows or confusing navigation and settings, translating accepted stories into wireflows or clickable prototypes; visual polish alone uses impeccable."
 ---
 
 # Interaction Design
@@ -59,6 +59,8 @@ Make deliberate decisions about what belongs together, where it lives, and how p
 - Give headers and toolbars a clear hierarchy. Check each item's role and scope: title/location, navigation, primary action, contextual action, or secondary destination. Keep controls near the content they affect. Move unrelated or infrequent destinations into a relevant group when that improves findability; do not hide useful actions in overflow solely to achieve a cleaner screenshot.
 - Review competing navigation systems, duplicated destinations, and excessive depth where they affect the task. Prioritize by task importance, frequency, and consequence, preserving familiar placement unless the benefit of a change justifies relearning. Use progressive disclosure for genuinely secondary detail, not to conceal the core task.
 - Specify semantic priority before polishing appearance: what should be noticed first, what is secondary, and why. Pass that hierarchy to design-mode and Impeccable for spacing, alignment, typography, and emphasis. A functional click path does not by itself establish good organization.
+
+Treat interface copy as part of the interaction. Before adding a label, eyebrow, subtitle, or helper sentence, identify the distinct question it answers at this moment that the existing content and controls do not answer. For example, “Upload a file to get started” adds little beside a clearly labeled upload control, while a required file format or size limit may prevent a failed attempt. Prefer clearer grouping, control wording, or feedback over explanatory prose that compensates for a confusing structure. Preserve instructions needed for unfamiliar actions, accessibility, consequences, and recovery; do not replace useful text with cryptic icons. Carry only necessary product copy into the wireflow and keep design rationale in its annotations or brief.
 
 For example, a header containing “Settings,” “Done,” and “Manage access” deserves a role check. If Done dismisses the panel and Manage access opens a separate permissions area, a plausible structure is a title and dismissal control in the header with an Access row in the panel. Confirm the functions and platform conventions before applying that structure; it is not a universal rule that headers may contain only two items.
 

@@ -1,6 +1,6 @@
 ---
 name: synthetic-userstudies
-description: "Simulate persona interviews, research panels, and product walkthroughs, including adversarial UX tests. Use for explicitly synthetic or simulated research; findings are hypotheses, not customer evidence."
+description: "Simulate persona interviews, research panels, product walkthroughs, and multi-turn users of AI products. Use for explicitly synthetic or simulated research; findings are hypotheses, not customer evidence."
 ---
 
 # Synthetic UX research
@@ -79,6 +79,10 @@ For live persona walkthroughs, follow [embodied-persona-live-browser.md](referen
 For independent tasks, record relevant prior exposure and moderator help. Earlier tasks may teach a destination or term; a screen reset alone does not erase that knowledge. Use fresh participant context or counterbalanced task order when first-attempt findability is the question. Preserve learned state when continuity is the question, and report these conditions separately.
 
 For time-spanning scenarios or studies used to evaluate the simulator itself, read [temporal studies and archive comparisons](references/temporal-and-archive-studies.md). Do not add a longitudinal protocol to a simple screen review.
+
+## Multi-turn users of AI products
+
+When testing how an AI product clarifies and carries out a user's task through conversation, follow [multi-turn collaboration](references/multi-turn-collaboration.md). Run the simulated user against actual target responses when execution is available; keep private persona context separate from the target and verify the resulting work independently. A researcher interviewing a fictional participant remains an interview; ordinary screen reviews do not require this mode or Harbor.
 
 ## Adversarial walkthroughs
 

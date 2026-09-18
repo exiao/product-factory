@@ -1,6 +1,6 @@
 ---
 name: make-it-work
-description: Own delivery of an agreed outcome through implementation, scoped reviews, fixes and runtime verification. Use for make-it-work requests and Software Factory delivery handoffs; unresolved product direction stays with Software Factory.
+description: "Own delivery of an agreed outcome through implementation, scoped reviews, fixes and runtime verification. Use for explicit make-it-work requests, project instructions or Software Factory delivery handoffs; generic phrases such as handle this are insufficient."
 ---
 
 # Make it work
@@ -12,6 +12,8 @@ Build the full agreed outcome, prove it works, and fix it until it passes.
 Reuse the agreed outcome, original and detailed criteria, evidence plan, current artifacts, exclusions and authorization from the request or Software Factory handoff. Own implementation, integration, review selection, fixes and completion reporting in the same task. Map each requirement to evidence from the actual configured workflow and its downstream result. Use [$program-design](../program-design/SKILL.md) only when code structure needs a decision. Build coherent slices and run the implementation checks.
 
 If evidence or feedback reopens the audience, problem, mechanism or agreed scope, return that specific decision to [$software-factory](../software-factory/SKILL.md), then resume delivery from its updated agreement. Do not repeat settled discovery or treat missing evidence as approval. A new product's prototype does not prove the implemented outcome.
+
+During implementation, use [$ponytail](../ponytail/SKILL.md) to choose the smallest complete solution after tracing the affected workflow. Preserve the agreed scope, required verification, and completion reporting; Ponytail's brevity and testing defaults do not replace those requirements.
 
 Use goal tracking only when available and explicitly requested under the runtime's rules; reuse a matching goal. Otherwise track criteria and completion in the existing task record. Do not create another task, board or automation as a side effect of delivery.
 
