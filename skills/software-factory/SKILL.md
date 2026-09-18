@@ -1,6 +1,6 @@
 ---
 name: software-factory
-description: Coordinate unresolved product decisions through vision, research and design, then hand delivery to Make It Work. Also support focused operations on individual artifacts; settled implementation and clear fixes go directly to Make It Work.
+description: "Coordinate product discovery and design, then hand delivery to Make It Work. Use for an end-to-end product initiative or an explicitly requested factory workflow; focused operations remain available."
 ---
 
 # Software Factory

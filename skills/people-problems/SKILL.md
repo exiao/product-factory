@@ -27,7 +27,7 @@ Before promoting an account into a problem, check what it actually establishes: 
 
 ## Statement standard
 
-Adapted from the user-supplied *People Problems* guide, pages 1–2. The standard below is self-contained. Keep each statement short; put the audience, situation, evidence, and measures alongside it.
+Adapted from the preserved People Problems guide, PDF pages 1–2. The standard below is self-contained. Keep each statement short; put the audience, situation, evidence, and measures alongside it.
 
 Check each statement against all five principles:
 

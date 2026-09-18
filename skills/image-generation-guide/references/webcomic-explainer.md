@@ -2,7 +2,7 @@
 
 Use when the user wants a comic that explains a technical change, plan, process, or system state. For product-journey research storyboards, use the storyboards skill. This is an optional illustration method within image-generation-guide, not a separate generation provider.
 
-Adapted from `skills/creative/webcomic-explainer/SKILL.md` in hermes-setup. Retains its explanation method; legacy Nano Banana, pricing, cron, Signal, and board integration instructions do not apply.
+Adapted from a private webcomic-explainer playbook. Retains its explanation method; legacy Nano Banana, pricing, cron, Signal, and board integration instructions do not apply.
 
 ## Ground the story
 

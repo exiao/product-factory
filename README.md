@@ -20,7 +20,7 @@ Use Artifact Review to decide what to keep, combine, revise or leave out. Once y
 | [`artifact-review`](skills/artifact-review/SKILL.md) | Lets you compare work, leave feedback and request revisions. |
 | [`make-it-work`](skills/make-it-work/SKILL.md) | Implements an agreed outcome, fixes issues and verifies the real workflow. |
 
-This repository supplies **26 skills** that guide how the agent works. Model access, browser tools, and deployment accounts come from your environment.
+This repository supplies **28 skills** that guide how the agent works. Model access, browser tools, and deployment accounts come from your environment.
 
 [Browse all skills](skills/) · [Detailed product workflow](skills/software-factory/references/product-workflow.md)
 
@@ -93,3 +93,5 @@ Product Factory includes and adapts work from these projects and authors:
 | Anshu Chimala's [How to turn your AI into a world-class designer](https://www.lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world) | Design-mode's [creative exploration guidance](skills/design-mode/references/creative-exploration.md), adapted from the accessible portion of the article. |
 
 Further method references are documented alongside the relevant skills. Original source links and license notices remain with the material; this repository does not relicense it or imply endorsement by its authors.
+
+The Artifact Review skill includes a reusable responsive review template and a local, fixed-task Codex submission bridge. Its bundled visual identity is the default; explicit project direction can override it. Personal PDF libraries and machine-specific paths are not required.

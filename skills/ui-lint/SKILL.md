@@ -1,6 +1,6 @@
 ---
 name: ui-lint
-description: Review UI code with named rules, assess product UX with a structured design review or heuristic scorecard, and implement focused interface polish. Use for UI code reviews, formal design critiques, and making an existing interface feel better; not broad product redesign.
+description: "Review UI code against named rules or assess a product with a structured UX scorecard. Use for formal interface audits and focused fixes to identified findings."
 license: MIT
 ---
 
