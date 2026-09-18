@@ -7,12 +7,8 @@ This guide consolidates the user's existing Hermes imagegen-cli prompting playbo
 
 The original playbook records older generation comparisons, but one purported A/B also changed lighting and camera anchors. They are historical observations, not controlled proof of model-independent improvement. This guide's installation did not rerun those generations. Validate each actual output and use genuinely controlled comparisons when needed.
 
-## Additional local-source audit
+## Additional provenance
 
-The follow-up audit used `skills/external-services/higgsfield-generate/references/seedance-prompting-guide.md` (reference sheets, single-face inputs, deliberate state changes, spatial maps), `skills/visual-design/sticker-creator/SKILL.md` (cutout delivery and orientation failures), `skills/creative/webcomic-explainer/SKILL.md` (mechanism-bearing illustrations), and `skills/creative/nano-banana-pro/references/editing-text-heavy-images.md` (preserving clean originals). These paths refer to the source Hermes workspace and are provenance, not runtime dependencies.
+Adapted from private creative-production playbooks and prior output reviews covering reference sheets, character consistency, cutout delivery, mechanism-bearing illustrations, preservation of originals, brand identity, and full-resolution inspection. These source files are not required at runtime.
 
-`VISUAL-IDENTITY.md`, `profile-extracts/creative.md`, `creative-review.md`, and the extracted content-critic/content-QA role briefs informed project-specific identity, separate creative and technical judgments, and verification of the receiving copy. A historical personal palette is not imposed on another brand, era, or requested style. Provider limits, fixed resolution and panel counts, mandatory reviewer pipelines, and automatic deployment were excluded.
-
-Local memory review also used `memories/hermes.md` (source-text transcription for screenshot edits; full-resolution final review), `memories/archive/meta-ads-ops.md` (OCR's inability to verify avatar shape), `memories/bloom.md` (repeatedly rejected image concepts), and `memories/archive/webcomic-explainer-skill-design.md` (explain the mechanism rather than decorate the status). The guide retains these failure-prevention lessons, not historical permission to ship on model reputation, old service limits, or claims that publication can never be reversed.
-
-Notebook and sticker styles are now maintained as direct references in this guide. The notebook block preserves the installed notebook-sketch style; the sticker treatment adapts `skills/visual-design/sticker-creator/SKILL.md` without its provider scripts, credential access, automatic Bloom branding, or fixed export dimensions.
+The guide retains reusable failure-prevention lessons. Historical permissions, provider limits, fixed dimensions, mandatory reviewer pipelines, and automatic deployment were excluded. Notebook and sticker guidance is maintained in the bundled references.

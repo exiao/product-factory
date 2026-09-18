@@ -53,7 +53,7 @@ Preserve previous versions and their feedback in the project record. Do not expo
 
 **Request revision** handles changes, additional research, and new alternatives through the existing Notes field. Do not add separate Request research, New option, or generic Add comment buttons beside it. **Keep** records acceptance and any optional note; **Request revision** records a change request without approval. Draft text and checked options alone are not approval.
 
-Annotations are an optional extension when an image point, passage, or video timestamp provides useful precision. Pair anchors with artifact IDs and versions; retain whole-artifact notes. Use an available host annotation surface or the `comments-layer` skill where appropriate. The optional `review-actions` helper is for custom hosts, not part of the default proposal flow. Only add dismiss/archive for optional work with a working undo/revisit path; never treat dismissal as approval.
+Annotations are an optional extension when an image point, passage, or video timestamp provides useful precision. Pair anchors with artifact IDs and versions; retain whole-artifact notes. Use an available host annotation surface or the optional `comments-layer` skill where installed and appropriate. The optional `review-actions` helper is for custom hosts, not part of the default proposal flow. Only add dismiss/archive for optional work with a working undo/revisit path; never treat dismissal as approval.
 
 Persist input before navigation and retain it on failures. Materially changed artifacts receive a new version; prior responses remain attached to what was reviewed. Preserve all chosen options and free-text intent in the host handoff.
 
