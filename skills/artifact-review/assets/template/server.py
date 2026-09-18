@@ -1,11 +1,10 @@
-"""Isolated local review server for the bitcoin-move review desk."""
+"""Local artifact review server with per-review feedback storage."""
 # Stdlib only. Serves this review dir on 127.0.0.1; persists UI state
-# to ../feedback/current.json and immutable snapshots beside it.
+# to .feedback/current.json and immutable snapshots beside it.
 # Dispatch uses fixed server-side argv and task binding; no browser-controlled commands.
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import os
 import threading
@@ -17,9 +16,9 @@ from handoff import save_and_dispatch
 
 # Cap accepted JSON bodies at 128 KiB to bound memory/disk use.
 MAX_BODY = 128 * 1024
-# Review dir is the only static root; feedback lives one level up.
+# Hidden feedback storage belongs to this review, not sibling reviews.
 REVIEW_DIR = Path(__file__).resolve().parent
-FEEDBACK_DIR = REVIEW_DIR.parent / "feedback"
+FEEDBACK_DIR = REVIEW_DIR / ".feedback"
 CURRENT_FILE = FEEDBACK_DIR / "current.json"
 # Serializes read-modify-write cycles across handler threads.
 IO_LOCK = threading.Lock()
@@ -41,13 +40,13 @@ def _send_json(handler: SimpleHTTPRequestHandler, status: int, obj: object) -> N
     handler.wfile.write(body)
 
 
-def _same_origin_ok(handler: SimpleHTTPRequestHandler) -> bool:
+def _same_origin_ok(handler: SimpleHTTPRequestHandler, check_origin=True) -> bool:
     # Non-browser clients send no Origin/Referer and are allowed.
     # Browser fetch() always sends Origin; forms/backs may send Referer.
     host = handler.headers.get("Host", "")
     if host not in {f"127.0.0.1:{handler.server.server_port}", f"localhost:{handler.server.server_port}"}:
         return False
-    for name in ("Origin", "Referer"):
+    for name in (("Origin", "Referer") if check_origin else ()):
         val = handler.headers.get(name)
         if not val:
             continue
@@ -122,6 +121,9 @@ class Handler(SimpleHTTPRequestHandler):
         return target != REVIEW_DIR and REVIEW_DIR not in target.parents
 
     def do_GET(self):
+        if not _same_origin_ok(self, check_origin=False):
+            self.send_error(403, "Invalid request origin")
+            return
         path = urlparse(self.path).path.rstrip("/") or "/"
         if path == "/api/capabilities":
             _send_json(self, 200, {"dispatch": bool(DISPATCH_THREAD)})
@@ -166,39 +168,25 @@ class Handler(SimpleHTTPRequestHandler):
         if err:
             _send_json(self, err[0], err[1])
             return
-        if route == "/api/submit":
-            if not DISPATCH_THREAD:
-                _send_json(self, 503, {"error": "Codex is not connected. Export feedback or restart with --thread."})
-                return
-            code, receipt = save_and_dispatch(obj, FEEDBACK_DIR, DISPATCH_THREAD)
-            _send_json(self, code, {k: receipt[k] for k in ("status", "messageId", "error") if k in receipt})
-            return
-        data = _json_bytes(obj)
-        if len(data) > MAX_BODY:
-            _send_json(self, 413, {"error": f"body over {MAX_BODY} byte limit"})
-            return
         with IO_LOCK:
             try:
-                FEEDBACK_DIR.mkdir(parents=True, exist_ok=True)
                 if route == "/api/review":
-                    _atomic_write(CURRENT_FILE, data)
+                    _atomic_write(CURRENT_FILE, _json_bytes(obj))
                     _send_json(self, 200, {"saved": True})
-                    return
-                # Navigation does not change the content identity.
-                data = _json_bytes({k: v for k, v in obj.items() if k not in ("selected", "selectedAt", "exportedAt")})
-                # Identical content reuses the same immutable snapshot.
-                digest = hashlib.sha256(data).hexdigest()
-                dest = FEEDBACK_DIR / f"snapshot-{digest}.json"
-                if not dest.exists():
-                    _atomic_write(dest, data)
-                _send_json(self, 200, {"saved": True, "path": str(dest.resolve())})
+                elif route == "/api/submit" and not DISPATCH_THREAD:
+                    _send_json(self, 503, {"error": "Codex is not connected. Save feedback or restart with --thread."})
+                else:
+                    code, receipt = save_and_dispatch(
+                        obj, FEEDBACK_DIR, DISPATCH_THREAD if route == "/api/submit" else None
+                    )
+                    _send_json(self, code, {k: receipt[k] for k in ("status", "messageId", "error") if k in receipt})
             except OSError:
                 _send_json(self, 500, {"error": "failed to write feedback file"})
 
 
 def main() -> None:
     global DISPATCH_THREAD
-    ap = argparse.ArgumentParser(description="bitcoin-move local review server")
+    ap = argparse.ArgumentParser(description="Local artifact review server")
     ap.add_argument("--port", type=int, default=8769, help="localhost port")
     ap.add_argument("--thread", help="Fixed originating Codex task UUID")
     args = ap.parse_args()

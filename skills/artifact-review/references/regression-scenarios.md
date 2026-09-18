@@ -1,6 +1,6 @@
 # Review regression scenarios
 
-Run `node scripts/check-desk.cjs` for the actual default template and `python3 scripts/check-handoff.py` for dispatch fixtures. Set `NODE_PATH` to an existing Playwright installation and `PLAYWRIGHT_CHANNEL=chrome` to use installed Chrome. These checks send no live task messages. `check-actions.cjs` covers only the optional custom-host annotation helper; it is not a requirement to add that helper to a review.
+Run `node scripts/check-desk.cjs` for the actual default template plus `python3 scripts/check-server.py` for sibling isolation/request boundaries and `python3 scripts/check-handoff.py` for dispatch fixtures. Set `NODE_PATH` to an existing Playwright installation and `PLAYWRIGHT_CHANNEL=chrome` to use installed Chrome. These checks send no live task messages. `check-actions.cjs` covers only the optional custom-host annotation helper; it is not a requirement to add that helper to a review.
 
 Use the cases affected by a change; these are reusable checks, not additional user approval gates. Use isolated records and explicit test markers. Never send test feedback to a live task without authorization.
 

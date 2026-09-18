@@ -15,7 +15,7 @@ Edit `artifacts.json` and supply real artifact files. Fields:
 - Use Notes + Request revision for research, alternatives, and corrections.
 - `history` may retain prior version metadata for the host; it is not rendered in the default UI. Feedback remains versioned.
 
-Serve with `python3 server.py --port 8873 --thread ORIGINATING_TASK_UUID`. The server binds localhost, fixes the destination on startup, and refuses task rebinding. No browser-supplied thread or shell command is accepted. Confirm `codex queue --help` exists before promising submission. Without `--thread`, the UI says Save feedback and reports local-only persistence after use.
+Serve with `python3 server.py --port 8873 --thread ORIGINATING_TASK_UUID`. Feedback and task binding live in the review directory’s hidden `.feedback/` folder, excluded from static serving. Sibling reviews are isolated. The server binds localhost, fixes the destination on startup, and refuses task rebinding. No browser-supplied thread or shell command is accepted. Confirm `codex queue --help` exists before promising submission. Without `--thread`, the UI says Save feedback and reports local-only persistence after use.
 
 Submission saves an immutable content-addressed snapshot and attempts `codex queue --thread ... --message ...` with an argv array. Only a parsed acknowledgment for that task produces Sent. Duplicate snapshots reuse their receipt; uncertain delivery is not automatically retried. The queued message tells the agent to read artifact IDs/versions, preserve all selected options and distinguish drafts from explicit decisions. A receipt is not proof the requested revisions happened.
 

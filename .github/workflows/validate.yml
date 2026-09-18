@@ -66,3 +66,8 @@ jobs:
               raise SystemExit('\n'.join(errors))
           print(f'Validated {len(skills)} skills and local Markdown links.')
           PY
+
+      - name: Check artifact review persistence and dispatch
+        run: |
+          python skills/artifact-review/scripts/check-server.py
+          python skills/artifact-review/scripts/check-handoff.py
