@@ -20,7 +20,7 @@ Use Artifact Review to decide what to keep, combine, revise or leave out. Once y
 | [`artifact-review`](skills/artifact-review/SKILL.md) | Lets you compare work, leave feedback and request revisions. |
 | [`make-it-work`](skills/make-it-work/SKILL.md) | Implements an agreed outcome, fixes issues and verifies the real workflow. |
 
-This repository supplies **29 skills** that guide how the agent works. Model access, browser tools, and deployment accounts come from your environment.
+This repository supplies **30 skills** that guide how the agent works. Model access, browser tools, and deployment accounts come from your environment.
 
 [Browse all skills](skills/) · [Detailed product workflow](skills/software-factory/references/product-workflow.md)
 
@@ -71,6 +71,13 @@ and which assumptions need checking before we build.
 ```text
 Use $artifact-review to compare these concepts with me.
 Let me combine ideas and ask for changes.
+```
+
+**Inspect prior agent work**
+
+```text
+Use $inspect-traces to investigate [a recurring issue] in this project.
+Start with local Claude Code and Codex sessions.
 ```
 
 **Build the chosen direction**
