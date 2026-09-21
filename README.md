@@ -20,7 +20,7 @@ Use Artifact Review to decide what to keep, combine, revise or leave out. Once y
 | [`artifact-review`](skills/artifact-review/SKILL.md) | Lets you compare work, leave feedback and request revisions. |
 | [`make-it-work`](skills/make-it-work/SKILL.md) | Implements an agreed outcome, fixes issues and verifies the real workflow. |
 
-This repository supplies **28 skills** that guide how the agent works. Model access, browser tools, and deployment accounts come from your environment.
+This repository supplies **29 skills** that guide how the agent works. Model access, browser tools, and deployment accounts come from your environment.
 
 [Browse all skills](skills/) · [Detailed product workflow](skills/software-factory/references/product-workflow.md)
 
@@ -57,6 +57,13 @@ Start a new Codex task in your project, then try:
 ```text
 Use $software-factory to develop [your product idea].
 Show me different directions before building a prototype.
+```
+
+**Map the unknowns**
+
+```text
+Use $explore-unknowns to map what we know, what we need to learn,
+and which assumptions need checking before we build.
 ```
 
 **Review the options**
