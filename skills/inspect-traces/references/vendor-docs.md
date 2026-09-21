@@ -31,5 +31,4 @@ Find the documented read/list/search/export route for the chosen product and
 version, using existing access and the requested project/time scope. Verify
 pagination, retention, truncation, and whether an export includes full messages
 and tool events. If only metadata is available, label that limitation rather
-than reconstructing missing conversation text. Never invent a vendor's storage
-path, database schema, command, or endpoint from another vendor's conventions.
+than reconstructing missing conversation text.
