@@ -20,7 +20,7 @@ Use Artifact Review to decide what to keep, combine, revise or leave out. Once y
 | [`artifact-review`](skills/artifact-review/SKILL.md) | Lets you compare work, leave feedback and request revisions. |
 | [`make-it-work`](skills/make-it-work/SKILL.md) | Implements an agreed outcome, fixes issues and verifies the real workflow. |
 
-This repository supplies **30 skills** that guide how the agent works. Model access, browser tools, and deployment accounts come from your environment.
+This repository supplies **31 skills** that guide how the agent works. Model access, browser tools, and deployment accounts come from your environment.
 
 [Browse all skills](skills/) · [Detailed product workflow](skills/software-factory/references/product-workflow.md)
 
@@ -85,6 +85,13 @@ Start with local Claude Code and Codex sessions.
 ```text
 Use $make-it-work to implement the agreed design
 and verify the core workflow.
+```
+
+**Expose your product to agents**
+
+```text
+Use $make-mcp to add an MCP server, llms.txt,
+and a downloadable companion skill to this product.
 ```
 
 Have your agent copy the skill folders into `$CODEX_HOME/skills` (default `~/.codex/skills`). Before updating, compare the installed copies and back up any customizations outside that directory. Pulling this repository does not update installed copies. Updates are agent-assisted or manual; the custom installer and its receipts are no longer used.
