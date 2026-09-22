@@ -46,6 +46,8 @@ Follow the [llms.txt proposal](https://llmstxt.org/) and preserve useful existin
 
 Serve these files with appropriate text content types. Check that routes return the files rather than the application's HTML fallback. Publish only the intended public material.
 
+Add a visible, crawlable HTML link to `/llms.txt` on the product homepage, preferably in the existing footer using its styling. Reuse an existing link if present. Agents starting from the homepage should be able to discover the skill without guessing the `/llms.txt` path.
+
 The companion skill should explain when to call the product, exact tool names, required inputs, defaults, units and ranges, output interpretation, and failure handling. Preserve the user's edit scope and authorization. Retain partial-result warnings and source attribution when relevant. Document an HTTP or CLI fallback only if it works; distinguish fallback results from invented or unavailable tool output.
 
 Prefer one self-contained SKILL.md. If scripts or references are necessary, distribute the complete bundle and document its installation.
@@ -56,7 +58,7 @@ Explain skill installation and MCP registration separately. Check the target cli
 
 Use a real MCP client over the selected transport to verify the required lifecycle and negotiation, tool discovery, and a representative call. Exercise invalid arguments, relevant upstream failure, cancellation/timeouts, and partial results where applicable. For authenticated servers, check both authorized and unauthorized requests. Label fixtures separately from real service calls.
 
-Fetch `/llms.txt` and follow its skill and guide links. Check bodies, content types, and GET/HEAD behavior as appropriate. Validate skill frontmatter and installation instructions. Use isolated client configuration for installation checks; update the user's active setup when installation is authorized.
+Start from the homepage and follow its `/llms.txt` link, then follow the skill and guide links. Verify the homepage link is present in the HTML, keyboard-accessible, and usable on desktop and narrow mobile layouts. Check bodies, content types, and GET/HEAD behavior as appropriate. Validate skill frontmatter and installation instructions. Use isolated client configuration for installation checks; update the user's active setup when installation is authorized.
 
 Follow repository branch, PR, and check requirements. Use [Make It Work](../make-it-work/SKILL.md) for delivery when available; otherwise complete implementation, focused review, and runtime verification directly. Preserve the user's authorization for publishing, merging, deployment, and installation. After an authorized deployment, verify the deployed revision and public artifacts.
 
