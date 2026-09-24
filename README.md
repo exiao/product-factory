@@ -96,6 +96,8 @@ and a downloadable companion skill to this product.
 
 Have your agent copy the skill folders into `$CODEX_HOME/skills` (default `~/.codex/skills`). Before updating, compare the installed copies and back up any customizations outside that directory. Pulling this repository does not update installed copies. Updates are agent-assisted or manual; the custom installer and its receipts are no longer used.
 
+When updating from a bundle with `design-eval` or `ui-lint`, remove those retired installed folders after installing `design-review`. The new skill combines their review guidance; leaving the old folders installed keeps duplicate skill routes available.
+
 Research needs web access; browser QA, image generation and deployment need your own tools and accounts. Native iOS testing needs macOS and Xcode. Missing optional tools limit the work that depends on them. Installing skills does not authorize publishing, spending or contacting people.
 
 ## Maintenance
