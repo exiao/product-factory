@@ -1,6 +1,6 @@
 # Usability checklist
 
-Use this checklist on every design-eval pass, within the affected journey and states. It adapts Jakob Nielsen's [ten usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) and the supplied *Psychological design ux usability heuristics.pdf*: Nielsen's summary is on page 2 and the psychological checklist is on pages 3–7. Use observed task needs to decide which changes each heuristic warrants.
+Use this checklist on every design-review pass, within the affected journey and states. It adapts Jakob Nielsen's [ten usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) and the supplied *Psychological design ux usability heuristics.pdf*: Nielsen's summary is on page 2 and the psychological checklist is on pages 3–7. Use observed task needs to decide which changes each heuristic warrants.
 
 ## Nielsen Norman's ten heuristics
 
@@ -31,7 +31,7 @@ Use one compact row per heuristic: `ID | state and observation/evidence | status
 
 Prioritize blocked tasks, unintended consequences, and difficult recovery before minor friction. Preserve established business rules and explicit requirements; a smoother imagined path alone does not authorize changing them. Use safeguards proportionate to consequence: do not add confirmation dialogs to every reversible action. Minimalism does not override the other nine heuristics. If a short label, status, or instruction prevents a specific mistake, retain it or replace it with an equally understandable affordance.
 
-Carry findings into the entrypoint's fix-and-confirm pass and update the same evidence rows. Report material fixes and remaining issues; show the full matrix when requested or useful for a formal review. Heuristic coverage alone establishes neither accessibility conformance nor how real people use the product.
+Carry findings into the design-review's fix-and-confirm pass and update the same evidence rows. Report material fixes and remaining issues; show the full matrix when requested or useful for a formal review. Heuristic coverage alone establishes neither accessibility conformance nor how real people use the product.
 
 ## Useful psychological checks from the supplied PDF
 
@@ -52,4 +52,4 @@ The PDF's numeric memory/social limits, line-length claims, photo-angle preferen
 ## Sources
 
 - Jakob Nielsen, [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/), Nielsen Norman Group; official page checked September 16, 2026.
-- User-supplied Psychological design ux usability heuristics.pdf (source not bundled), pages 2–7. The summary above works without access to the original file. Page 2 is an image; text extraction omits its heuristic summary.
+- User-supplied Psychological design UX usability heuristics PDF, pages 2–7. The summary above works without access to the original file. Page 2 is an image; text extraction omits its heuristic summary.

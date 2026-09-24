@@ -7,6 +7,10 @@ description: "Coordinate product discovery and design, then hand delivery to Mak
 
 Turn product judgment into an implemented and verified outcome without losing agreed intent between steps. The user's current instructions take precedence. Preserve authorization, scope and settled decisions; this skill does not authorize additional publishing, deployment, spending or messages.
 
+## Generated media in this workflow
+
+For design exploration where imagery or motion can communicate the product's character or useful transformation, use [generated media and storytelling](../design-mode/references/creative-exploration.md#generated-media-and-storytelling) through design-mode. Prepare an in-context still or short interactive motion study before committing to the implementation; let the user judge the actual proposed experience. Generated scenes can illustrate a hypothesis but cannot verify product behavior. Preserve required direction decisions and accepted scope; do not turn a task-focused prototype into a promotional film.
+
 ## Choose the scope
 
 Commands below are conversational operations, not shell commands or standalone skills. Infer the operation from ordinary language; users need not memorize names.

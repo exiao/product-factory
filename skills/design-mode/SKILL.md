@@ -7,7 +7,7 @@ description: "Apply Eric’s personal design preferences alongside the selected 
 
 ## Shared quality contract
 
-Read [$design-eval](../design-eval/SKILL.md) when applying this skill and run its evaluate → fix → recheck pass before delivering a created or revised interface. It owns removal, content necessity, disclosure, review routing, and final rendered verification; share one review budget across the workflow. For an assessment-only request, use its review-only behavior.
+Read [$design-review](../design-review/SKILL.md) when applying this skill and run its evaluate → fix → recheck pass before delivering a created or revised interface. It owns removal, content necessity, disclosure, review routing, and final rendered verification; share one review budget across the workflow. For an assessment-only request, use its review-only behavior.
 
 For prototypes, center each direction on one core loop: starting material → product contribution → useful result → accept or revise. Requested alternatives can each test a focused loop; do not merge their capabilities into one prototype. Reuse a settled loop rather than creating another discovery or approval step.
 
@@ -31,17 +31,19 @@ Apply these creation preferences alongside the shared quality contract:
 
 - For an open brief, explore structurally different concepts briefly, then turn the user's taste and reactions into a concrete direction. A fixed brief or narrow change proceeds directly.
 - For new concepts and substantial redesigns, compare the proposed experience with how the person gets the job done today, including workarounds or doing nothing. State the meaningful advantage and the evidence or assumption behind it; visual novelty alone does not establish a better solution. Reuse existing research and settled decisions rather than reopening discovery for a narrow fix.
-- For new designs or substantial redesigns, explicitly assess whether custom imagery strengthens the chosen direction. When it does, use [$image-generation-guide](../image-generation-guide/SKILL.md) to generate and integrate the asset; do not stop at a recommendation, placeholder, or generic gradient/shape substitute. Brief composition, palette, crop, and text placement, then inspect the integrated result at desktop/mobile or relevant target sizes. Preserve supplied brand assets and use existing imagery, code, or vectors when they better serve the task. See [image asset workflow](references/creative-exploration.md#image-assets) for exploration, production, and verification.
+- For new designs or substantial redesigns, develop a meaningful generated-image or video opportunity when it strengthens the chosen direction. Specify what the viewer sees, what changes or is revealed, and why it belongs to this product. Generate and integrate the actual asset; do not stop at a suggestion, placeholder, or generic gradient/shape substitute. Show an in-context keyframe or short motion study for unresolved taste decisions before full production. Existing assets, vectors, and code remain appropriate when they better express the idea. Read [generated media and storytelling](references/creative-exploration.md#generated-media-and-storytelling) for imagery, loops, state transitions, and verification.
 - When feedback rejects the underlying benefit or idea, distinguish concept weakness from usability and appearance before editing. Return to the mechanism comparison in [$software-factory](../software-factory/SKILL.md), reusing the agreed problem; a successful click path or cleaner sketch does not establish useful assistance. When output quality is disputed, inspect or produce the relevant result sample before further UI investment. Keep ordinary visual fixes scoped to the interface.
 - Prefer assistance attached to the object being worked on: select a phrase, inspect an inline alternative, keep or undo it. Add a separate widget, panel, or screen only when the task needs that separation. Make a usable result look ready to use; do not present it as an unfinished form by default.
 - Prefer a meaningful image, pattern, or solid background when a generic gradient adds nothing.
 - Build hierarchy with placement, spacing, and typography before adding copy. Default to no decorative eyebrows (small labels above headings), redundant subtitles, section introductions, or helper sentences that repeat a heading or control. Do not fill whitespace or manufacture a visual hierarchy with extra words. An eyebrow is useful when it conveys distinct context, such as a publication section or an object's category, that the surrounding interface does not already establish. Explicit briefs and established systems take precedence.
-- Match the surface to its purpose. Put the task or content first in apps, tools, visualizations, and motion studies; do not wrap them in a hero, slogan, or promotional sections unless requested. Marketing and editorial surfaces can use those elements when they serve the intended message. Apply design-eval's content-necessity test while composing, not only after rendering; preserve functional labels, accessible names, and necessary guidance.
+- Match the surface to its purpose. Put the task or content first in apps, tools, visualizations, and motion studies; do not wrap them in a hero, slogan, or promotional sections unless requested. Marketing and editorial surfaces can use those elements when they serve the intended message. Apply design-review's content-necessity test while composing, not only after rendering; preserve functional labels, accessible names, and necessary guidance.
 - For a new type system, start with 1–2 font families and 2–4 text styles; use accents and italics sparingly. Existing product typography, useful labels, and functional boundaries take precedence over these defaults.
 
 For optional exploration techniques, read [creative exploration](references/creative-exploration.md).
 
 For custom text geometry, such as prose flowing around moving shapes or measured canvas typography, read [Pretext](references/pretext.md). Use it only when the requested behavior needs text measurement before rendering; prefer ordinary HTML/CSS otherwise.
+
+When alternatives are requested, name the decision axis each one tests and keep the task, content, and surrounding context comparable. Show each at a usable size with quick switching when side-by-side thumbnails would hide interaction or detail; record the chosen direction and its tradeoff before folding it into the main artifact.
 
 For brand-inspired styling, use user-provided references and preserve the established design system.
 
@@ -62,6 +64,6 @@ Reuse the current project's stack and components; do not add dependencies or rew
 
 For artifacts, use standard in-page controls for requested variants. There is no assumed host Tweaks protocol, automatic model API, slide-notes bridge, or file-rewrite service. Read [references/artifact-patterns.md](references/artifact-patterns.md) for variant state, slide geometry, and artifact-specific checks.
 
-Before handoff, complete [$design-eval](../design-eval/SKILL.md) on the final saved artifact.
+Before handoff, complete [$design-review](../design-review/SKILL.md) on the final saved artifact.
 
 For supplied design handoff archives, read [references/handoff-bundles.md](references/handoff-bundles.md). Present the actual artifact path in the app when supported. Local creation does not imply publishing; use an authorized deployment workflow only when sharing or hosting is requested. Be clear about prototype versus production behavior.

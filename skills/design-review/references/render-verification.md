@@ -2,13 +2,15 @@
 
 Persist accepted changes to source and recheck after reload. Temporary browser-side styling is exploration, not a saved implementation.
 
-Use these checks within design-eval’s shared evaluation and confirmation pass. Use realistic long and populated content so overflow and wrapping are visible.
+Use these checks within design-review’s shared evaluation and confirmation pass. Use realistic long and populated content so overflow and wrapping are visible.
 
 When alignment is disputed, use computed geometry such as `getBoundingClientRect()` and treat the numbers as ground truth; screenshots and vision judgments are supplementary. Verify no horizontal overflow, clipped overlays, missing focus, or incorrect touch targets. Apply relevant project and accessibility requirements rather than treating an arbitrary target size as universal.
 
 For server-rendered pages, extract inline scripts and run `node --check` before trusting an interactive screenshot. Data attributes plus event delegation are safer than nesting quotes across a server template, JavaScript string, and HTML attribute. For client-side sorting/filtering, assert the resulting row order after a real click, not merely that headers look clickable.
 
 If a capture is blank, stale, or taken before the state settled, recapture it before judging the implementation.
+
+For a lazy-loaded or scroll-animated page whose one-shot full-page capture is blank, sparse, or inconsistent with observed scrolling, warm the page by scrolling through it, return to the top, then capture settled viewport slices with slight overlap and stitch them. Inspect the stitched image for missing bands and compare representative sections with the live page or scroll recording before using it as visual evidence. Keep the viewport, scroll positions, and capture method with the artifact; a working video alone does not prove the full-page still is complete.
 
 ## SVG delivery
 

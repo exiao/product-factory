@@ -7,6 +7,10 @@ description: Create or edit raster images using concrete visual briefs, referenc
 
 Turn the requested image into a concrete visual brief, generate or edit it, inspect it, and deliver the actual file. Keep the creative method independent of provider, model, and reference-token syntax. A prompt-only request ends with the prompt.
 
+## Generated media in this workflow
+
+For design/content assets, use [generated media and storytelling](../design-mode/references/creative-exploration.md#generated-media-and-storytelling) to brief a specific scene, relationship, or visual transformation rather than generic decoration. Include the intended layout, crop, surrounding palette, and copy space; deliver a usable asset for integration. For motion anchor frames, preserve the subject, geometry, camera, and lighting needed by the planned transition, and identify start/end states explicitly. If the frames will be supplied to image-to-video, save the start and end as separate full-frame images with matching dimensions and aspect ratio; a combined review sheet does not replace those files. A generated keyframe remains a still until the downstream motion is produced and inspected. Respect the host's pending human choices before expanding the asset set.
+
 ## Execution and local delivery
 
 In Eric's Codex environment, use the built-in image-generation tool and follow its current tool instructions. Save requested deliverables in the current project, normally `output/images/`, or the user's chosen directory. This means local files, not inference running on the Mac or offline generation. Do not invoke a provider CLI, paid API, plugin generation service, or remote rendering workflow as an automatic fallback. If the built-in capability is unavailable, report the blocker and retain the brief; an explicit request for another provider changes this choice.

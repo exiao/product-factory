@@ -5,11 +5,15 @@ description: "Revise existing designs from critique or user feedback, preserving
 
 # Design Iteration
 
-The loop step between **testing** a design and **re-testing** it. Something else generated the feedback (a [$design-eval](../design-eval/SKILL.md), a marketing-psychology / persuasion review, an another-perspective (optional, when installed) council, a [$synthetic-userstudies](../synthetic-userstudies/SKILL.md) run, a [$ui-lint](../ui-lint/SKILL.md) report, or the user's own notes). Your job is to turn that feedback into a **revised version** without losing the plot: every change is traceable to the critique that drove it, so the next test can measure improvement instead of just noticing the design changed.
+The loop step between **testing** a design and **re-testing** it. Something else generated the feedback (a [$design-review](../design-review/SKILL.md), a marketing-psychology / persuasion review, an another-perspective (optional, when installed) council, a [$synthetic-userstudies](../synthetic-userstudies/SKILL.md) run, or the user's own notes). Your job is to turn that feedback into a **revised version** without losing the plot: every change is traceable to the critique that drove it, so the next test can measure improvement instead of just noticing the design changed.
+
+## Generated media in this workflow
+
+For feedback that calls for stronger personality or storytelling, use [generated media and storytelling](../design-mode/references/creative-exploration.md#generated-media-and-storytelling): consider a meaningful custom image, integrated loop, or state transition instead of adding containers, gradients, or ornamental copy. Show the changed media in the actual layout, preserve working controls and product truth, and recheck the affected crops, joins, motion, and fallback. Respect the host's human decisions before expanding a new direction; a narrow layout fix does not require media generation.
 
 ## Choose the scope
 
-Read [$design-eval](../design-eval/SKILL.md) when applying this skill and complete its evaluate → fix → recheck pass before handoff. It owns removal, content necessity, disclosure, review routing, and final rendered verification. Reuse its findings in this skill's triage and change log within one shared review budget.
+Read [$design-review](../design-review/SKILL.md) when applying this skill and complete its evaluate → fix → recheck pass before handoff. It owns removal, content necessity, disclosure, review routing, and final rendered verification. Reuse its findings in this skill's triage and change log within one shared review budget.
 
 Default to iterating on the visible artifact. Accept feedback anchored to an element, image region, frame, or moment without requiring the user to restate it as a textual brief. Inspect the referenced version, apply the requested change to the actual source, and show the rendered revision. Keep access to the baseline; use comparable before/after views when they clarify the change. For motion or interaction changes, show the behavior in a working preview or playable capture rather than a static screenshot. Use an existing preview/editor, or [artifact-review](../artifact-review/SKILL.md) when comparison and anchored feedback warrant a dedicated surface. Do not build a review site for every correction or force alternatives for a clear instruction. A change log supports the visible result; it does not replace it.
 
@@ -21,7 +25,7 @@ First identify what the feedback rejects: the value of the concept, its interact
 
 When an unresolved question about perceived qualities, personal relevance, or willingness to adopt would change the revision, read and use [$desirability-study](../desirability-study/SKILL.md) as the feedback or retest method. Keep appearance, relevance, and conditional adoption separate; a visual improvement cannot close an unresolved value objection. Preserve its word-association visual and comparable vocabulary and exposure conditions for retests. Use supplied responses or prepare collection; simulate only when requested or established in context, with fresh isolated participant sessions. Apply an explicit user preference directly when the requested change is clear; a study is not an extra approval gate.
 
-When critique is missing, obtain the focused review through design-eval and triage its findings before revision. Use its routing for explicitly requested broader reviews.
+When critique is missing, obtain the focused review through design-review and triage its findings before revision. Use its routing for explicitly requested broader reviews.
 
 For an explicitly requested full test-revise-retest loop:
 
@@ -29,7 +33,7 @@ For an explicitly requested full test-revise-retest loop:
 2. Gather relevant critique. Independent review tasks can use available subagents when delegation is authorized; otherwise run the scoped reviews sequentially. another-perspective (optional, when installed) is useful for a disputed decision, not mandatory for every mockup.
 3. Triage combined feedback, revise the real source, and log the decisions.
 4. Use [$synthetic-userstudies](../synthetic-userstudies/SKILL.md) when a simulated persona panel is requested or appropriate to the agreed loop. Label simulated reactions as hypotheses and distinguish them from real user observations. Repeated persona complaints help prioritize questions but do not prove frequency or demand; a single reproducible blocker can justify a fix.
-5. Complete design-eval on the revision, then conduct any agreed study or independent retest against the baseline. Keep participant tasks and exposure conditions comparable.
+5. Complete design-review on the revision, then conduct any agreed study or independent retest against the baseline. Keep participant tasks and exposure conditions comparable.
 6. Deliver the revised artifact and findings. Deploy only when the user has requested or authorized deployment; then verify the actual live surface.
 
 Use the actual tools exposed in the session and their schemas. Do not assume Hermes toolset names or a particular browser API. Preserve alternative variants unless their modification or removal is in scope; KILL retires the named feature, step, or concept within scope; it is not permission to delete unrelated files.
@@ -48,7 +52,7 @@ Design iteration fails in a specific way: someone reads a pile of critique, rewr
   - **synthetic-userstudies** → per-persona reactions and separately observed task behavior.
   - **desirability-study** → word associations, personal relevance, and conditional adoption findings.
   - **people-problems** → disputed problem framing, supporting evidence, and the desired outcome.
-  - **UI lint pass** → file:line findings tied to named rules (motion, typography, spacing).
+  - **design-review rules and accessibility findings** → file:line findings tied to named rules and observed behavior.
   - **raw user notes** → freeform, often terse.
 
 If the artifact is a live URL or on-disk file, open and read it first. You cannot iterate on a design you haven't actually looked at.
@@ -57,7 +61,7 @@ If the artifact is a live URL or on-disk file, open and read it first. You canno
 
 ### 1. Read the artifact and the feedback
 
-Use design-eval's review routing for the requested depth. Carry unresolved assumptions into the change log rather than silently treating them as facts.
+Use design-review's review routing for the requested depth. Carry unresolved assumptions into the change log rather than silently treating them as facts.
 
 Load the current design and every feedback source. If multiple sources disagree (a council says "too much friction," a user study says "not enough guidance"), name the tension explicitly rather than silently picking a side.
 
@@ -71,7 +75,7 @@ Go through every distinct feedback item and label it. Not all critique deserves 
 
 - **KEEP** — the design already handles this; no change, note why so it doesn't get re-raised.
 - **CHANGE** — revise the identified part of the core loop to answer the feedback.
-- **KILL** — remove the named feature, step, explanation, or variant, applying design-eval's necessity test.
+- **KILL** — remove the named feature, step, explanation, or variant, applying design-review's necessity test.
 
 Prioritize reproduced blockers and failures of the core outcome before polish; claim prevalence only when supported. Judge evidence against the claim: observed task behavior for usability, measured checks for accessibility, and participant explanations for perceived qualities or relevance. A stated preference does not override a reproduced failure. Keep user decisions distinct from research evidence, and record unresolved conflicts.
 
@@ -91,7 +95,7 @@ If you find one, conform to it and say which one you used. If you find nothing, 
 
 Produce the new version in the **same medium as the input** unless the user requests a conversion (edit the HTML/component, edit image mockups using available image-editing tools, or update the spec). Preserve supplied brand assets and requested native formats. Change only what the triage justifies. Resist the urge to redesign untouched areas: scope creep destroys the ability to attribute the next test's result.
 
-Map design-eval findings and any related sibling-state fixes to the same feedback item, so the change log captures the reason for the whole correction.
+Map design-review findings and any related sibling-state fixes to the same feedback item, so the change log captures the reason for the whole correction.
 
 ### 5. Emit the change log
 
@@ -115,7 +119,7 @@ Open for next test: <what the next round should specifically measure>
 
 ### 6. Complete the shared check and hand back
 
-Run [$design-eval](../design-eval/SKILL.md) on the final saved revision, incorporating its fixes and evidence into the change log. Reuse a completed pass if it covers this exact revision. Then hand the artifact to any agreed next review or study.
+Run [$design-review](../design-review/SKILL.md) on the final saved revision, incorporating its fixes and evidence into the change log. Reuse a completed pass if it covers this exact revision. Then hand the artifact to any agreed next review or study.
 
 ## Where this sits in a design pipeline
 
@@ -123,7 +127,7 @@ A typical loop, with this skill as the recurring node:
 
 ```
 design-mode + design-system  →  design-review + marketing-psychology review + another-perspective (parallel)
-      →  DESIGN-ITERATION (includes design-eval)  →  requested retest
+      →  DESIGN-ITERATION (includes design-review)  →  requested retest
 ```
 
 Keep the reviewed baseline stable during feedback collection, then record the revised version used for retesting.
@@ -132,11 +136,11 @@ Keep the reviewed baseline stable during feedback collection, then record the re
 
 - **Not a standalone review method.** It consumes feedback and invokes an appropriate review skill when feedback is missing.
 - **Not from-scratch design.** For exploring new layout paradigms use a UI-prototype-exploration workflow; for building a fresh interface use the [$impeccable](../impeccable/SKILL.md) skill or your usual UI-building workflow.
-- **Not a separate evaluation method.** The required final pass belongs to design-eval, including its routing to applicable technical polish checks.
+- **Not a separate evaluation method.** The required final pass belongs to design-review, including its routing to applicable technical polish checks.
 
 ## Gotchas
 
-- **Keep revisions traceable.** Tie each substantive change to user feedback, a review finding, or an observed defect. Design-eval findings qualify; do not wait for the user to repeat them. Unrelated redesign remains outside scope.
+- **Keep revisions traceable.** Tie each substantive change to user feedback, a review finding, or an observed defect. Design-review findings qualify; do not wait for the user to repeat them. Unrelated redesign remains outside scope.
 - **Conflicting sources need arbitration, not averaging.** When a council says "too much friction" and a user study says "not enough guidance," don't split the difference into mush. Name the tension, weigh evidence relevant to the disputed claim, and record that you made the call in the change log's "Unresolved tensions" line.
 - **A missing design system is never a reason to stall.** If the search in step 3 finds nothing, iterate on the artifact's own internal consistency and note it. Don't invent a system or block on one.
 

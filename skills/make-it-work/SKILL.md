@@ -17,6 +17,14 @@ During implementation, use [$ponytail](../ponytail/SKILL.md) to choose the small
 
 Use goal tracking only when available and explicitly requested under the runtime's rules; reuse a matching goal. Otherwise track criteria and completion in the existing task record. Do not create another task, board or automation as a side effect of delivery.
 
+## Testing
+
+- NEVER write unit tests after you write code.
+- Tautological or change-detector tests are harmful. Use the [prune-tests guidance](https://github.com/waffleflopper/ai-tools/blob/main/skills/prune-tests/SKILL.md) to identify tests that merely restate the implementation or detect incidental changes.
+- Do not create regression tests for bug fixes without a genuine gap in behavior testing.
+- Highly prefer end-to-end tests as the sole testing mechanism for complex features. At the end of an end-to-end test, produce a verifiable, repeatable artifact as described in [$verify-feature](../verify-feature/SKILL.md).
+- If you must test a system in isolation, FIRST write all the ways it could fail, THEN write the code.
+
 ## Review
 
 Select reviews from the changed behavior and original criteria, not a fixed quota. State the selected coverage briefly in the existing record. Reuse still-applicable evidence and combine overlapping checks; changes or unresolved failures require affected-path rechecks.
@@ -24,7 +32,7 @@ Select reviews from the changed behavior and original criteria, not a fixed quot
 | Change | Required coverage |
 |---|---|
 | Contained code, CLI, backend or configuration change | [$code-review](../code-review/SKILL.md), relevant repository checks, and [$verify-feature](../verify-feature/SKILL.md) on the actual affected workflow, including a realistic failure or recovery path. |
-| Interface or interaction change | The coverage above plus relevant usability, accessibility and visual checks through [$ui-lint](../ui-lint/SKILL.md) or [$impeccable](../impeccable/SKILL.md). Inspect the changed states and exercise their controls; a backend-only fix does not need a visual review. |
+| Interface or interaction change | The coverage above plus [$design-review](../design-review/SKILL.md) for a UX flow, using one shared usability, journey, UI-rule and accessibility pass. Use [$impeccable](../impeccable/SKILL.md) for additional visual craft when relevant. Inspect the changed states and exercise their controls; a backend-only fix does not need a visual review. |
 | New user-facing product or substantially new user journey | Applicable coverage above plus a representative end-to-end task and [$synthetic-userstudies](../synthetic-userstudies/SKILL.md) for comprehension and usefulness hypotheses. Reuse a sufficient walkthrough of the current version; preserve an explicitly requested alternative method and report its limits. |
 
 Use independent reviewers for selected reviews when subagents are available and delegation is authorized. Give them the original request, criteria, artifact version and execution setup without coaching a verdict. Delegate bounded independent work in parallel; reviewers sharing a browser or computer session take turns. If independent review is unavailable, perform the applicable checks directly and disclose the limit instead of blocking unrelated work or claiming an independent pass.

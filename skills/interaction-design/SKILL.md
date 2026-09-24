@@ -7,6 +7,8 @@ description: "Design product navigation, information grouping, action placement,
 
 Bridge an accepted human story to a product experience that can be tried, evaluated, and designed at high fidelity. Own the interaction decisions and their handoff; use the existing design skills for rendering, visual direction, and implementation.
 
+If a task uses dragging or swiping, specify how someone completes the same task with a single pointer and keyboard where applicable. Define what happens when the gesture is canceled, interrupted, or reaches a boundary; leave spring parameters and visual polish to implementation and review.
+
 ## Focused modes and routing
 
 The exact mode names below are conversational requests, not shell commands or standalone skills. Use the narrow mode when the request explicitly names it or clearly asks for that operation. A broader request already authorized by the user may continue beyond the mode; otherwise keep the work local and do not require the software-factory workflow.
