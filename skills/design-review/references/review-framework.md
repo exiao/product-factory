@@ -47,21 +47,4 @@ Lead the user-facing review with material UNKNOWN, ASSUMED, and CONFLICTING item
 
 When a missing answer or inconsistency would change the recommendation or revision, use the available Ask user question tool. Prefer `functions.request_user_input_async` when available; use `functions.request_user_input` only in a mode where it is permitted. Ask concise, targeted questions, batching related gaps and offering concrete choices when helpful. Do not send the whole checklist as a questionnaire or ask again for settled answers. If no question tool is available, state that limitation and ask directly. Continue independent review while answers are pending; do not treat silence as an answer or mark dependent conclusions settled. User clarification resolves intent, not missing empirical proof; retain evidence gaps with a proposed observation or test.
 
-## Usability heuristics
-
-Use this heuristic scorecard:
-
-| Heuristic | Evidence to collect |
-|---|---|
-| Visibility of status | loading, progress, saved, and completion state |
-| Match to real world | familiar language and domain concepts |
-| User control | back, cancel, undo, escape, recovery |
-| Consistency | platform and product conventions |
-| Error prevention | validation and safe defaults before commitment |
-| Recognition | visible options, context, and affordances |
-| Flexibility | efficient paths without hiding the basic path |
-| Minimalism | every visible element earns its space |
-| Error recovery | actionable message and next step |
-| Help | guidance at the point of uncertainty |
-
-For each row record PASS, FAIL, WATCH, or UNTESTED plus the observed surface and evidence. Keep the report proportional to what was actually observed.
+Use the [usability checklist](usability.md) for the heuristic coverage in this same review. Do not create a second scorecard from the question matrix.

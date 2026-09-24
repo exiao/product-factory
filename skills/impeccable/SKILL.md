@@ -1,6 +1,6 @@
 ---
 name: impeccable
-description: "Design, build, and visually improve frontend interfaces, including layout, typography, color, responsive behavior, accessibility, and motion. Use for new UI, redesigns, visual critique, and interface polish; formal rule-based audits use ui-lint and journey or reference-fidelity reviews use audit-flow."
+description: "Design, build, and visually improve frontend interfaces, including layout, typography, color, responsive behavior, accessibility, and motion. Use for new UI, redesigns, visual critique, and interface polish; UX flow reviews, UI rule checks, and reference-fidelity reviews use design-review."
 metadata:
   version: 4.3.1
 ---

@@ -20,7 +20,7 @@ These compact definitions are the minimum evidence standard for the IDs in `rule
 
 ## Touch, accessibility, and sound
 
-- `ux-fitts-target-size` / `ux-fitts-hit-area`: provide a sufficiently large, non-overlapping interactive target for the platform and context. Around 40px is a useful web heuristic, not a universal standard; use the platform's accessibility guidance when stricter.
+- `ux-fitts-target-size` / `ux-fitts-hit-area`: provide a sufficiently large, non-overlapping interactive target for the platform and context. WCAG 2.2 AA criterion 2.5.8 uses 24 by 24 CSS pixels with stated exceptions; around 40–44px is a comfort heuristic, not the conformance threshold. Use stricter platform guidance where it applies and check the rendered hit area.
 - `prefetch-touch-fallback`: hover or pointer trajectory prefetch must have a touch/keyboard path and must not be required for correctness.
 - `a11y-visual-equivalent`: sound cannot be the sole carrier of status or meaning; provide a visible or haptic equivalent where the product needs one.
 - `a11y-toggle-setting`: recurring nonessential sound needs an accessible way to mute or control it.

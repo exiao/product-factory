@@ -7,6 +7,10 @@ description: Build an interactive site for a creator to inspect artifacts, choos
 
 Present the actual work and the judgment it needs. This skill owns the review surface and feedback handoff; the host owns research, generation, implementation, and delivery. Reuse established scope and decisions. Reviewing an artifact does not authorize publishing it or messaging other people.
 
+## Generated media in this workflow
+
+For generated-media decisions, present actual in-context keyframes, comparable visual directions, or playable excerpts using [generated media and storytelling](../design-mode/references/creative-exploration.md#generated-media-and-storytelling). Make the question about the story, visual treatment, or transition the user must choose; a prompt or production rationale is not the artifact. Include relevant start/end states and a working preview for interactive motion. Keep concept selection, execution acceptance, and readiness attached to their exact versions. The review shell itself does not need generated decoration.
+
 ## Start from the template
 
 Reuse an existing review when available. For a new review, run:

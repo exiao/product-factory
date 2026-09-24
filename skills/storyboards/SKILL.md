@@ -5,6 +5,10 @@ description: Create illustrated product-journey storyboards that show a personâ€
 
 # Product storyboards
 
+## Generated media in this workflow
+
+For visual exploration, use [generated media and storytelling](../design-mode/references/creative-exploration.md#generated-media-and-storytelling) to make the human situation and changed outcome visible through composition, recurring subjects, and purposeful transformations. Keep character, setting, and product references consistent between panels; show the transition rather than relying on captions to explain missing causality. If the storyboard will guide motion, identify the anchor states for video-direction. An explicitly ASCII/text-only storyboard stays text-only. A storyboard is a human decision surface, not automatic approval to generate the finished film.
+
 ## Still-image generation
 
 For generated or edited still images, use [$image-generation-guide](../image-generation-guide/SKILL.md): Codex built-in image generation, verified files saved in the local project. This applies to reference sheets and intermediate assets as well as final images. Keep this skill's creative requirements; do not automatically use provider CLIs, external generation plugins, or remote rendering services. An explicit user request for another provider takes precedence.

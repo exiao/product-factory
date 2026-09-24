@@ -40,7 +40,7 @@ Follow the [llms.txt proposal](https://llmstxt.org/) and preserve useful existin
 
 | Artifact | Contents |
 | --- | --- |
-| `/llms.txt` | Project H1, short blockquote summary, and Markdown links to the skill and guide. |
+| `/llms.txt` | Project H1, short blockquote summary, explicit skill-plus-MCP setup steps, endpoint/transport/auth summary, and Markdown links to the skill, connection guide, and authentication setup. |
 | `/skills/<product>/SKILL.md` | Downloadable UTF-8 Markdown with YAML `name` and `description` frontmatter. |
 | `/mcp.md` | Connection and installation steps, authentication, tool contracts, runnable examples, data handling, and verified compatibility. |
 
@@ -52,7 +52,11 @@ The companion skill should explain when to call the product, exact tool names, r
 
 Prefer one self-contained SKILL.md. If scripts or references are necessary, distribute the complete bundle and document its installation.
 
-Explain skill installation and MCP registration separately. Check the target client's current docs or CLI help for paths, syntax, and timeout settings. Preserve existing configuration and inspect installed files before replacing them. `llms.txt` enables discovery; installation and registration require separate actions. Downloading a Markdown skill should not require executing an installation script.
+Make the complete setup apparent directly in `llms.txt`: install the companion skill, register the MCP endpoint, authenticate, and verify tool discovery. Explain that both the skill and a working MCP connection are needed; a generic link labeled "guide" alone is insufficient. Keep detailed client commands in `/mcp.md`, with clear links from discovery and the companion skill. Downloading a Markdown skill should not require executing an installation script.
+
+When the user requests installation of the product integration, carry through skill installation, MCP registration, authentication, and verification within the authorized scope. Honor an explicit skill-only request, but do not stop at downloading Markdown when the intended outcome is a usable integration. Check the target client's current docs or CLI help for paths, syntax, and timeout settings. Preserve existing configuration and inspect installed files before replacing them.
+
+Document token scope, lifetime, revocation, and whether generation replaces an existing token. Use the client's supported private credential storage; never publish secrets in discovery files, examples, or tool output. If using a token environment variable, verify that the actual client process can resolve it; naming the variable in configuration is not authentication. Follow the active tool's approval requirements for credential creation or access changes without inventing additional approval gates. If authentication is blocked, finish independent setup and report the exact remaining step; do not call the integration connected.
 
 ## Verify and deliver
 
@@ -62,4 +66,4 @@ Start from the homepage and follow its `/llms.txt` link, then follow the skill a
 
 Follow repository branch, PR, and check requirements. Use [Make It Work](../make-it-work/SKILL.md) for delivery when available; otherwise complete implementation, focused review, and runtime verification directly. Preserve the user's authorization for publishing, merging, deployment, and installation. After an authorized deployment, verify the deployed revision and public artifacts.
 
-Report the connection command or URL, tool names, artifact locations, installation status, verified compatibility, and relevant checks. Distinguish local-ready, merged, and verified-live status. State untested behavior plainly.
+Report the connection command or URL, tool names, artifact locations, installation status, verified compatibility, and relevant checks. Distinguish skill installed, server registered, authenticated, and tools verified; configuration readback alone proves only registration. Distinguish local-ready, merged, and verified-live status. State untested behavior plainly.
