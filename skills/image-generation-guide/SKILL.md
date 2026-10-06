@@ -41,6 +41,7 @@ Omit irrelevant fields. Resolve the visual identity from the explicit brief, cur
 - For photographs and identity edits, read [realism and reference editing](references/realism-and-identity.md).
 - For the black-and-blue notebook look, read [notebook sketch style](references/notebook-sketch.md).
 - For die-cut stickers and sticker-style cards, read [sticker style](references/sticker-style.md).
+- For fluffy, poofy 3D characters and cohesive plush avatar sets, read [poofy characters](references/poofy-characters.md).
 - For products, thumbnails, illustration sets, and visual assets, read [composition and asset sets](references/composition-and-sets.md).
 - For where this guidance came from and the source limitations, read [sources](references/sources.md). Historical observations are not universal model guarantees.
 

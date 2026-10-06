@@ -79,6 +79,8 @@ Go through every distinct feedback item and label it. Not all critique deserves 
 
 Prioritize reproduced blockers and failures of the core outcome before polish; claim prevalence only when supported. Judge evidence against the claim: observed task behavior for usability, measured checks for accessibility, and participant explanations for perceived qualities or relevance. A stated preference does not override a reproduced failure. Keep user decisions distinct from research evidence, and record unresolved conflicts.
 
+Once blockers are cleared, improve the same core action across iterations. When relevant, compare task time, steps, errors, recovery, and clarity of the next action against the baseline; record which small changes together made the journey easier. Use observed task evidence where available, and do not turn aesthetic polish into an unmeasured retention claim.
+
 ### 3. Reach for a design system (if one exists)
 
 For an existing-product enhancement, inspect the current product’s navigation, shared shell, and comparable flow as well as its visual tokens. Match action placement and behavior to that context; report any access gap.
