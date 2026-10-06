@@ -11,7 +11,7 @@ If a task uses dragging or swiping, specify how someone completes the same task 
 
 ## Focused modes and routing
 
-The exact mode names below are conversational requests, not shell commands or standalone skills. Use the narrow mode when the request explicitly names it or clearly asks for that operation. A broader request already authorized by the user may continue beyond the mode; otherwise keep the work local and do not require the software-factory workflow.
+The exact mode names below are conversational requests, not shell commands or standalone skills. Use the narrow mode when the request explicitly names it or clearly asks for that operation. A broader request already authorized by the user may continue beyond the mode; otherwise keep the work local and do not require the product-factory workflow.
 
 | Conversational mode | Target | Default output |
 |---|---|---|
@@ -31,7 +31,7 @@ Match the deliverable to the request: assessment or planning can stop at a wiref
 
 For an existing navigation, toolbar, or settings problem, start from that surface and the task it supports. A storyboard is not a prerequisite. Inspect actual destinations and action effects when access permits; a screenshot establishes appearance, not what a control does. Keep changes local unless the problem requires broader restructuring.
 
-If the user rejects the usefulness of the idea, or the proposed intervention only names a desired result without explaining how it helps, return to the mechanism comparison in [$software-factory](../software-factory/SKILL.md) before designing dependent flows. Reuse the agreed problem and existing evidence; do not restart the entire discovery process. When output quality is the disputed issue, carry a worked result and its limitations into the interaction brief. A clickable simulation can test control and clarity, but cannot establish that the underlying assistance produces a useful result. Explicit UI-only requests and settled directions still proceed within their stated scope.
+If the user rejects the usefulness of the idea, or the proposed intervention only names a desired result without explaining how it helps, return to the mechanism comparison in [$product-factory](../product-factory/SKILL.md) before designing dependent flows. Reuse the agreed problem and existing evidence; do not restart the entire discovery process. When output quality is the disputed issue, carry a worked result and its limitations into the interaction brief. A clickable simulation can test control and clarity, but cannot establish that the underlying assistance produces a useful result. Explicit UI-only requests and settled directions still proceed within their stated scope.
 
 ## Define the core loop and remove work
 
