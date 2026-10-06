@@ -27,7 +27,7 @@ and show me possible directions before building a prototype.
 
 ![Give agents context, confirm understanding, build shareable skills, delegate, and build improvement loops.](assets/build-product-factory.png)
 
-| Step | Workflow | What you get |
+| Step | Workflow or tool | What you get |
 | --- | --- | --- |
 | Give agents context | [`gather-context`](skills/gather-context/SKILL.md) | A brief with prioritized sources and missing evidence. |
 | Confirm understanding | [`confirm-understanding`](skills/confirm-understanding/SKILL.md) | A clear task, boundaries, and unresolved assumptions. |
@@ -37,9 +37,9 @@ and show me possible directions before building a prototype.
 
 Invoke a skill with a request such as `$gather-context for this project`. Reuse existing context and decisions; run only the steps you need. See the [setup workflow](skills/product-factory/references/factory-setup.md) for handoffs.
 
-For skill creation, audits, and measured skill optimization, see [meta-skills](https://github.com/exiao/meta-skills): [skill-creator](https://github.com/exiao/meta-skills/tree/main/skill-creator), [skill-audit](https://github.com/exiao/meta-skills/tree/main/skill-audit), and [skill-improver](https://github.com/exiao/meta-skills/tree/main/skill-improver). Use your coding agent's existing creator when available. These external skills are optional and are not bundled here.
+Optional [meta-skills](https://github.com/exiao/meta-skills) tools cover [skill creation](https://github.com/exiao/meta-skills/tree/main/skill-creator), [audits](https://github.com/exiao/meta-skills/tree/main/skill-audit), and [evaluated optimization](https://github.com/exiao/meta-skills/tree/main/skill-improver). Use your agent's built-in creator when available; these tools are not bundled here.
 
-Delegation means assigning a concrete outcome, context, boundaries, and completion check to an agent coworker, then inspecting what it delivers. Trace inspection explains what happened; hill-climbing compares candidates against an evaluator and keeps supported improvements. A one-off correction may need only a scoped fix and recheck.
+Give delegated work an outcome, context, boundaries, and completion check. Inspect traces to diagnose a failure; use an evaluator and hill-climbing when comparing repeated attempts. A one-off correction may need only a fix and recheck.
 
 ## Start with these skills
 
