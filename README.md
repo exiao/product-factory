@@ -20,7 +20,7 @@ for the coding agent I am using. Preserve my existing customizations.
 Then try a task in your own project:
 
 ```text
-Use $software-factory to investigate [product problem].
+Use $product-factory to investigate [product problem].
 Use our customer evidence and priorities. Ask about consequential gaps,
 and show me possible directions before building a prototype.
 ```
@@ -37,13 +37,13 @@ Once a direction is agreed, use `$make-it-work` to implement and verify it. Use 
 4. **Delegate to agents as coworkers.** Use agents as thinking partners, task executors, or scheduled researchers, depending on the work. Give them a concrete outcome and let them prepare artifacts you can inspect. Have them surface consequential decisions that need your input.
 5. **Build improvement loops.** [Inspect past traces](skills/inspect-traces/SKILL.md) to find missed context, wrong assumptions, and repeated corrections. Update the relevant instructions, then evaluate whether the next attempt improves. For repeated, valuable tasks, use evals to compare changes to skills, models, tools, and environments.
 
-These steps help you establish the factory. The [product workflow](skills/software-factory/references/product-workflow.md) describes how agents then carry a particular initiative from research through design and delivery.
+These steps help you establish the factory. The [product workflow](skills/product-factory/references/product-workflow.md) describes how agents then carry a particular initiative from research through design and delivery.
 
 ## Start with these skills
 
 | Skill | When to use it |
 | --- | --- |
-| [`software-factory`](skills/software-factory/SKILL.md) | Work through an unresolved product problem, research, and possible directions. |
+| [`product-factory`](skills/product-factory/SKILL.md) | Work through an unresolved product problem, research, and possible directions. |
 | [`artifact-review`](skills/artifact-review/SKILL.md) | Inspect actual concepts, storyboards, designs, or prototypes; choose, combine, or request revisions. |
 | [`make-it-work`](skills/make-it-work/SKILL.md) | Implement the agreed outcome, fix issues, and verify the real workflow. |
 | [`inspect-traces`](skills/inspect-traces/SKILL.md) | Learn from prior agent work and identify specific changes to context, skills, or process. |
@@ -54,7 +54,7 @@ These steps help you establish the factory. The [product workflow](skills/softwa
 
 If you are reading the accompanying article as a coding agent, open [this GitHub repository](https://github.com/exiao/product-factory) for the actual skills and workflow details. The article explains the approach; each `SKILL.md` supplies task-specific instructions.
 
-- Read the user's request and project instructions, then open the relevant [skill](skills/) and only the references needed for that task. For a product initiative, start with [Software Factory](skills/software-factory/SKILL.md) and its [product workflow](skills/software-factory/references/product-workflow.md).
+- Read the user's request and project instructions, then open the relevant [skill](skills/) and only the references needed for that task. For a product initiative, start with [Product Factory](skills/product-factory/SKILL.md) and its [product workflow](skills/product-factory/references/product-workflow.md).
 - Reuse accepted context, decisions, artifacts, and criteria. Ask about consequential gaps. Keep evidence, assumptions, and simulated outcomes distinct.
 - Present prepared work through [Artifact Review](skills/artifact-review/SKILL.md) when human judgment is needed. Hand agreed implementation to [Make It Work](skills/make-it-work/SKILL.md), and verify the actual result before reporting completion.
 - Install skills only when the user requests installation. Copy complete skill folders, including their references, scripts, and assets, into the target agent's supported skill directory. For Codex, use `$CODEX_HOME/skills`, defaulting to `~/.codex/skills`; check the target client's current instructions for other agents. Compare existing copies and back up customizations before updating them. Pulling this repository does not update installed skills.
@@ -68,6 +68,8 @@ Artifact Review includes a runnable review template and an optional fixed-task C
 
 <details>
 <summary>Updating an existing installation</summary>
+
+If you installed the former `software-factory` skill, install `product-factory`, preserve any customizations, and retire the old installed folder to avoid duplicate skill routes. Use `$product-factory` in new prompts.
 
 When updating from a bundle with `design-eval` or `ui-lint`, retire those old installed copies after installing `design-review`, which combines their guidance. Preserve unrelated skills and customizations.
 
