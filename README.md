@@ -2,11 +2,30 @@
 
 **Teach your coding agents how you make product decisions.**
 
-Product Factory is a collection of skills for coding agents such as Codex and Claude Code. A skill is a folder containing a `SKILL.md` instruction manual that an agent reads when it needs to perform a task. These skills help agents research problems, explore solutions, prepare work for your judgment, and implement the decisions you make.
+Product Factory is a collection of skills for coding agents such as Codex and Claude Code. They help you give agents your team's context, teach them your working practices, and decide when they should ask for your judgment.
 
-Coding agents can build software quickly. Deciding what is valuable to build still requires customer evidence, business context, and judgment. A product factory combines reusable workflows, specialized agent coworkers, and your input at the moments that matter.
+Use them to investigate a customer problem, compare possible solutions, review a prototype, or implement an agreed design. Each skill contains a readable `SKILL.md` instruction manual you can inspect, edit, and share.
 
 ![Customer evidence, usage data, team context, and priorities feed agents that prepare problem statements, storyboards, and prototypes for your judgment. Feedback returns to the shared context.](assets/product-factory.png)
+
+## For people: get started
+
+Ask your coding agent:
+
+```text
+Read https://github.com/exiao/product-factory and install its skills
+for the coding agent I am using. Preserve my existing customizations.
+```
+
+Then try a task in your own project:
+
+```text
+Use $software-factory to investigate [product problem].
+Use our customer evidence and priorities. Ask about consequential gaps,
+and show me possible directions before building a prototype.
+```
+
+Once a direction is agreed, use `$make-it-work` to implement and verify it. Use `$artifact-review` when you want a review site, and `$inspect-traces` when you want to learn from a prior task.
 
 ## Build your product factory
 
@@ -29,26 +48,7 @@ These steps help you establish the factory. The [product workflow](skills/softwa
 | [`make-it-work`](skills/make-it-work/SKILL.md) | Implement the agreed outcome, fix issues, and verify the real workflow. |
 | [`inspect-traces`](skills/inspect-traces/SKILL.md) | Learn from prior agent work and identify specific changes to context, skills, or process. |
 
-[Browse all 30 skills](skills/). Focused requests use the relevant specialist; settled decisions do not need another discovery round.
-
-## For people: get started
-
-Ask your coding agent:
-
-```text
-Read https://github.com/exiao/product-factory and install its skills
-for the coding agent I am using. Preserve my existing customizations.
-```
-
-Then try a task in your own project:
-
-```text
-Use $software-factory to investigate [product problem].
-Use our customer evidence and priorities. Ask about consequential gaps,
-and show me possible directions before building a prototype.
-```
-
-Once a direction is agreed, use `$make-it-work` to implement and verify it. Use `$artifact-review` when you want a review site, and `$inspect-traces` when you want to learn from a prior task.
+[Browse all 30 skills](skills/).
 
 ## For coding agents: read this before working
 
@@ -66,7 +66,12 @@ This repository provides instructions and supporting assets. Model access and ru
 
 Artifact Review includes a runnable review template and an optional fixed-task Codex feedback bridge. Local saving, acknowledged dispatch, and completed revisions are separate states. Impeccable's launcher may download its pinned engine on first use.
 
+<details>
+<summary>Updating an existing installation</summary>
+
 When updating from a bundle with `design-eval` or `ui-lint`, retire those old installed copies after installing `design-review`, which combines their guidance. Preserve unrelated skills and customizations.
+
+</details>
 
 [GitHub Actions](.github/workflows/validate.yml) checks skill metadata, local Markdown links, and review persistence and dispatch. These checks do not measure downstream agent performance or prove that the factory learns automatically.
 
@@ -80,5 +85,3 @@ Product Factory includes and adapts work from these projects and authors:
 | Anshu Chimala's [How to turn your AI into a world-class designer](https://www.lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world) | Design-mode's [creative exploration guidance](skills/design-mode/references/creative-exploration.md), adapted from the accessible portion of the article. |
 
 Further method references are documented alongside the relevant skills. Original source links and license notices remain with the material; this repository does not relicense it or imply endorsement by its authors.
-
-The Artifact Review skill includes a reusable responsive review template and a local, fixed-task Codex submission bridge. Its bundled visual identity is the default; explicit project direction can override it. Personal PDF libraries and machine-specific paths are not required.
