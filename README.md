@@ -31,11 +31,15 @@ and show me possible directions before building a prototype.
 | --- | --- | --- |
 | Give agents context | [`gather-context`](skills/gather-context/SKILL.md) | A brief with prioritized sources and missing evidence. |
 | Confirm understanding | [`confirm-understanding`](skills/confirm-understanding/SKILL.md) | A clear task, boundaries, and unresolved assumptions. |
-| Build shareable skills | [`build-skill`](skills/build-skill/SKILL.md) | Instructions that capture a repeatable team practice. |
-| Delegate to coworkers | [`delegate-work`](skills/delegate-work/SKILL.md) | Bounded assignments and checked results. |
-| Build improvement loops | [`improve-workflow`](skills/improve-workflow/SKILL.md) | A trace-grounded change and comparison with the previous attempt. |
+| Build shareable skills | Your coding agent's skill creator, or [meta-skills](https://github.com/exiao/meta-skills/tree/main/skill-creator) | Instructions that capture a repeatable team practice. |
+| Delegate to coworkers | [`product-factory`](skills/product-factory/SKILL.md), [`make-it-work`](skills/make-it-work/SKILL.md), and native delegation tools | Bounded assignments and checked results. |
+| Build improvement loops | [`inspect-traces`](skills/inspect-traces/SKILL.md), then an existing evaluator and hill-climbing workflow as needed | A diagnosed failure and a supported change. |
 
 Invoke a skill with a request such as `$gather-context for this project`. Reuse existing context and decisions; run only the steps you need. See the [setup workflow](skills/product-factory/references/factory-setup.md) for handoffs.
+
+For skill creation, audits, and measured skill optimization, see [meta-skills](https://github.com/exiao/meta-skills): [skill-creator](https://github.com/exiao/meta-skills/tree/main/skill-creator), [skill-audit](https://github.com/exiao/meta-skills/tree/main/skill-audit), and [skill-improver](https://github.com/exiao/meta-skills/tree/main/skill-improver). Use your coding agent's existing creator when available. These external skills are optional and are not bundled here.
+
+Delegation means assigning a concrete outcome, context, boundaries, and completion check to an agent coworker, then inspecting what it delivers. Trace inspection explains what happened; hill-climbing compares candidates against an evaluator and keeps supported improvements. A one-off correction may need only a scoped fix and recheck.
 
 ## Start with these skills
 
@@ -49,7 +53,7 @@ Invoke a skill with a request such as `$gather-context for this project`. Reuse 
 
 For focused work, try [explore-unknowns](skills/explore-unknowns/SKILL.md) to uncover assumptions, [design-review](skills/design-review/SKILL.md) to check usability and accessibility, or [synthetic-userstudies](skills/synthetic-userstudies/SKILL.md) for simulated walkthroughs. Simulated findings are hypotheses, not customer evidence.
 
-[Browse all 35 skills](skills/).
+[Browse all 32 skills](skills/).
 
 ## For coding agents
 
