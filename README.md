@@ -56,9 +56,18 @@ These steps help you establish the factory. The [product workflow](skills/produc
 | Skill | When to use it |
 | --- | --- |
 | [`product-factory`](skills/product-factory/SKILL.md) | Work through an unresolved product problem, research, and possible directions. |
+| [`design-mode`](skills/design-mode/SKILL.md) | Turn a selected direction into visual designs, interactive prototypes, or comparable alternatives. |
 | [`artifact-review`](skills/artifact-review/SKILL.md) | Inspect actual concepts, storyboards, designs, or prototypes; choose, combine, or request revisions. |
 | [`make-it-work`](skills/make-it-work/SKILL.md) | Implement the agreed outcome, fix issues, and verify the real workflow. |
 | [`inspect-traces`](skills/inspect-traces/SKILL.md) | Learn from prior agent work and identify specific changes to context, skills, or process. |
+
+### Focused specialists
+
+| Skill | When to use it |
+| --- | --- |
+| [`explore-unknowns`](skills/explore-unknowns/SKILL.md) | Uncover assumptions and unanswered questions before committing to a direction. |
+| [`design-review`](skills/design-review/SKILL.md) | Check a design's usability, accessibility, and fit with the intended experience. |
+| [`synthetic-userstudies`](skills/synthetic-userstudies/SKILL.md) | Simulate a user walkthrough to identify possible confusion and failure points. Findings are hypotheses, not customer evidence. |
 
 [Browse all 35 skills](skills/).
 
