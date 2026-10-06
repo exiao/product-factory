@@ -2,15 +2,15 @@
 
 **Hand over the generating. Keep the thinking.**
 
-![Artifact Review: compare concepts, keep useful parts, and direct the next revision.](assets/artifact-review.svg)
+![Customer evidence, usage data, team context, and priorities feed agents that prepare problem statements, storyboards, and prototypes for your judgment. Feedback returns to the shared context.](assets/product-factory.png)
 
 An agent can build a polished answer to the wrong question. Start with your customer conversations, research, and constraints. Product Factory helps the agent investigate the problem and turn possible solutions into concepts and prototypes you can inspect.
 
-## How it works
+## How to build your product factory
 
-![Four stages connect agent work to your judgment: Define, Explore, Decide, and Deliver. Artifact Review carries feedback into revised work throughout.](assets/workflow.svg)
+![Five steps to build a product factory: give agents context, confirm understanding, build shareable skills, delegate liberally, and build improvement loops. Feedback improves context and skills.](assets/build-product-factory.png)
 
-Use Artifact Review to decide what to keep, combine, revise or leave out. Once you agree on the design, Make It Work implements it and checks the real workflow against your criteria. If new evidence changes the problem, return to that decision.
+Give agents context, check their understanding, and capture your working practices in shared skills. Delegate work you can inspect, then use past traces and evaluation results to improve the next attempt. Artifact Review helps you decide what to keep or revise; Make It Work delivers the agreed design and verifies the result.
 
 ## The main skills
 
