@@ -27,6 +27,8 @@ Use goal tracking only when available and explicitly requested under the runtime
 
 ## Review
 
+For new interfaces or substantial user journeys, explore realistic paths with the available browser when exploratory QA would add coverage beyond the agreed feature checks. Reuse applicable evidence and record reproducible bugs and usability problems. Feed findings that prevent the agreed outcome into the fix-and-recheck loop; report unrelated findings separately without expanding scope. Exploration complements the required feature verification.
+
 Select reviews from the changed behavior and original criteria, not a fixed quota. State the selected coverage briefly in the existing record. Reuse still-applicable evidence and combine overlapping checks; changes or unresolved failures require affected-path rechecks.
 
 | Change | Required coverage |
@@ -35,9 +37,11 @@ Select reviews from the changed behavior and original criteria, not a fixed quot
 | Interface or interaction change | The coverage above plus [$design-review](../design-review/SKILL.md) for a UX flow, using one shared usability, journey, UI-rule and accessibility pass. Use [$impeccable](../impeccable/SKILL.md) for additional visual craft when relevant. Inspect the changed states and exercise their controls; a backend-only fix does not need a visual review. |
 | New user-facing product or substantially new user journey | Applicable coverage above plus a representative end-to-end task and [$synthetic-userstudies](../synthetic-userstudies/SKILL.md) for comprehension and usefulness hypotheses. Reuse a sufficient walkthrough of the current version; preserve an explicitly requested alternative method and report its limits. |
 
+Make It Work includes the full [$verify-feature](../verify-feature/SKILL.md) workflow without a separate user request. Run the affected feature on its real surface, capture the action and resulting state in a short continuous video whenever recording is available, and attach or embed it in the final report. Before delivery, watch the exported video from its opening through its ending and apply Verify Feature's clip-quality gate; a mostly blank setup recording is not evidence. For CLI, API, backend, and configuration changes, record the actual runtime result on the relevant surface too. Use a screenshot only when video capture is unavailable; if neither can be captured, report verification as BLOCKED or INCONCLUSIVE rather than PASS. Apply Verify Feature's safe-target and dry-run limits to external or destructive paths.
+
 Use independent reviewers for selected reviews when subagents are available and delegation is authorized. Give them the original request, criteria, artifact version and execution setup without coaching a verdict. Delegate bounded independent work in parallel; reviewers sharing a browser or computer session take turns. If independent review is unavailable, perform the applicable checks directly and disclose the limit instead of blocking unrelated work or claiming an independent pass.
 
-Use deterministic checks for fixed contracts, browser automation for repeatable interactions, and agents for exploration and judgment. Synthetic reactions remain hypotheses, not customer evidence. Preserve approved design choices while fixing observed obstacles. Use [$ci-slopgate](../ci-slopgate/SKILL.md) only if a quality gate needs repair. Unit tests alone do not prove the configured workflow; record screenshots or logs from actual execution. Do not count an unrun review as a pass.
+Use deterministic checks for fixed contracts, browser automation for repeatable interactions, and agents for exploration and judgment. Synthetic reactions remain hypotheses, not customer evidence. Preserve approved design choices while fixing observed obstacles. Use [$ci-slopgate](../ci-slopgate/SKILL.md) only if a quality gate needs repair. Unit tests and logs alone do not prove the configured workflow; retain the runtime capture required above. Do not count an unrun review as a pass.
 
 ## Fix and recheck
 
@@ -53,4 +57,4 @@ When waiting for a PR, inspect checks within the active task and fix authorized 
 
 For improvement claims, compare equivalent workloads over the requested scope, including failures and retries; distinguish component gains from whole-job results.
 
-Finish when the agreed outcome is delivered and all applicable reviews pass on the final version; complete an active matching goal only under the runtime's rules. Deployment is required only when it is part of the agreed finish line; verify it with [$verify-deploy](../verify-deploy/SKILL.md). Report criterion status, evidence links or artifact paths, and remaining limitations. Existing tests and CI count for what they demonstrate; do not require production deployment for a local change.
+Finish when the agreed outcome is delivered and all applicable reviews pass on the final version; complete an active matching goal only under the runtime's rules. Deployment is required only when it is part of the agreed finish line; verify it with [$verify-deploy](../verify-deploy/SKILL.md). Report criterion status, attach or embed the Verify Feature capture, link other evidence or artifacts, and state remaining limitations. Existing tests and CI count for what they demonstrate; do not require production deployment for a local change.

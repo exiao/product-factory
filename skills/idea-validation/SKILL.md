@@ -11,6 +11,8 @@ For generated or edited still images, use [$image-generation-guide](../image-gen
 
 Use Eric's Ad Test to make an idea concrete before adding analysis. Read the idea list and constraints. Preserve every named idea and distinguish acquisition promise, actual product capability, and retention value. Default to concise comparisons rather than numerical scorecards; use scores only when requested, with explicit assumptions.
 
+For consumer apps, state the recurring job and why a fresh, useful result will exist on the next visit. Test repeat demand and outcome quality separately from ad clicks, installs, and opens. When the promise is a financial result, define how it could be measured prospectively; engagement alone cannot prove it.
+
 For each idea write:
 
 - **Buyer and placement:** a specific audience and a plausible way to reach it.

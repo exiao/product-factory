@@ -5,8 +5,10 @@ For each verification, record:
 - diff/commit and the changed surface;
 - build or start command and the route/CLI request used;
 - exact capture command, viewport/device, auth state, seed data, and wait time;
+- for data-dependent claims, the real source and as-of time, input values and units, observed response, and any ingestion or transport step replaced by a fixture or harness;
 - the attached video when recording was available, otherwise the screenshot and why video was unavailable; include the local path when saved;
 - observed result and at least one edge or failure probe;
+- a verdict for each affected branch and which captures show the actual app versus a supplemental harness; for a harness, the observed blocker and bypassed host/state/handlers;
 - surfaces and account states not tested.
 
 For visual changes, use the same method for baseline and candidate and combine them into one comparison artifact. For interactions, the artifact must perform the target action and capture its result. A screenshot of a visible control does not prove its handler works. If a baseline cannot build, state the failure and downgrade the claim accordingly. Keep evidence local unless publishing was explicitly requested.
