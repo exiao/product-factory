@@ -68,7 +68,7 @@ On submitted feedback, read the snapshot and apply the latest explicit response 
 | `inspect`, `critique`, `audit [flow/surface]` | Inspect / Revise | [$interaction-design](../interaction-design/SKILL.md) |
 | `sharpen`, `assess`, `define` | Revise / Evaluate | [$acceptance-criteria](../acceptance-criteria/SKILL.md) |
 | `develop [product]` | Coordinate | [Product workflow](references/product-workflow.md) |
-| `setup factory [project]` | Coordinate | Five callable setup workflows and their reusable outputs; [factory setup](references/factory-setup.md) |
+| `setup factory [project]` | Coordinate | Five setup steps using bundled skills and available tools; [factory setup](references/factory-setup.md) |
 
 A lens reveals something about the current artifact; an action changes it. Choose from the user's intent. For example, “highlight hidden user work” annotates the current flow; “remove the unnecessary setup step” calls for a scoped revision. Preserve the original object and show the affected portion, a before/after excerpt, or an annotated screenshot instead of replacing whole documents unnecessarily. Keep observations separate from suggested changes.
 
