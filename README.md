@@ -1,110 +1,74 @@
 # Product Factory
 
-**Hand over the generating. Keep the thinking.**
+**Teach your coding agents how you make product decisions.**
+
+Product Factory is a collection of skills for coding agents such as Codex and Claude Code. A skill is a folder containing a `SKILL.md` instruction manual that an agent reads when it needs to perform a task. These skills help agents research problems, explore solutions, prepare work for your judgment, and implement the decisions you make.
+
+Coding agents can build software quickly. Deciding what is valuable to build still requires customer evidence, business context, and judgment. A product factory combines reusable workflows, specialized agent coworkers, and your input at the moments that matter.
 
 ![Customer evidence, usage data, team context, and priorities feed agents that prepare problem statements, storyboards, and prototypes for your judgment. Feedback returns to the shared context.](assets/product-factory.png)
 
-An agent can build a polished answer to the wrong question. Start with your customer conversations, research, and constraints. Product Factory helps the agent investigate the problem and turn possible solutions into concepts and prototypes you can inspect.
-
-## How to build your product factory
+## Build your product factory
 
 ![Five steps to build a product factory: give agents context, confirm understanding, build shareable skills, delegate liberally, and build improvement loops. Feedback improves context and skills.](assets/build-product-factory.png)
 
-Give agents context, check their understanding, and capture your working practices in shared skills. Delegate work you can inspect, then use past traces and evaluation results to improve the next attempt. Artifact Review helps you decide what to keep or revise; Make It Work delivers the agreed design and verifies the result.
+1. **Give agents context.** Connect the customer interviews, usage data, team discussions, code, and priorities that inform your decisions. Use your project's instructions to explain where that context lives and which sources matter most.
+2. **Confirm their understanding.** Ask agents to summarize the problem and expose assumptions before building. Use questions, diagrams, storyboards, and small prototypes to check that you mean the same thing. [Explore Unknowns](skills/explore-unknowns/SKILL.md) helps investigate gaps and assumptions.
+3. **Build shareable skills.** Capture how your team does research, reviews designs, or verifies a release in readable instructions. Adapt the [skills in this repository](skills/) to your team's practices and share them with your coworkers.
+4. **Delegate to agents as coworkers.** Use agents as thinking partners, task executors, or scheduled researchers, depending on the work. Give them a concrete outcome and let them prepare artifacts you can inspect. Have them surface consequential decisions that need your input.
+5. **Build improvement loops.** [Inspect past traces](skills/inspect-traces/SKILL.md) to find missed context, wrong assumptions, and repeated corrections. Update the relevant instructions, then evaluate whether the next attempt improves. For repeated, valuable tasks, use evals to compare changes to skills, models, tools, and environments.
 
-## The main skills
+These steps help you establish the factory. The [product workflow](skills/software-factory/references/product-workflow.md) describes how agents then carry a particular initiative from research through design and delivery.
 
-| Skill | What it does |
+## Start with these skills
+
+| Skill | When to use it |
 | --- | --- |
-| [`software-factory`](skills/software-factory/SKILL.md) | Guides research and design, then hands implementation to Make It Work. |
-| [`artifact-review`](skills/artifact-review/SKILL.md) | Lets you compare work, leave feedback and request revisions. |
-| [`make-it-work`](skills/make-it-work/SKILL.md) | Implements an agreed outcome, fixes issues and verifies the real workflow. |
+| [`software-factory`](skills/software-factory/SKILL.md) | Work through an unresolved product problem, research, and possible directions. |
+| [`artifact-review`](skills/artifact-review/SKILL.md) | Inspect actual concepts, storyboards, designs, or prototypes; choose, combine, or request revisions. |
+| [`make-it-work`](skills/make-it-work/SKILL.md) | Implement the agreed outcome, fix issues, and verify the real workflow. |
+| [`inspect-traces`](skills/inspect-traces/SKILL.md) | Learn from prior agent work and identify specific changes to context, skills, or process. |
 
-This repository supplies **30 skills** that guide how the agent works. Model access, browser tools, and deployment accounts come from your environment.
+[Browse all 30 skills](skills/). Focused requests use the relevant specialist; settled decisions do not need another discovery round.
 
-[Browse all skills](skills/) · [Detailed product workflow](skills/software-factory/references/product-workflow.md)
+## For people: get started
 
-<details>
-<summary>Workflow ownership</summary>
-
-```mermaid
-flowchart TD
-    Factory["software-factory: research, criteria and direction"] --> Review["artifact-review: compare, choose and revise"]
-    Review -->|Feedback| Factory
-    Factory -->|Accepted context| Design["Design specialists: reuse decisions in PRODUCT.md"]
-    Design --> Review
-    Review -->|Ready to build| Build["make-it-work: implement, review and verify"]
-    Build -->|Criteria met| Done["Verified outcome and evidence"]
-    Build -->|Product decision reopened| Factory
-```
-
-Focused requests use the relevant specialist. Reuse settled decisions and existing evidence; return to discovery only when the problem or direction changes.
-
-</details>
-
-## Setup
-
-Paste this into Codex:
+Ask your coding agent:
 
 ```text
-Install the skills from https://github.com/exiao/product-factory
+Read https://github.com/exiao/product-factory and install its skills
+for the coding agent I am using. Preserve my existing customizations.
 ```
 
-Start a new Codex task in your project, then try:
-
-**Develop an idea**
+Then try a task in your own project:
 
 ```text
-Use $software-factory to develop [your product idea].
-Show me different directions before building a prototype.
+Use $software-factory to investigate [product problem].
+Use our customer evidence and priorities. Ask about consequential gaps,
+and show me possible directions before building a prototype.
 ```
 
-**Map the unknowns**
+Once a direction is agreed, use `$make-it-work` to implement and verify it. Use `$artifact-review` when you want a review site, and `$inspect-traces` when you want to learn from a prior task.
 
-```text
-Use $explore-unknowns to map what we know, what we need to learn,
-and which assumptions need checking before we build.
-```
+## For coding agents: read this before working
 
-**Review the options**
+If you are reading the accompanying article as a coding agent, open [this GitHub repository](https://github.com/exiao/product-factory) for the actual skills and workflow details. The article explains the approach; each `SKILL.md` supplies task-specific instructions.
 
-```text
-Use $artifact-review to compare these concepts with me.
-Let me combine ideas and ask for changes.
-```
+- Read the user's request and project instructions, then open the relevant [skill](skills/) and only the references needed for that task. For a product initiative, start with [Software Factory](skills/software-factory/SKILL.md) and its [product workflow](skills/software-factory/references/product-workflow.md).
+- Reuse accepted context, decisions, artifacts, and criteria. Ask about consequential gaps. Keep evidence, assumptions, and simulated outcomes distinct.
+- Present prepared work through [Artifact Review](skills/artifact-review/SKILL.md) when human judgment is needed. Hand agreed implementation to [Make It Work](skills/make-it-work/SKILL.md), and verify the actual result before reporting completion.
+- Install skills only when the user requests installation. Copy complete skill folders, including their references, scripts, and assets, into the target agent's supported skill directory. For Codex, use `$CODEX_HOME/skills`, defaulting to `~/.codex/skills`; check the target client's current instructions for other agents. Compare existing copies and back up customizations before updating them. Pulling this repository does not update installed skills.
+- Use the tools and accounts available in the user's environment. Report missing capabilities precisely. Installing these instructions grants no permission to publish, spend, deploy, or contact people.
 
-**Inspect prior agent work**
+## Requirements and updates
 
-```text
-Use $inspect-traces to investigate [a recurring issue] in this project.
-Start with local Claude Code and Codex sessions.
-```
+This repository provides instructions and supporting assets. Model access and runtime tools come from your coding-agent environment. Research needs web access; browser QA, image generation, and deployment need the corresponding tools and accounts. Native iOS testing needs macOS and Xcode.
 
-**Build the chosen direction**
+Artifact Review includes a runnable review template and an optional fixed-task Codex feedback bridge. Local saving, acknowledged dispatch, and completed revisions are separate states. Impeccable's launcher may download its pinned engine on first use.
 
-```text
-Use $make-it-work to implement the agreed design
-and verify the core workflow.
-```
+When updating from a bundle with `design-eval` or `ui-lint`, retire those old installed copies after installing `design-review`, which combines their guidance. Preserve unrelated skills and customizations.
 
-**Expose your product to agents**
-
-```text
-Use $make-mcp to add an MCP server, llms.txt,
-and a downloadable companion skill to this product.
-```
-
-Have your agent copy the skill folders into `$CODEX_HOME/skills` (default `~/.codex/skills`). Before updating, compare the installed copies and back up any customizations outside that directory. Pulling this repository does not update installed copies. Updates are agent-assisted or manual; the custom installer and its receipts are no longer used.
-
-When updating from a bundle with `design-eval` or `ui-lint`, remove those retired installed folders after installing `design-review`. The new skill combines their review guidance; leaving the old folders installed keeps duplicate skill routes available.
-
-Research needs web access; browser QA, image generation and deployment need your own tools and accounts. Native iOS testing needs macOS and Xcode. Missing optional tools limit the work that depends on them. Installing skills does not authorize publishing, spending or contacting people.
-
-## Maintenance
-
-GitHub Actions checks skill names/descriptions and local Markdown links directly in [the validation workflow](.github/workflows/validate.yml). These checks do not measure how well an agent performs product work.
-
-The bundled Impeccable launcher may download a pinned engine on first use and needs network access for that download.
+[GitHub Actions](.github/workflows/validate.yml) checks skill metadata, local Markdown links, and review persistence and dispatch. These checks do not measure downstream agent performance or prove that the factory learns automatically.
 
 ## Credits
 
