@@ -37,6 +37,18 @@ Once a direction is agreed, use `$make-it-work` to implement and verify it. Use 
 4. **Delegate to agents as coworkers.** Use agents as thinking partners, task executors, or scheduled researchers, depending on the work. Give them a concrete outcome and let them prepare artifacts you can inspect. Have them surface consequential decisions that need your input.
 5. **Build improvement loops.** [Inspect past traces](skills/inspect-traces/SKILL.md) to find missed context, wrong assumptions, and repeated corrections. Update the relevant instructions, then evaluate whether the next attempt improves. For repeated, valuable tasks, use evals to compare changes to skills, models, tools, and environments.
 
+### Run a workflow for each step
+
+| Step | Skill | Ask your coding agent |
+| --- | --- | --- |
+| Give context | [`gather-context`](skills/gather-context/SKILL.md) | "Gather the context needed for this task and show which sources matter most." |
+| Confirm understanding | [`confirm-understanding`](skills/confirm-understanding/SKILL.md) | "Check your interpretation, expose assumptions, and ask about consequential gaps." |
+| Build skills | [`build-skill`](skills/build-skill/SKILL.md) | "Turn this repeatable practice into a skill my team can inspect and reuse." |
+| Delegate work | [`delegate-work`](skills/delegate-work/SKILL.md) | "Assign this work to agent coworkers and verify what they deliver." |
+| Improve the workflow | [`improve-workflow`](skills/improve-workflow/SKILL.md) | "Inspect where this workflow failed, make a scoped change, and compare the next attempt." |
+
+For example, use `$gather-context` to prepare a source-backed brief before delegating research. Use `$improve-workflow` when repeated corrections suggest the brief or skill needs changing. Reuse existing context and decisions, and run only the steps the task needs. Your coding agent may display skills as slash commands; the names here are not shell commands.
+
 These steps help you establish the factory. The [product workflow](skills/product-factory/references/product-workflow.md) describes how agents then carry a particular initiative from research through design and delivery.
 
 ## Start with these skills
@@ -48,7 +60,7 @@ These steps help you establish the factory. The [product workflow](skills/produc
 | [`make-it-work`](skills/make-it-work/SKILL.md) | Implement the agreed outcome, fix issues, and verify the real workflow. |
 | [`inspect-traces`](skills/inspect-traces/SKILL.md) | Learn from prior agent work and identify specific changes to context, skills, or process. |
 
-[Browse all 30 skills](skills/).
+[Browse all 35 skills](skills/).
 
 ## For coding agents: read this before working
 
