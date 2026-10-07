@@ -32,6 +32,6 @@ Update the existing project brief or context record when the task authorizes wri
 
 The brief should let another agent answer where a claim came from and what remains uncertain without rereading every source. Keep private raw evidence in its authorized location; link it rather than copying sensitive material into a public artifact. Explain which sources deserve priority and why.
 
-If persistent source pointers would help future tasks, propose a short addition to existing project instructions. Apply it only within the requested edit scope; do not create a global rule or another competing source of truth. Confirm meaning through [confirm-understanding](../confirm-understanding/SKILL.md) when a consequential interpretation remains unresolved.
+If persistent source pointers would help future tasks, propose a short addition to existing project instructions. Apply it only within the requested edit scope; do not create a global rule or another competing source of truth. State consequential unresolved interpretations and ask the relevant question before dependent work. For a product initiative, reuse [Product Factory's clarification step](../product-factory/SKILL.md#clarify-before-dependent-work); context gathering alone does not launch the full product workflow.
 
 Report what was inspected, what could not be read, where the brief lives, and the next decision it supports. A completed brief does not establish that its assumptions are true.

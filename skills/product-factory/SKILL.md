@@ -21,6 +21,14 @@ Commands below are conversational operations, not shell commands or standalone s
 - **Settled implementation or clear fix:** hand delivery to [$make-it-work](../make-it-work/SKILL.md); focused design or verification requests use their specialist directly. Do not reopen discovery.
 - **Advice or bare invocation:** recommend up to three context-relevant next operations and explain the leading choice. Advice does not execute them. If the surrounding conversation already supplies an actionable request, follow it rather than showing a menu.
 
+## Clarify before dependent work
+
+Reuse the request, project instructions, accepted context, and prior decisions. Summarize the intended outcome, problem, and approach in two or three sentences, making the relevant audience, scope, exclusions, and success criteria clear. Separate supported requirements from assumptions and check consequential interpretations against the evidence; do not turn a proposed implementation detail into a requirement.
+
+Ask only about gaps that could materially change the result, scope, criteria, or authorization. Batch related questions through the runtime's asynchronous question tool when available, and continue independent authorized work while a required answer is pending. Use a small example or diagram when it helps resolve a real ambiguity. Clear tasks and already settled decisions need no new approval round.
+
+When the user corrects the interpretation, update the existing brief and affected downstream decisions. Silence is not agreement. For an explicitly requested deeper unknowns interview, use [explore-unknowns](../explore-unknowns/SKILL.md); use [acceptance-criteria](../acceptance-criteria/SKILL.md) when the finish line needs clarification. This establishes what to do, not proof that the result works.
+
 ## Default sequence
 
 For a product outcome, follow this sequence in order. Read [product workflow](references/product-workflow.md) for execution detail and the linked specialist skills at their stages. Focused operations above remain available when the user asks for a specific step; do not turn a product assignment into a menu of optional operations.
