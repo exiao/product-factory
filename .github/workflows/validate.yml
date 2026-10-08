@@ -69,5 +69,5 @@ jobs:
 
       - name: Check artifact review persistence and dispatch
         run: |
-          python skills/artifact-review/scripts/check-server.py
-          python skills/artifact-review/scripts/check-handoff.py
+          python skills/review-with-me/scripts/check-server.py
+          python skills/review-with-me/scripts/check-handoff.py
