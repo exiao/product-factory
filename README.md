@@ -29,13 +29,13 @@ and show me possible directions before building a prototype.
 
 | Step | Workflow or tool | What you get |
 | --- | --- | --- |
-| Give agents context | [`gather-context`](skills/gather-context/SKILL.md) | A brief with prioritized sources and missing evidence. |
+| Connect agents to your data | [`connect-your-data`](skills/connect-your-data/SKILL.md) | Checked source access, important context, and a reusable brief. |
 | Confirm understanding | Handled within [`product-factory`](skills/product-factory/SKILL.md#clarify-before-dependent-work) | A clear task, boundaries, and unresolved assumptions. |
 | Build shareable skills | Your coding agent's skill creator, or [meta-skills](https://github.com/exiao/meta-skills/tree/main/skill-creator) | Instructions that capture a repeatable team practice. |
 | Delegate to coworkers | [`product-factory`](skills/product-factory/SKILL.md), [`make-it-work`](skills/make-it-work/SKILL.md), and native delegation tools | Bounded assignments and checked results. |
 | Build improvement loops | [`inspect-traces`](skills/inspect-traces/SKILL.md), then an existing evaluator and hill-climbing workflow as needed | A diagnosed failure and a supported change. |
 
-Invoke a skill with a request such as `$gather-context for this project`. Reuse existing context and decisions; run only the steps you need. See the [setup workflow](skills/product-factory/references/factory-setup.md) for handoffs.
+Invoke a skill with a request such as `$connect-your-data for this project`. Reuse existing context and decisions; run only the steps you need. See the [setup workflow](skills/product-factory/references/factory-setup.md) for handoffs.
 
 Optional [meta-skills](https://github.com/exiao/meta-skills) tools cover [skill creation](https://github.com/exiao/meta-skills/tree/main/skill-creator), [audits](https://github.com/exiao/meta-skills/tree/main/skill-audit), and [evaluated optimization](https://github.com/exiao/meta-skills/tree/main/skill-improver). Use your agent's built-in creator when available; these tools are not bundled here.
 
@@ -45,12 +45,12 @@ Give delegated work an outcome, context, boundaries, and completion check. Inspe
 
 | Order | Invoke | What it does | When needed |
 | --- | --- | --- | --- |
-| 1 | [`gather-context`](skills/gather-context/SKILL.md) | Prioritize relevant evidence, constraints, and accepted decisions. | When project context is missing or scattered. |
+| 1 | [`connect-your-data`](skills/connect-your-data/SKILL.md) | Check access and gather the evidence and priorities the task needs. | When project context is missing or scattered. |
 | 2 | [`product-factory`](skills/product-factory/SKILL.md) | Clarify the task, investigate the problem, explore directions, design, prototype, and review with you. | Main entry point; it coordinates the specialists. |
 | 3 | [`make-it-work`](skills/make-it-work/SKILL.md) | Implement the agreed outcome and verify the real workflow. | After design agreement; Product Factory can hand off within the authorized scope. |
 | 4 | [`inspect-traces`](skills/inspect-traces/SKILL.md) | Find mistakes and repeated corrections to improve future work. | After a task or recurring failure. |
 
-Usually, invoke `$product-factory` and ask it to carry the agreed work through delivery. It uses [design-mode](skills/design-mode/SKILL.md) for designs and prototypes and [artifact-review](skills/artifact-review/SKILL.md) for your judgment and revisions. Invoke those specialists directly for focused work; clarification does not require a separate skill call.
+Usually, invoke `$product-factory` and ask it to carry the agreed work through delivery. It uses [design-mode](skills/design-mode/SKILL.md) for designs and prototypes and [review-with-me](skills/review-with-me/SKILL.md) for your judgment and revisions. Invoke those specialists directly for focused work; clarification does not require a separate skill call.
 
 For focused work, try [explore-unknowns](skills/explore-unknowns/SKILL.md) to uncover assumptions, [design-review](skills/design-review/SKILL.md) to check usability and accessibility, or [synthetic-userstudies](skills/synthetic-userstudies/SKILL.md) for simulated walkthroughs. Simulated findings are hypotheses, not customer evidence.
 
@@ -70,9 +70,11 @@ Reading the accompanying article? Open [this repository](https://github.com/exia
 
 Model access and tools come from your coding-agent environment. Research needs web access; browser QA, image generation, and deployment need the corresponding tools and accounts. Native iOS testing needs macOS and Xcode.
 
-Artifact Review includes a review template and an optional Codex feedback bridge. Saved feedback is not proof of dispatch or completed revisions. Impeccable's launcher may download its pinned engine on first use.
+Review With Me includes a review template and an optional Codex feedback bridge. Saved feedback is not proof of dispatch or completed revisions. Impeccable's launcher may download its pinned engine on first use.
 
 Pulling this repository does not update installed copies. When replacing `software-factory` with `product-factory`, preserve customizations and retire the old folder. Also retire any installed `confirm-understanding` copy after preserving customizations; its guidance now lives in `product-factory`. Replace retired `design-eval` and `ui-lint` copies with `design-review`.
+
+Replace `gather-context` with `connect-your-data` and `artifact-review` with `review-with-me`, preserving customizations. Copy the complete `review-with-me` folder, including its scripts and template. Existing reviews keep their saved-feedback keys.
 
 [CI](.github/workflows/validate.yml) checks metadata, links, and review persistence and dispatch. It does not measure downstream agent performance.
 

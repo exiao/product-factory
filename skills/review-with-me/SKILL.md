@@ -1,9 +1,9 @@
 ---
-name: artifact-review
+name: review-with-me
 description: Build an interactive site for a creator to inspect artifacts, choose directions, request revisions, and send feedback to the originating task. Use for human review of actual work, not agent-only critique.
 ---
 
-# Artifact Review
+# Review With Me
 
 Present the actual work and the judgment it needs. This skill owns the review surface and feedback handoff; the host owns research, generation, implementation, and delivery. Reuse established scope and decisions. Reviewing an artifact does not authorize publishing it or messaging other people.
 
@@ -16,7 +16,7 @@ For generated-media decisions, present actual in-context keyframes, comparable v
 Reuse an existing review when available. For a new review, run:
 
 ```bash
-python3 <artifact-review-skill-directory>/scripts/create_review.py /absolute/review-directory
+python3 <review-with-me-skill-directory>/scripts/create_review.py /absolute/review-directory
 ```
 
 The generator refuses to overwrite a nonempty directory. Populate `artifacts.json` and copy actual media. Read [the template contract](references/review-desk.md) for data fields and serving. Use the bundled shell rather than reinventing its navigation, typography, storage, and submission controls. Preserve existing storage keys, artifact IDs, versions, drafts, and responses when updating a review.

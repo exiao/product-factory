@@ -4,7 +4,7 @@ Use this guide when the user asks to establish or improve how their coding-agent
 
 | Step | Workflow or tool | Result carried forward |
 | --- | --- | --- |
-| Give agents context | [gather-context](../../gather-context/SKILL.md) | Prioritized source map, brief, and explicit gaps. |
+| Connect agents to your data | [connect-your-data](../../connect-your-data/SKILL.md) | Checked source access, relevant context, and a brief with explicit gaps. |
 | Confirm understanding | [Product Factory's clarification step](../SKILL.md#clarify-before-dependent-work), within the main workflow. | Task interpretation, boundaries, criteria, and unresolved assumptions. |
 | Build shareable skills | Available runtime skill creator, or [meta-skills skill-creator](https://github.com/exiao/meta-skills/tree/main/skill-creator) | Editable instructions capturing a repeatable practice, with validation limits. |
 | Delegate to coworkers | Product Factory for product judgment; [make-it-work](../../make-it-work/SKILL.md) for delivery; native delegation tools for workers. | Bounded assignment and an inspected result, with its pending or unverified boundaries. |
@@ -32,4 +32,4 @@ For repeated work with a measurable goal, reuse a runnable evaluator and availab
 
 Keep diagnosis cases distinct from independent evaluation cases. Report what was exercised and what remains untested; cleaner instructions or metadata checks alone do not prove better behavior. Apply or publish an accepted result only within existing authorization.
 
-Use `$gather-context` when context is missing or scattered, then `$product-factory` for a product initiative or factory setup. Product Factory handles clarification, design specialists, and artifact review, then hands agreed delivery to Make It Work. Inspect traces afterward when there is a failure or a useful learning question. A setup handoff links the source, scope, result, uncertainty, and next action in the existing project record. Skill names are not shell commands.
+Use `$connect-your-data` when context is missing or scattered, then `$product-factory` for a product initiative or factory setup. Product Factory handles clarification, design specialists, and artifact review, then hands agreed delivery to Make It Work. Inspect traces afterward when there is a failure or a useful learning question. A setup handoff links the source, scope, result, uncertainty, and next action in the existing project record. Skill names are not shell commands.
