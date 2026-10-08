@@ -1,6 +1,6 @@
 ---
 name: product-factory
-description: "Coordinate product discovery and design, then hand delivery to Make It Work. Use for an end-to-end product initiative or an explicitly requested factory workflow; focused operations remain available."
+description: "Coordinate product discovery and design, then hand delivery to Make It Work. Use for an end-to-end product initiative, factory setup, or focused task clarification to resolve intent, scope, and consequential assumptions."
 ---
 
 # Product Factory
@@ -25,9 +25,9 @@ Commands below are conversational operations, not shell commands or standalone s
 
 Reuse the request, project instructions, accepted context, and prior decisions. Summarize the intended outcome, problem, and approach in two or three sentences, making the relevant audience, scope, exclusions, and success criteria clear. Separate supported requirements from assumptions and check consequential interpretations against the evidence; do not turn a proposed implementation detail into a requirement.
 
-Ask only about gaps that could materially change the result, scope, criteria, or authorization. Batch related questions through the runtime's asynchronous question tool when available, and continue independent authorized work while a required answer is pending. Use a small example or diagram when it helps resolve a real ambiguity. Clear tasks and already settled decisions need no new approval round.
+Ask only about gaps that could materially change the result, scope, criteria, or authorization. Batch related questions through the runtime's asynchronous question tool when available, and continue independent authorized work while a required answer is pending. Use a small example or diagram when it helps resolve a real ambiguity.
 
-When the user corrects the interpretation, update the existing brief and affected downstream decisions. Silence is not agreement. For an explicitly requested deeper unknowns interview, use [explore-unknowns](../explore-unknowns/SKILL.md); use [acceptance-criteria](../acceptance-criteria/SKILL.md) when the finish line needs clarification. This establishes what to do, not proof that the result works.
+When the user corrects the interpretation, update the existing brief and affected downstream decisions. For an explicitly requested deeper unknowns interview, use [explore-unknowns](../explore-unknowns/SKILL.md); use [acceptance-criteria](../acceptance-criteria/SKILL.md) when the finish line needs clarification. This establishes what to do, not proof that the result works.
 
 ## Default sequence
 
@@ -68,6 +68,7 @@ On submitted feedback, read the snapshot and apply the latest explicit response 
 
 | Operation | Kind | Result and guidance |
 |---|---|---|
+| `clarify [task]` | Inspect | Task interpretation, boundaries, and unresolved assumptions; [clarification](#clarify-before-dependent-work). Stop after clarification for a focused request. |
 | `recommend [project/artifact]` | Advise | Current decision, recommended next operation and why; [focused work](references/focused-work.md) |
 | `compare [approaches]` | Evaluate | Same-input worked comparison, tradeoffs and smallest useful test; [focused work](references/focused-work.md) |
 | `trace [promise/artifact]` | Inspect | Links from problem and evidence through intervention, criterion and observed result; [focused work](references/focused-work.md) |

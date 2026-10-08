@@ -72,7 +72,7 @@ Model access and tools come from your coding-agent environment. Research needs w
 
 Artifact Review includes a review template and an optional Codex feedback bridge. Saved feedback is not proof of dispatch or completed revisions. Impeccable's launcher may download its pinned engine on first use.
 
-Pulling this repository does not update installed copies. When replacing `software-factory` with `product-factory`, preserve customizations and retire the old folder. Likewise, replace retired `design-eval` and `ui-lint` copies with `design-review`.
+Pulling this repository does not update installed copies. When replacing `software-factory` with `product-factory`, preserve customizations and retire the old folder. Also retire any installed `confirm-understanding` copy after preserving customizations; its guidance now lives in `product-factory`. Replace retired `design-eval` and `ui-lint` copies with `design-review`.
 
 [CI](.github/workflows/validate.yml) checks metadata, links, and review persistence and dispatch. It does not measure downstream agent performance.
 
