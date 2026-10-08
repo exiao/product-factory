@@ -1,6 +1,6 @@
 ---
 name: product-factory
-description: "Coordinate product discovery and design, then hand delivery to Make It Work. Use for an end-to-end product initiative or an explicitly requested factory workflow; focused operations remain available."
+description: "Coordinate product discovery and design, then hand delivery to Make It Work. Use for an end-to-end product initiative, factory setup, or focused task clarification to resolve intent, scope, and consequential assumptions."
 ---
 
 # Product Factory
@@ -16,9 +16,18 @@ For design exploration where imagery or motion can communicate the product's cha
 Commands below are conversational operations, not shell commands or standalone skills. Infer the operation from ordinary language; users need not memorize names.
 
 - **Focused request:** run only the selected operation on the named artifact. Read its linked playbook and relevant specialist guidance. Do not launch discovery, maps, prototypes or implementation as a side effect. Review-only work reports findings without editing. A request to revise or fix authorizes the bounded change and appropriate verification.
+- **Factory setup:** use the [five-part setup workflow](references/factory-setup.md) when the user asks to establish context, clarify working agreements, capture skills, delegate to coworkers, or improve recurring agent work. Reuse completed setup; this is not another mandatory discovery sequence for every product task.
 - **Delegated outcome:** use [product workflow](references/product-workflow.md) when audience, promise, behavior or direction is unresolved. Start by stating or reusing the short vision. Follow the default sequence below, reuse agreements, and continue through the authorized finish line. An intermediate focused operation does not cancel the larger assignment.
 - **Settled implementation or clear fix:** hand delivery to [$make-it-work](../make-it-work/SKILL.md); focused design or verification requests use their specialist directly. Do not reopen discovery.
 - **Advice or bare invocation:** recommend up to three context-relevant next operations and explain the leading choice. Advice does not execute them. If the surrounding conversation already supplies an actionable request, follow it rather than showing a menu.
+
+## Clarify before dependent work
+
+Reuse the request, project instructions, accepted context, and prior decisions. Summarize the intended outcome, problem, and approach in two or three sentences, making the relevant audience, scope, exclusions, and success criteria clear. Separate supported requirements from assumptions and check consequential interpretations against the evidence; do not turn a proposed implementation detail into a requirement.
+
+Ask only about gaps that could materially change the result, scope, criteria, or authorization. Batch related questions through the runtime's asynchronous question tool when available, and continue independent authorized work while a required answer is pending. Use a small example or diagram when it helps resolve a real ambiguity.
+
+When the user corrects the interpretation, update the existing brief and affected downstream decisions. For an explicitly requested deeper unknowns interview, use [explore-unknowns](../explore-unknowns/SKILL.md); use [acceptance-criteria](../acceptance-criteria/SKILL.md) when the finish line needs clarification. This establishes what to do, not proof that the result works.
 
 ## Default sequence
 
@@ -51,7 +60,7 @@ Explicitly requested alternatives remain separate focused experiments. Preserve 
 
 ## Review artifacts with the user
 
-Use [artifact-review](../artifact-review/SKILL.md) when creating an interactive site for the user to judge generated work. Product prototypes must open as standalone working experiences with their own URL and product interface; the review site launches them and gathers feedback afterward. Let the user work on the artifact and exercise the core loop, including accepting, rejecting and revising results, rather than filling out a form describing the product. It owns concise artifact-centered cards, question-specific primary controls, and context-appropriate revision, research, annotation and archive actions. Product Factory owns product direction, stage order and the project record; Make It Work owns delivery after handoff. Specialized review mechanisms remain available without becoming a mandatory questionnaire. Prepare each review artifact from the earliest unresolved prerequisite, moving from purpose and concepts toward mechanisms and interaction details. A downstream card must not silently settle an upstream choice. Required stage outputs do not each require a separate approval card; surface only judgments that need this person.
+Use [review-with-me](../review-with-me/SKILL.md) when creating an interactive site for the user to judge generated work. Product prototypes must open as standalone working experiences with their own URL and product interface; the review site launches them and gathers feedback afterward. Let the user work on the artifact and exercise the core loop, including accepting, rejecting and revising results, rather than filling out a form describing the product. It owns concise artifact-centered cards, question-specific primary controls, and context-appropriate revision, research, annotation and archive actions. Product Factory owns product direction, stage order and the project record; Make It Work owns delivery after handoff. Specialized review mechanisms remain available without becoming a mandatory questionnaire. Prepare each review artifact from the earliest unresolved prerequisite, moving from purpose and concepts toward mechanisms and interaction details. A downstream card must not silently settle an upstream choice. Required stage outputs do not each require a separate approval card; surface only judgments that need this person.
 
 On submitted feedback, read the snapshot and apply the latest explicit response to its matching artifact and version. Preserve approvals, revisions, and unresolved responses as distinct states. Revise affected dependencies, continue from the earliest incomplete stage, and make the next appropriate artifact available in the review site. Retain the current assignment and its fresh-start or reuse constraints. A saved response or acknowledged dispatch alone is not completed downstream work.
 
@@ -59,6 +68,7 @@ On submitted feedback, read the snapshot and apply the latest explicit response 
 
 | Operation | Kind | Result and guidance |
 |---|---|---|
+| `clarify [task]` | Inspect | Task interpretation, boundaries, and unresolved assumptions; [clarification](#clarify-before-dependent-work). Stop after clarification for a focused request. |
 | `recommend [project/artifact]` | Advise | Current decision, recommended next operation and why; [focused work](references/focused-work.md) |
 | `compare [approaches]` | Evaluate | Same-input worked comparison, tradeoffs and smallest useful test; [focused work](references/focused-work.md) |
 | `trace [promise/artifact]` | Inspect | Links from problem and evidence through intervention, criterion and observed result; [focused work](references/focused-work.md) |
@@ -67,6 +77,7 @@ On submitted feedback, read the snapshot and apply the latest explicit response 
 | `inspect`, `critique`, `audit [flow/surface]` | Inspect / Revise | [$interaction-design](../interaction-design/SKILL.md) |
 | `sharpen`, `assess`, `define` | Revise / Evaluate | [$acceptance-criteria](../acceptance-criteria/SKILL.md) |
 | `develop [product]` | Coordinate | [Product workflow](references/product-workflow.md) |
+| `setup factory [project]` | Coordinate | Five setup steps using bundled skills and available tools; [factory setup](references/factory-setup.md) |
 
 A lens reveals something about the current artifact; an action changes it. Choose from the user's intent. For example, “highlight hidden user work” annotates the current flow; “remove the unnecessary setup step” calls for a scoped revision. Preserve the original object and show the affected portion, a before/after excerpt, or an annotated screenshot instead of replacing whole documents unnecessarily. Keep observations separate from suggested changes.
 

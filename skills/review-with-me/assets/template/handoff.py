@@ -1,4 +1,4 @@
-"""Durable, at-most-once dispatch attempts for artifact-review snapshots."""
+"""Durable, at-most-once dispatch attempts for review feedback snapshots."""
 import datetime
 import hashlib
 import json
@@ -33,7 +33,7 @@ def save_and_dispatch(data, directory, thread):
             return 200, previous
         return 409, {**previous, 'error': 'Feedback saved; delivery is unconfirmed. Check this task before retrying. This snapshot will not be sent again automatically.'}
     message = (
-        'Apply my artifact-review feedback from ' + str(dest) + '. '
+        'Apply my review-with-me feedback from ' + str(dest) + '. '
         'Read the snapshot and match each response or request to its artifact ID and version. '
         'Preserve every selected option and custom note. Draft notes are feedback, not approval; '
         'only explicit recorded decisions settle direction. Continue the existing task within its authorized scope, '
