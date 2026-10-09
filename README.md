@@ -38,7 +38,7 @@ and show me possible directions before building a prototype.
 
 Invoke a skill with a request such as `$connect-your-data for this project`. Reuse existing context and decisions; run only the steps you need. See the [setup workflow](skills/product-factory/references/factory-setup.md) for handoffs.
 
-Try `$get-to-know-me` when introducing yourself to an agent or updating your role and goals. It prepares a profile for your review before saving it in the agreed location. You do not need to repeat the interview for every task.
+Try `$get-to-know-me` when introducing yourself to an agent or updating your role and goals. It prepares a short addition to your project's `AGENTS.md` for your review, preserving existing instructions. You can choose another location. You do not need to repeat the interview for every task.
 
 Optional [meta-skills](https://github.com/exiao/meta-skills) tools cover [skill creation](https://github.com/exiao/meta-skills/tree/main/skill-creator), [audits](https://github.com/exiao/meta-skills/tree/main/skill-audit), and [evaluated optimization](https://github.com/exiao/meta-skills/tree/main/skill-improver). Use your agent's built-in creator when available; these tools are not bundled here.
 

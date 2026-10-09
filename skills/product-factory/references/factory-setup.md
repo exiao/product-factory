@@ -13,7 +13,7 @@ Use this guide when the user asks to establish or improve how their coding-agent
 
 Start at the requested step or earliest material gap. A new project may need a source-backed brief; a recurring failure may begin with trace inspection. Reuse existing context records, decisions, skills, and worker results.
 
-Use Get To Know Me for an introduction or a change in role or goals. Reuse an existing profile for ordinary tasks. It learns about the person; Connect Your Data checks access to project evidence. Save profile changes only after the user reviews the content and agrees to its location.
+Use Get To Know Me for an introduction or a change in role or goals. Reuse an existing profile for ordinary tasks. It learns about the person; Connect Your Data checks access to project evidence. Default to a short section in the project's `AGENTS.md`, preserving existing instructions. Save profile changes only after the user reviews the content and agrees to its location.
 
 ## Capture a working practice
 
