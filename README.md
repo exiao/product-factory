@@ -25,15 +25,15 @@ and show me possible directions before building a prototype.
 
 ## Set up and improve your factory
 
-![Give agents context, confirm understanding, build shareable skills, delegate, and build improvement loops.](assets/build-product-factory.png)
+![Tell your agent about you, connect agents to your data, turn workflows into skills, change how your agents communicate, delegate your work, and build improvement loops. Feedback returns to skills at step 3.](assets/build-product-factory.png)
 
 | Step | Workflow or tool | What you get |
 | --- | --- | --- |
 | Tell your agent about you | [`get-to-know-me`](skills/get-to-know-me/SKILL.md) | A profile of your role, current work, goals, and preferences for you to review. |
 | Connect agents to your data | [`connect-my-data`](skills/connect-my-data/SKILL.md) | Checked source access, important context, and a reusable brief. |
 | Turn workflows into skills | [`turn-workflows-into-skills`](skills/turn-workflows-into-skills/SKILL.md) | Find skills that fit your role and projects, install existing ones, or capture your method in new ones. |
-| Change how agents communicate | [`product-factory`](skills/product-factory/SKILL.md#clarify-before-dependent-work) and [`review-with-me`](skills/review-with-me/SKILL.md) | Clarifying questions and actual work you can inspect and respond to. |
-| Delegate to coworkers | [`product-factory`](skills/product-factory/SKILL.md), [`make-it-work`](skills/make-it-work/SKILL.md), and native delegation tools | Bounded assignments and checked results. |
+| Change how your agents communicate | [`product-factory`](skills/product-factory/SKILL.md#clarify-before-dependent-work) and [`review-with-me`](skills/review-with-me/SKILL.md) | Clarifying questions and actual work you can inspect and respond to. |
+| Delegate your work | [`product-factory`](skills/product-factory/SKILL.md), [`make-it-work`](skills/make-it-work/SKILL.md), and native delegation tools | Bounded assignments and checked results. |
 | Build improvement loops | [`inspect-traces`](skills/inspect-traces/SKILL.md), [`make-an-eval`](skills/make-an-eval/SKILL.md), then an available hill-climbing workflow as needed | A diagnosed failure, replayable evaluation, and a supported change. |
 
 Invoke a skill with a request such as `$connect-my-data for this project`. Reuse existing context and decisions; run only the steps you need. See the [setup workflow](skills/product-factory/references/factory-setup.md) for handoffs.
