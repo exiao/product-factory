@@ -25,15 +25,15 @@ and show me possible directions before building a prototype.
 
 ## Set up and improve your factory
 
-![Give agents context, confirm understanding, build shareable skills, delegate, and build improvement loops.](assets/build-product-factory.png)
+![Tell your agent about you, connect agents to your data, turn workflows into skills, change how your agents communicate, delegate your work, and build improvement loops. Feedback returns to skills at step 3.](assets/build-product-factory.png)
 
 | Step | Workflow or tool | What you get |
 | --- | --- | --- |
 | Tell your agent about you | [`get-to-know-me`](skills/get-to-know-me/SKILL.md) | A profile of your role, current work, goals, and preferences for you to review. |
 | Connect agents to your data | [`connect-your-data`](skills/connect-your-data/SKILL.md) | Checked source access, important context, and a reusable brief. |
-| Build shareable skills | Your coding agent's skill creator, or [meta-skills](https://github.com/exiao/meta-skills/tree/main/skill-creator) | Instructions that capture a repeatable team practice. |
-| Change how agents communicate | [`product-factory`](skills/product-factory/SKILL.md#clarify-before-dependent-work) and [`review-with-me`](skills/review-with-me/SKILL.md) | Clarifying questions and actual work you can inspect and respond to. |
-| Delegate to coworkers | [`product-factory`](skills/product-factory/SKILL.md), [`make-it-work`](skills/make-it-work/SKILL.md), and native delegation tools | Bounded assignments and checked results. |
+| Turn workflows into skills | Your coding agent's skill creator, or [meta-skills](https://github.com/exiao/meta-skills/tree/main/skill-creator) | Instructions that capture a repeatable team practice. |
+| Change how your agents communicate | [`product-factory`](skills/product-factory/SKILL.md#clarify-before-dependent-work) and [`review-with-me`](skills/review-with-me/SKILL.md) | Clarifying questions and actual work you can inspect and respond to. |
+| Delegate your work | [`product-factory`](skills/product-factory/SKILL.md), [`make-it-work`](skills/make-it-work/SKILL.md), and native delegation tools | Bounded assignments and checked results. |
 | Build improvement loops | [`inspect-traces`](skills/inspect-traces/SKILL.md), then an existing evaluator and hill-climbing workflow as needed | A diagnosed failure and a supported change. |
 
 Invoke a skill with a request such as `$connect-your-data for this project`. Reuse existing context and decisions; run only the steps you need. See the [setup workflow](skills/product-factory/references/factory-setup.md) for handoffs.
