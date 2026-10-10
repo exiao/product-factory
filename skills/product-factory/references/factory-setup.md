@@ -9,7 +9,7 @@ Use this guide when the user asks to establish or improve how their coding-agent
 | Build shareable skills | Available runtime skill creator, or [meta-skills skill-creator](https://github.com/exiao/meta-skills/tree/main/skill-creator) | Editable instructions capturing a repeatable practice, with validation limits. |
 | Change how agents communicate | [Product Factory's clarification step](../SKILL.md#clarify-before-dependent-work) and [review-with-me](../../review-with-me/SKILL.md) | Questions that resolve important gaps and actual work the user can judge. |
 | Delegate to coworkers | Product Factory for product judgment; [make-it-work](../../make-it-work/SKILL.md) for delivery; native delegation tools for workers. | Bounded assignment and an inspected result, with its pending or unverified boundaries. |
-| Build improvement loops | [inspect-traces](../../inspect-traces/SKILL.md), existing evaluation and hill-climbing tools as needed. | Diagnosed failure, scoped correction, and a supported keep/reject decision. |
+| Build improvement loops | [inspect-traces](../../inspect-traces/SKILL.md), [make-an-eval](../../make-an-eval/SKILL.md), available hill-climbing tools as needed. | Diagnosed failure, replayable evaluation, and a supported keep/reject decision. |
 
 Start at the requested step or earliest material gap. A new project may need a source-backed brief; a recurring failure may begin with trace inspection. Reuse existing context records, decisions, skills, and worker results.
 
@@ -31,7 +31,9 @@ Inspect worker artifacts and reproduce disputed findings before integrating them
 
 Trace inspection identifies the supported divergence between intent and execution. A missing source may require a context update; a simple defect may need a scoped fix and recheck. Inspection alone does not authorize editing, publication, or repeated experiments.
 
-For repeated work with a measurable goal, reuse a runnable evaluator and available hill-climbing workflow. Hold conditions comparable, run an unchanged baseline, preserve required behavior, keep supported candidates, and stop within the agreed resource limits. For skill optimization, [meta-skills skill-improver](https://github.com/exiao/meta-skills/tree/main/skill-improver) provides a dedicated evaluated loop. A general hill-climbing workflow can also compare models, tools, environments, or other artifacts when available; it is not bundled here.
+For repeated work with a measurable goal, use [make-an-eval](../../make-an-eval/SKILL.md) to build or reuse replayable cases, check the grading, and report quality, cost, and time. It supports local agent runs and Harbor tasks when repeatable tool access or isolation helps. Evaluation measures behavior; optimization chooses changes using those measurements.
+
+Reuse the runnable evaluator with an available hill-climbing workflow. Hold conditions comparable, run an unchanged baseline, preserve required behavior, keep supported candidates, and stop within the agreed resource limits. For skill optimization, [meta-skills skill-improver](https://github.com/exiao/meta-skills/tree/main/skill-improver) provides a dedicated evaluated loop. A general hill-climbing workflow can also compare models, tools, environments, or other artifacts when available; it is not bundled here.
 
 Keep diagnosis cases distinct from independent evaluation cases. Report what was exercised and what remains untested; cleaner instructions or metadata checks alone do not prove better behavior. Apply or publish an accepted result only within existing authorization.
 

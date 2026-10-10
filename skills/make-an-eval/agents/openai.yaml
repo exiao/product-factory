@@ -1,0 +1,3 @@
+interface:
+  display_name: "Make an Eval"
+  short_description: "Turn work and traces into replayable agent evals"
