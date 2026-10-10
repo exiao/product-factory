@@ -1,16 +1,19 @@
-# Set up the five-part workflow
+# Set up the six-part workflow
 
 Use this guide when the user asks to establish or improve how their coding-agent coworkers operate. It sets up working practices; the separate [product workflow](product-workflow.md) develops a particular product initiative. Reuse completed setup and run only the steps the task needs.
 
 | Step | Workflow or tool | Result carried forward |
 | --- | --- | --- |
+| Tell your agent about you | [get-to-know-me](../../get-to-know-me/SKILL.md) | A user-reviewed profile of their role, work, goals, and preferences. |
 | Connect agents to your data | [connect-your-data](../../connect-your-data/SKILL.md) | Checked source access, relevant context, and a brief with explicit gaps. |
-| Confirm understanding | [Product Factory's clarification step](../SKILL.md#clarify-before-dependent-work), within the main workflow. | Task interpretation, boundaries, criteria, and unresolved assumptions. |
 | Build shareable skills | Available runtime skill creator, or [meta-skills skill-creator](https://github.com/exiao/meta-skills/tree/main/skill-creator) | Editable instructions capturing a repeatable practice, with validation limits. |
+| Change how agents communicate | [Product Factory's clarification step](../SKILL.md#clarify-before-dependent-work) and [review-with-me](../../review-with-me/SKILL.md) | Questions that resolve important gaps and actual work the user can judge. |
 | Delegate to coworkers | Product Factory for product judgment; [make-it-work](../../make-it-work/SKILL.md) for delivery; native delegation tools for workers. | Bounded assignment and an inspected result, with its pending or unverified boundaries. |
 | Build improvement loops | [inspect-traces](../../inspect-traces/SKILL.md), [make-an-eval](../../make-an-eval/SKILL.md), available hill-climbing tools as needed. | Diagnosed failure, replayable evaluation, and a supported keep/reject decision. |
 
 Start at the requested step or earliest material gap. A new project may need a source-backed brief; a recurring failure may begin with trace inspection. Reuse existing context records, decisions, skills, and worker results.
+
+Use Get To Know Me for an introduction or a change in role or goals. Reuse an existing profile for ordinary tasks. It learns about the person; Connect Your Data checks access to project evidence. Default to a short section in the project's `AGENTS.md`, preserving existing instructions. Save profile changes only after the user reviews the content and agrees to its location.
 
 ## Capture a working practice
 
