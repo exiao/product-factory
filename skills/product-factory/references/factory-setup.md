@@ -6,7 +6,7 @@ Use this guide when the user asks to establish or improve how their coding-agent
 | --- | --- | --- |
 | Tell your agent about you | [get-to-know-me](../../get-to-know-me/SKILL.md) | A user-reviewed profile of their role, work, goals, and preferences. |
 | Connect agents to your data | [connect-my-data](../../connect-my-data/SKILL.md) | Checked source access, relevant context, and a brief with explicit gaps. |
-| Build shareable skills | Available runtime skill creator, or [meta-skills skill-creator](https://github.com/exiao/meta-skills/tree/main/skill-creator) | Editable instructions capturing a repeatable practice, with validation limits. |
+| Turn workflows into skills | [turn-workflows-into-skills](../../turn-workflows-into-skills/SKILL.md), using the available skill creator and installer | Skills chosen for the user's role and projects, reused or installed where possible, and created or updated where needed. |
 | Change how agents communicate | [Product Factory's clarification step](../SKILL.md#clarify-before-dependent-work) and [review-with-me](../../review-with-me/SKILL.md) | Questions that resolve important gaps and actual work the user can judge. |
 | Delegate to coworkers | Product Factory for product judgment; [make-it-work](../../make-it-work/SKILL.md) for delivery; native delegation tools for workers. | Bounded assignment and an inspected result, with its pending or unverified boundaries. |
 | Build improvement loops | [inspect-traces](../../inspect-traces/SKILL.md), [make-an-eval](../../make-an-eval/SKILL.md), available hill-climbing tools as needed. | Diagnosed failure, replayable evaluation, and a supported keep/reject decision. |
@@ -17,7 +17,7 @@ Use Get To Know Me for an introduction or a change in role or goals. Reuse an ex
 
 ## Capture a working practice
 
-Inspect existing skills before creating another. Keep project-specific decisions in the brief; capture a reusable method in a skill. Use the coding agent's existing authoring workflow when available. For a separate creation, audit, or optimization toolkit, link to [meta-skills](https://github.com/exiao/meta-skills). These external skills are not included in this bundle; inspect their current instructions and prerequisites before use, and install only within the user's requested scope.
+Use [turn-workflows-into-skills](../../turn-workflows-into-skills/SKILL.md) to recommend skills based on the user's role and projects. Inspect existing skills first, install suitable ones when requested, and capture missing methods from examples and questions with the available skill creator. Keep project-specific decisions in the brief. For a separate creation, audit, or optimization toolkit, link to [meta-skills](https://github.com/exiao/meta-skills). These external skills are not included in this bundle; inspect their current instructions and prerequisites before use, and install only within the user's requested scope.
 
 ## Delegate an outcome
 
