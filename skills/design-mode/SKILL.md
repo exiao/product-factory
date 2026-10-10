@@ -1,6 +1,6 @@
 ---
 name: design-mode
-description: "Apply Eric’s personal design preferences alongside the selected frontend design workflow. Use for frontend creation, refinement, and review, including requested prototypes, variant canvases, HTML decks, and motion studies; preserve established design systems and requested formats."
+description: "Create, refine, and review frontend interfaces using Eric’s design preferences. Use for interfaces, prototypes, variant canvases, HTML decks, and motion studies; preserve established design systems and requested formats."
 ---
 
 # Design preferences and artifacts
@@ -17,7 +17,7 @@ For generated or edited still images, use [$image-generation-guide](../image-gen
 
 Apply the preferences below to the requested production UI or reviewable artifact. Artifact-specific packaging and controls apply only when the user needs an artifact; ordinary frontend work stays in the application. Determine the audience, format, fidelity, constraints, and unresolved choices from existing context. Ask only for missing decisions that materially affect the result; do not require a questionnaire, UI-kit upload, or option count for every task.
 
-Inspect the current source, supplied screenshots, design files, tokens, and relevant assets. Existing visual evidence matters even without a DESIGN.md. Use the project’s existing design system and [$impeccable](../impeccable/SKILL.md) for its frontend design workflow and commands. Keep Impeccable unmodified: this skill owns personal preferences and local references, while Impeccable owns its upstream workflow and tooling. Use its public skill entrypoint rather than depending on internal reference paths. Apply these personal defaults within the requested scope; explicit briefs and established systems win. Combine overlapping steps into one workflow, including one shared review budget. Preserve the brief and established product behavior; a small change does not authorize a redesign.
+Inspect the current source, supplied screenshots, design files, tokens, and relevant assets. Existing visual evidence matters even without a DESIGN.md. Use the project’s existing design system, stack, and components for frontend work. Apply these personal defaults within the requested scope; explicit briefs and established systems win. Combine overlapping steps into one workflow, including one shared review budget. Preserve the brief and established product behavior; a small change does not authorize a redesign.
 
 When looking for inspiration, start with the unresolved design question: overall composition, navigation, one component, mobile density, motion, typography, or illustration. Inspect a small number of directly comparable examples at the intended viewport and interaction state. Record the transferable rule, such as hierarchy, spacing, type scale, control anatomy, or transition behavior, then apply it using the project's own content and components. A gallery, prompt, or component example is evidence for a specific choice, not a substitute for a product brief or a reason to add a dependency.
 
@@ -29,9 +29,9 @@ For a live-site redesign, inspect the current routes and URLs, anchor IDs, prima
 
 ## Product context handoff
 
-When arriving from Product Factory, reuse its accepted vision, person and job, mechanism, constraints, evidence and explicit or delegated decisions. Use [$impeccable](../impeccable/SKILL.md)'s context setup once per session, reusing a completed setup, and follow its init record-writing format, including its schema marker and platform value. Create or update the resolved PRODUCT.md from accepted facts before visual work, preserving confirmed content and linking the original criteria and evidence. Keep visual decisions in DESIGN.md and decision history in the existing project record; link PRODUCT.md there instead of duplicating its facts.
+When arriving from Product Factory, reuse its accepted vision, person and job, mechanism, constraints, evidence and explicit or delegated decisions. Keep accepted facts, criteria, and evidence in the existing project brief, or update PRODUCT.md if the project already uses it. Record unresolved platform or stack choices before dependent visual work. Keep visual decisions in DESIGN.md when the project uses it, linking the product brief instead of copying its facts.
 
-For this handoff, existing explicit answers and approvals satisfy product-truth confirmation; this reuse rule takes precedence over requiring a new init interview merely because PRODUCT.md is missing. Ask only about consequential gaps or contradictions that remain unresolved. Product approval does not settle an unanswered platform, stack or design-workflow choice. Keep assumptions and open questions labeled; a file's existence does not turn an inference into an approval. Preserve Impeccable's upstream files, record format and scope limits on drift repair. Resume its applicable design workflow once the record is ready.
+For this handoff, reuse explicit answers and approvals. A missing PRODUCT.md does not require another interview or a separate product record. Ask only about consequential gaps or contradictions that remain unresolved. Product approval does not settle an unanswered platform, stack or design-workflow choice. Keep assumptions and open questions labeled; a file's existence does not turn an inference into an approval. Continue the requested design work once the relevant decisions are settled.
 
 ## Design and artifact checks
 

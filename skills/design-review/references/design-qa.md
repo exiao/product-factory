@@ -10,7 +10,7 @@ Supplied screenshots support a screenshot comparison; they do not prove live beh
 
 Match route, content, theme, scroll position, interaction state, viewport, crop, scale, and pixel density before judging. Settle loading and animation. Compare app content without browser chrome, surrounding canvas, or device bezels unless the reference includes them as part of the target. Normalize @2x imagery and CSS-pixel captures to comparable dimensions without stretching proportions. Record source/implementation pixel dimensions, CSS viewport and device scale when known; label unknowns and any remaining comparison limitations.
 
-Put source and implementation together in one comparison input, such as a paired image, rather than judging from memory or unrelated image views. Inspect the full composition and paired region crops when text or details are too small to assess. Reuse existing valid Impeccable comparisons instead of generating a duplicate review.
+Put source and implementation together in one comparison input, such as a paired image, rather than judging from memory or unrelated image views. Inspect the full composition and paired region crops when text or details are too small to assess. Reuse existing valid design comparisons instead of generating a duplicate review.
 
 ## Check fidelity and behavior
 

@@ -83,7 +83,7 @@ A lens reveals something about the current artifact; an action changes it. Choos
 
 ## Preserve evidence across operations
 
-Use the existing project record for scope, decisions, criteria, artifacts and open questions. At the design handoff, use [design-mode's product context handoff](../design-mode/SKILL.md#product-context-handoff) to populate Impeccable's PRODUCT.md from accepted decisions; link it from the record rather than maintaining a second copy of product truth. No additional dashboard or ledger is required. Give problems and criteria stable identifiers when they must survive multiple handoffs; reuse existing IDs and source links.
+Use the existing project record for scope, decisions, criteria, artifacts and open questions. At the design handoff, use [design-mode's product context handoff](../design-mode/SKILL.md#product-context-handoff) to preserve accepted product context in the existing brief or PRODUCT.md; link it from the record rather than maintaining a second copy of product truth. No additional dashboard or ledger is required. Give problems and criteria stable identifiers when they must survive multiple handoffs; reuse existing IDs and source links.
 
 Carry reported experience, observed behavior, inference and simulation as distinct evidence types. Approval selects a direction; it does not verify an assumption. Passing a narrower technical check does not pass the full user promise. Check the underlying source or execution result before strengthening a claim; if unavailable, retain uncertainty.
 
