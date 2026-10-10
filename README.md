@@ -75,7 +75,7 @@ Model access and tools come from your coding-agent environment. Research needs w
 
 Review With Me includes a review template and an optional Codex feedback bridge. Saved feedback is not proof of dispatch or completed revisions.
 
-Pulling this repository does not update installed copies. When replacing `software-factory` with `product-factory`, preserve customizations and retire the old folder. Also retire any installed `confirm-understanding` copy after preserving customizations; its guidance now lives in `product-factory`. Replace retired `design-eval` and `ui-lint` copies with `design-review`.
+Pulling this repository does not update installed copies. If you installed `impeccable`, preserve any customizations in `design-mode` and retire the old installed folder. When replacing `software-factory` with `product-factory`, preserve customizations and retire the old folder. Also retire any installed `confirm-understanding` copy after preserving customizations; its guidance now lives in `product-factory`. Replace retired `design-eval` and `ui-lint` copies with `design-review`.
 
 Replace `gather-context` with `connect-your-data` and `artifact-review` with `review-with-me`, preserving customizations. Copy the complete `review-with-me` folder, including its scripts and template. Existing reviews keep their saved-feedback keys.
 
