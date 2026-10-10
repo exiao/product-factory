@@ -30,13 +30,13 @@ and show me possible directions before building a prototype.
 | Step | Workflow or tool | What you get |
 | --- | --- | --- |
 | Tell your agent about you | [`get-to-know-me`](skills/get-to-know-me/SKILL.md) | A profile of your role, current work, goals, and preferences for you to review. |
-| Connect agents to your data | [`connect-your-data`](skills/connect-your-data/SKILL.md) | Checked source access, important context, and a reusable brief. |
+| Connect agents to your data | [`connect-my-data`](skills/connect-my-data/SKILL.md) | Checked source access, important context, and a reusable brief. |
 | Build shareable skills | Your coding agent's skill creator, or [meta-skills](https://github.com/exiao/meta-skills/tree/main/skill-creator) | Instructions that capture a repeatable team practice. |
 | Change how agents communicate | [`product-factory`](skills/product-factory/SKILL.md#clarify-before-dependent-work) and [`review-with-me`](skills/review-with-me/SKILL.md) | Clarifying questions and actual work you can inspect and respond to. |
 | Delegate to coworkers | [`product-factory`](skills/product-factory/SKILL.md), [`make-it-work`](skills/make-it-work/SKILL.md), and native delegation tools | Bounded assignments and checked results. |
 | Build improvement loops | [`inspect-traces`](skills/inspect-traces/SKILL.md), [`make-an-eval`](skills/make-an-eval/SKILL.md), then an available hill-climbing workflow as needed | A diagnosed failure, replayable evaluation, and a supported change. |
 
-Invoke a skill with a request such as `$connect-your-data for this project`. Reuse existing context and decisions; run only the steps you need. See the [setup workflow](skills/product-factory/references/factory-setup.md) for handoffs.
+Invoke a skill with a request such as `$connect-my-data for this project`. Reuse existing context and decisions; run only the steps you need. See the [setup workflow](skills/product-factory/references/factory-setup.md) for handoffs.
 
 Try `$get-to-know-me` when introducing yourself to an agent or updating your role and goals. It prepares a short addition to your project's `AGENTS.md` for your review, preserving existing instructions. You can choose another location. You do not need to repeat the interview for every task.
 
@@ -48,7 +48,7 @@ Give delegated work an outcome, context, boundaries, and completion check. Inspe
 
 | Order | Invoke | What it does | When needed |
 | --- | --- | --- | --- |
-| 1 | [`connect-your-data`](skills/connect-your-data/SKILL.md) | Check access and gather the evidence and priorities the task needs. | When project context is missing or scattered. |
+| 1 | [`connect-my-data`](skills/connect-my-data/SKILL.md) | Check access and gather the evidence and priorities the task needs. | When project context is missing or scattered. |
 | 2 | [`product-factory`](skills/product-factory/SKILL.md) | Clarify the task, investigate the problem, explore directions, design, prototype, and review with you. | Main entry point; it coordinates the specialists. |
 | 3 | [`make-it-work`](skills/make-it-work/SKILL.md) | Implement the agreed outcome and verify the real workflow. | After design agreement; Product Factory can hand off within the authorized scope. |
 | 4 | [`inspect-traces`](skills/inspect-traces/SKILL.md) | Find mistakes and repeated corrections to improve future work. | After a task or recurring failure. |
@@ -78,7 +78,7 @@ Review With Me includes a review template and an optional Codex feedback bridge.
 
 Pulling this repository does not update installed copies. If you installed `impeccable`, preserve any customizations in `design-mode` and retire the old installed folder. When replacing `software-factory` with `product-factory`, preserve customizations and retire the old folder. Also retire any installed `confirm-understanding` copy after preserving customizations; its guidance now lives in `product-factory`. Replace retired `design-eval` and `ui-lint` copies with `design-review`.
 
-Replace `gather-context` with `connect-your-data` and `artifact-review` with `review-with-me`, preserving customizations. Copy the complete `review-with-me` folder, including its scripts and template. Existing reviews keep their saved-feedback keys.
+Replace `gather-context` or `connect-your-data` with `connect-my-data` and `artifact-review` with `review-with-me`, preserving customizations. Copy the complete `review-with-me` folder, including its scripts and template. Existing reviews keep their saved-feedback keys.
 
 [CI](.github/workflows/validate.yml) checks metadata, links, and review persistence and dispatch. It does not measure downstream agent performance.
 
