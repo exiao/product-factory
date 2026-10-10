@@ -1,9 +1,9 @@
 ---
-name: turn-workflows-to-skills
+name: turn-workflows-into-skills
 description: Help a user turn a recurring work process into a reusable coding-agent skill. Use to choose a workflow, capture how it is done, and create or revise the skill with an available skill creator.
 ---
 
-# Turn workflows to skills
+# Turn workflows into skills
 
 Pick a piece of work you want an agent to repeat, then teach it how you do that work. Start with one workflow, such as reviewing a PRD, analyzing usage, or preparing a customer interview.
 
