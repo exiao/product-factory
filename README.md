@@ -74,9 +74,9 @@ Reading the accompanying article? Open [this repository](https://github.com/exia
 
 Model access and tools come from your coding-agent environment. Research needs web access; browser QA, image generation, and deployment need the corresponding tools and accounts. Native iOS testing needs macOS and Xcode.
 
-Review With Me includes a review template and an optional Codex feedback bridge. Saved feedback is not proof of dispatch or completed revisions. Impeccable's launcher may download its pinned engine on first use.
+Review With Me includes a review template and an optional Codex feedback bridge. Saved feedback is not proof of dispatch or completed revisions.
 
-Pulling this repository does not update installed copies. When replacing `software-factory` with `product-factory`, preserve customizations and retire the old folder. Also retire any installed `confirm-understanding` copy after preserving customizations; its guidance now lives in `product-factory`. Replace retired `design-eval` and `ui-lint` copies with `design-review`.
+Pulling this repository does not update installed copies. If you installed `impeccable`, preserve any customizations in `design-mode` and retire the old installed folder. When replacing `software-factory` with `product-factory`, preserve customizations and retire the old folder. Also retire any installed `confirm-understanding` copy after preserving customizations; its guidance now lives in `product-factory`. Replace retired `design-eval` and `ui-lint` copies with `design-review`.
 
 Replace `gather-context` with `connect-your-data` and `artifact-review` with `review-with-me`, preserving customizations. Copy the complete `review-with-me` folder, including its scripts and template. Existing reviews keep their saved-feedback keys.
 
@@ -86,7 +86,6 @@ Replace `gather-context` with `connect-your-data` and `artifact-review` with `re
 
 ## Credits
 
-- [Impeccable](https://github.com/pbakaus/impeccable) by [Paul Bakaus](https://github.com/pbakaus): bundled design skill and tooling.
 - Anshu Chimala's [How to turn your AI into a world-class designer](https://www.lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world): [creative exploration guidance](skills/design-mode/references/creative-exploration.md), adapted from the accessible portion of the article.
 
 Original source links and license notices remain with the material; this repository does not relicense it or imply endorsement.

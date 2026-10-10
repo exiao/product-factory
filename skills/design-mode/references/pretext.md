@@ -2,7 +2,7 @@
 
 Use [@chenglou/pretext](https://github.com/chenglou/pretext) when a requested interaction needs line breaks or text dimensions before rendering: prose flowing around moving shapes, canvas typography, word-based games, or measured wrapping for virtualized layouts. Prefer normal HTML/CSS for ordinary pages, forms, articles, and static wrapping. Do not add Pretext merely to decorate an interface.
 
-Pretext computes layout; the application draws it. Keep design-mode and Impeccable responsible for visual direction, accessibility, and verification. Follow the project palette and typography rather than imposing a dark demo aesthetic.
+Pretext computes layout; the application draws it. Keep design-mode responsible for visual direction, accessibility, and verification. Follow the project palette and typography rather than imposing a dark demo aesthetic.
 
 ## Implementation notes
 

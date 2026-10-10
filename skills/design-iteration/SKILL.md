@@ -137,7 +137,7 @@ Keep the reviewed baseline stable during feedback collection, then record the re
 ## What this skill is NOT
 
 - **Not a standalone review method.** It consumes feedback and invokes an appropriate review skill when feedback is missing.
-- **Not from-scratch design.** For exploring new layout paradigms use a UI-prototype-exploration workflow; for building a fresh interface use the [$impeccable](../impeccable/SKILL.md) skill or your usual UI-building workflow.
+- **Not from-scratch design.** For exploring new layout paradigms use a UI-prototype-exploration workflow; for building a fresh interface use [$design-mode](../design-mode/SKILL.md).
 - **Not a separate evaluation method.** The required final pass belongs to design-review, including its routing to applicable technical polish checks.
 
 ## Gotchas
