@@ -1,9 +1,9 @@
 ---
-name: connect-your-data
+name: connect-my-data
 description: Help a coding agent find and read the data it needs for a project or task. Use to check source access, explain priorities, and create or refresh a short context brief.
 ---
 
-# Connect your data
+# Connect my data
 
 Give the agent access to the information that shapes your decisions, and tell it what matters. Start with the current task, project instructions, and decisions already made.
 
