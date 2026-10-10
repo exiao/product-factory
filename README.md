@@ -31,7 +31,7 @@ and show me possible directions before building a prototype.
 | --- | --- | --- |
 | Tell your agent about you | [`get-to-know-me`](skills/get-to-know-me/SKILL.md) | A profile of your role, current work, goals, and preferences for you to review. |
 | Connect agents to your data | [`connect-your-data`](skills/connect-your-data/SKILL.md) | Checked source access, important context, and a reusable brief. |
-| Turn workflows into skills | [`turn-workflows-into-skills`](skills/turn-workflows-into-skills/SKILL.md) | Choose a recurring task, capture your method, and build a reusable skill with your agent's skill creator. |
+| Turn workflows into skills | [`turn-workflows-into-skills`](skills/turn-workflows-into-skills/SKILL.md) | Find skills that fit your role and projects, install existing ones, or capture your method in new ones. |
 | Change how agents communicate | [`product-factory`](skills/product-factory/SKILL.md#clarify-before-dependent-work) and [`review-with-me`](skills/review-with-me/SKILL.md) | Clarifying questions and actual work you can inspect and respond to. |
 | Delegate to coworkers | [`product-factory`](skills/product-factory/SKILL.md), [`make-it-work`](skills/make-it-work/SKILL.md), and native delegation tools | Bounded assignments and checked results. |
 | Build improvement loops | [`inspect-traces`](skills/inspect-traces/SKILL.md), then an existing evaluator and hill-climbing workflow as needed | A diagnosed failure and a supported change. |
@@ -40,7 +40,7 @@ Invoke a skill with a request such as `$connect-your-data for this project`. Reu
 
 Try `$get-to-know-me` when introducing yourself to an agent or updating your role and goals. It prepares a short addition to your project's `AGENTS.md` for your review, preserving existing instructions. You can choose another location. You do not need to repeat the interview for every task.
 
-Then try `$turn-workflows-into-skills to capture how I review PRDs`. Bring an example if you have one. The agent helps describe your process, creates or updates the skill, and checks it on representative work when possible.
+Then try `$turn-workflows-into-skills to recommend skills to make or install based on my role and projects, then help me set up the ones I choose`. It checks what you already have, uses the skill installer for existing skills, and the skill creator for new ones. For a specific workflow, try `$turn-workflows-into-skills to capture how I review PRDs`, with an example if you have one.
 
 Optional [meta-skills](https://github.com/exiao/meta-skills) tools cover [skill creation](https://github.com/exiao/meta-skills/tree/main/skill-creator), [audits](https://github.com/exiao/meta-skills/tree/main/skill-audit), and [evaluated optimization](https://github.com/exiao/meta-skills/tree/main/skill-improver). Use your agent's built-in creator when available; these tools are not bundled here.
 
