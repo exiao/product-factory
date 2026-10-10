@@ -25,7 +25,7 @@ Ask about the gaps that would change how you help. Useful questions include:
 
 Adapt the questions to what is missing. Batch related questions using the available question tool or ask them together in chat. Let the user skip a question. Ask a follow-up when an answer needs clarification, and stop when you have enough context to support their work.
 
-Collect only information useful for this purpose. The user can share relevant experience or preferences without giving private details. Connecting company data belongs to [connect-your-data](../connect-your-data/SKILL.md).
+Collect only information useful for this purpose. The user can share relevant experience or preferences without giving private details. Connecting company data belongs to [connect-my-data](../connect-my-data/SKILL.md).
 
 ## Show the profile before saving it
 
