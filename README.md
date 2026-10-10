@@ -31,7 +31,7 @@ and show me possible directions before building a prototype.
 | --- | --- | --- |
 | Tell your agent about you | [`get-to-know-me`](skills/get-to-know-me/SKILL.md) | A profile of your role, current work, goals, and preferences for you to review. |
 | Connect agents to your data | [`connect-your-data`](skills/connect-your-data/SKILL.md) | Checked source access, important context, and a reusable brief. |
-| Build shareable skills | Your coding agent's skill creator, or [meta-skills](https://github.com/exiao/meta-skills/tree/main/skill-creator) | Instructions that capture a repeatable team practice. |
+| Turn workflows into skills | [`turn-workflows-to-skills`](skills/turn-workflows-to-skills/SKILL.md) | Choose a recurring task, capture your method, and build a reusable skill with your agent's skill creator. |
 | Change how agents communicate | [`product-factory`](skills/product-factory/SKILL.md#clarify-before-dependent-work) and [`review-with-me`](skills/review-with-me/SKILL.md) | Clarifying questions and actual work you can inspect and respond to. |
 | Delegate to coworkers | [`product-factory`](skills/product-factory/SKILL.md), [`make-it-work`](skills/make-it-work/SKILL.md), and native delegation tools | Bounded assignments and checked results. |
 | Build improvement loops | [`inspect-traces`](skills/inspect-traces/SKILL.md), then an existing evaluator and hill-climbing workflow as needed | A diagnosed failure and a supported change. |
@@ -39,6 +39,8 @@ and show me possible directions before building a prototype.
 Invoke a skill with a request such as `$connect-your-data for this project`. Reuse existing context and decisions; run only the steps you need. See the [setup workflow](skills/product-factory/references/factory-setup.md) for handoffs.
 
 Try `$get-to-know-me` when introducing yourself to an agent or updating your role and goals. It prepares a short addition to your project's `AGENTS.md` for your review, preserving existing instructions. You can choose another location. You do not need to repeat the interview for every task.
+
+Then try `$turn-workflows-to-skills to capture how I review PRDs`. Bring an example if you have one. The agent helps describe your process, creates or updates the skill, and checks it on representative work when possible.
 
 Optional [meta-skills](https://github.com/exiao/meta-skills) tools cover [skill creation](https://github.com/exiao/meta-skills/tree/main/skill-creator), [audits](https://github.com/exiao/meta-skills/tree/main/skill-audit), and [evaluated optimization](https://github.com/exiao/meta-skills/tree/main/skill-improver). Use your agent's built-in creator when available; these tools are not bundled here.
 
@@ -57,7 +59,7 @@ Usually, invoke `$product-factory` and ask it to carry the agreed work through d
 
 For focused work, try [explore-unknowns](skills/explore-unknowns/SKILL.md) to uncover assumptions, [design-review](skills/design-review/SKILL.md) to check usability and accessibility, or [synthetic-userstudies](skills/synthetic-userstudies/SKILL.md) for simulated walkthroughs. Simulated findings are hypotheses, not customer evidence.
 
-[Browse all 32 skills](skills/).
+[Browse all skills](skills/).
 
 ## For coding agents
 
