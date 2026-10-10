@@ -34,7 +34,7 @@ and show me possible directions before building a prototype.
 | Turn workflows into skills | [`turn-workflows-into-skills`](skills/turn-workflows-into-skills/SKILL.md) | Find skills that fit your role and projects, install existing ones, or capture your method in new ones. |
 | Change how agents communicate | [`product-factory`](skills/product-factory/SKILL.md#clarify-before-dependent-work) and [`review-with-me`](skills/review-with-me/SKILL.md) | Clarifying questions and actual work you can inspect and respond to. |
 | Delegate to coworkers | [`product-factory`](skills/product-factory/SKILL.md), [`make-it-work`](skills/make-it-work/SKILL.md), and native delegation tools | Bounded assignments and checked results. |
-| Build improvement loops | [`inspect-traces`](skills/inspect-traces/SKILL.md), then an existing evaluator and hill-climbing workflow as needed | A diagnosed failure and a supported change. |
+| Build improvement loops | [`inspect-traces`](skills/inspect-traces/SKILL.md), [`make-an-eval`](skills/make-an-eval/SKILL.md), then an available hill-climbing workflow as needed | A diagnosed failure, replayable evaluation, and a supported change. |
 
 Invoke a skill with a request such as `$connect-your-data for this project`. Reuse existing context and decisions; run only the steps you need. See the [setup workflow](skills/product-factory/references/factory-setup.md) for handoffs.
 
@@ -44,7 +44,7 @@ Then try `$turn-workflows-into-skills to recommend skills to make or install bas
 
 Optional [meta-skills](https://github.com/exiao/meta-skills) tools cover [skill creation](https://github.com/exiao/meta-skills/tree/main/skill-creator), [audits](https://github.com/exiao/meta-skills/tree/main/skill-audit), and [evaluated optimization](https://github.com/exiao/meta-skills/tree/main/skill-improver). Use your agent's built-in creator when available; these tools are not bundled here.
 
-Give delegated work an outcome, context, boundaries, and completion check. Inspect traces to diagnose a failure; use an evaluator and hill-climbing when comparing repeated attempts. A one-off correction may need only a fix and recheck.
+Give delegated work an outcome, context, boundaries, and completion check. Inspect traces to diagnose a failure; use `make-an-eval` to turn representative work into repeatable checks of quality, cost, and time. Use hill-climbing when optimizing against those checks. A one-off correction may need only a fix and recheck.
 
 ## Run a product task
 
@@ -54,6 +54,7 @@ Give delegated work an outcome, context, boundaries, and completion check. Inspe
 | 2 | [`product-factory`](skills/product-factory/SKILL.md) | Clarify the task, investigate the problem, explore directions, design, prototype, and review with you. | Main entry point; it coordinates the specialists. |
 | 3 | [`make-it-work`](skills/make-it-work/SKILL.md) | Implement the agreed outcome and verify the real workflow. | After design agreement; Product Factory can hand off within the authorized scope. |
 | 4 | [`inspect-traces`](skills/inspect-traces/SKILL.md) | Find mistakes and repeated corrections to improve future work. | After a task or recurring failure. |
+| 5 | [`make-an-eval`](skills/make-an-eval/SKILL.md) | Build replayable tasks and measure quality, cost, and time. | When you need repeatable evidence before comparing or optimizing agents. |
 
 Usually, invoke `$product-factory` and ask it to carry the agreed work through delivery. It uses [design-mode](skills/design-mode/SKILL.md) for designs and prototypes and [review-with-me](skills/review-with-me/SKILL.md) for your judgment and revisions. Invoke those specialists directly for focused work; clarification does not require a separate skill call.
 
