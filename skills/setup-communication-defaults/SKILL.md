@@ -14,9 +14,9 @@ Reuse the user's choice of tools and preferences. If the target tools are unclea
 | Tool | Global user instructions | What to check |
 | --- | --- | --- |
 | Codex | `AGENTS.md` inside `CODEX_HOME`, which defaults to `~/.codex` | A nonempty `AGENTS.override.md` takes precedence. Explain this before choosing the file to edit. |
-| Claude Code | `~/.claude/CLAUDE.md` in the default configuration | Check for a custom configuration directory and verify its instruction location in the current tool documentation. |
+| Claude Code | `~/.claude/CLAUDE.md` and Markdown files under `~/.claude/rules/` | Read user rules recursively, including linked files. For a custom configuration directory, verify the equivalent locations in the current tool documentation. |
 
-Follow existing imports and inspect symlink targets before editing. Keep the user's file organization. Do not copy these preferences into every project's instruction file. Project instructions and explicit task requests may change how these defaults apply.
+Follow imports and inspect symlink targets before editing. Check all loaded user instructions for duplicate or conflicting preferences. Keep the user's file organization and any rule scope. Update the existing owner of a preference, including a rules file, rather than adding a competing copy to `CLAUDE.md`. Save new defaults in the main global file when no existing section owns them. Do not copy these preferences into every project's instruction file.
 
 ## Choose the defaults
 
@@ -38,7 +38,7 @@ Keep the agreement about communication. Project goals, personal background, mode
 These are defaults. Follow explicit task requests and applicable project instructions. This agreement does not grant permission to publish, spend, deploy, or message others.
 ```
 
-Adapt this text to the user's preferences. Do not add a mandatory interview, review page, or approval step to every task. When a question tool or visual tool is unavailable, use ordinary chat.
+Adapt this text to the user's preferences. Do not require an interview or review page for every task. Use ordinary chat when a question or visual tool is unavailable.
 
 ## Save without losing customizations
 
@@ -50,11 +50,9 @@ If Codex has a global override, do not silently write a shadowed base file or re
 
 ## Check the result
 
-Read the saved files and inspect the diff. Confirm that the agreed preferences appear once and existing instructions remain intact. Report the exact files changed and how to restore the backups.
+Read the saved files and inspect the diff. Check the full set of loaded user instructions, including Claude's rules, for duplicate or conflicting defaults. Confirm existing instructions remain intact. Report the exact files changed and how to restore the backups.
 
 Start a fresh session in each configured tool to check that it loads the defaults, when the environment supports this. If you cannot check loading, say that the files were updated but session loading remains unverified. File contents and a loading check do not prove that an agent will follow every preference.
-
-For a particular product task, [product-factory](../product-factory/SKILL.md) handles clarification and design decisions. Use [review-with-me](../review-with-me/SKILL.md) when the user needs an interactive place to inspect and comment on artifacts.
 
 ## Sources
 
