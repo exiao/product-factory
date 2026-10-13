@@ -8,7 +8,7 @@ Use this guide when the user asks to establish or improve how their coding-agent
 | 2. Confirm their understanding | [confirm-understanding](../../confirm-understanding/SKILL.md) | Shared intent, visible assumptions, questions, and appropriate visual explanations. |
 | 3. Build shareable skills | [build-skills](../../build-skills/SKILL.md) | Reused, installed, or created skills for the user's recurring work. |
 | 4. Delegate your work | [review-with-me](../../review-with-me/SKILL.md), Product Factory, [make-it-work](../../make-it-work/SKILL.md), and native delegation tools | Bounded assignments, inspected work, and feedback applied to revisions. |
-| 5. Build improvement loops | [inspect-my-traces](../../inspect-my-traces/SKILL.md), [make-an-eval](../../make-an-eval/SKILL.md), and available hill-climbing tools | Diagnosed failures, replayable evaluation, and supported changes. |
+| 5. Build improvement loops | [inspect-traces](../../inspect-traces/SKILL.md), [build-eval](../../build-eval/SKILL.md), and [hill-climb](../../hill-climb/SKILL.md) | Diagnosed failures, replayable evaluation, and supported changes. |
 
 Start at the requested step or earliest material gap. Reuse profiles, source lists, briefs, and settled decisions. Add My Context combines learning about the person with access to project evidence; a focused request needs only its relevant portion. Save profile changes after review of their content and location, and preserve existing project instructions.
 
@@ -34,9 +34,9 @@ Inspect worker artifacts and reproduce disputed findings before integrating them
 
 Trace inspection identifies the supported divergence between intent and execution. A missing source may require a context update; a simple defect may need a scoped fix and recheck. Inspection alone does not authorize editing, publication, or repeated experiments.
 
-For repeated work with a measurable goal, use [make-an-eval](../../make-an-eval/SKILL.md) to build or reuse replayable cases, check the grading, and report quality, cost, and time. It supports local agent runs and Harbor tasks when repeatable tool access or isolation helps. Evaluation measures behavior; optimization chooses changes using those measurements.
+For repeated work with a measurable goal, use [build-eval](../../build-eval/SKILL.md) to build or reuse replayable cases, check the grading, and report quality, cost, and time. It supports local agent runs and Harbor tasks when repeatable tool access or isolation helps. Evaluation measures behavior; optimization chooses changes using those measurements.
 
-Reuse the runnable evaluator with an available hill-climbing workflow. Hold conditions comparable, run an unchanged baseline, preserve required behavior, keep supported candidates, and stop within the agreed resource limits. For skill optimization, [meta-skills skill-improver](https://github.com/exiao/meta-skills/tree/main/skill-improver) provides a dedicated evaluated loop. A general hill-climbing workflow can also compare models, tools, environments, or other artifacts when available; it is not bundled here.
+Reuse the runnable evaluator with [hill-climb](../../hill-climb/SKILL.md). Hold conditions comparable, run an unchanged baseline, preserve required behavior, keep supported candidates, and stop within the agreed resource limits. For skill optimization, [meta-skills skill-improver](https://github.com/exiao/meta-skills/tree/main/skill-improver) provides a dedicated evaluated loop. Hill Climb can also compare models, tools, environments, and other artifacts against the agreed evaluator.
 
 Keep diagnosis cases distinct from independent evaluation cases. Report what was exercised and what remains untested; cleaner instructions or metadata checks alone do not prove better behavior. Apply or publish an accepted result only within existing authorization.
 

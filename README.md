@@ -33,7 +33,7 @@ The [product factory article](https://app.notion.com/p/V2-How-to-build-a-product
 | 2. Confirm their understanding | [`confirm-understanding`](skills/confirm-understanding/SKILL.md) | A shared task interpretation, consequential questions, stated assumptions, and visual explanations. Save communication defaults when requested. |
 | 3. Build shareable skills | [`build-skills`](skills/build-skills/SKILL.md) | Skills that fit your role and work, using the agent's skill installer for existing skills and skill creator for new ones. |
 | 4. Delegate your work | [`review-with-me`](skills/review-with-me/SKILL.md) | Actual work and alternatives you can inspect, choose, and revise while the agent carries out the assignment. |
-| 5. Build improvement loops | [`inspect-my-traces`](skills/inspect-my-traces/SKILL.md), [`make-an-eval`](skills/make-an-eval/SKILL.md), then available hill-climbing tools | Evidence of what went wrong, replayable checks, and measured improvements to skills, context, models, or tools. |
+| 5. Build improvement loops | [`inspect-traces`](skills/inspect-traces/SKILL.md), [`build-eval`](skills/build-eval/SKILL.md), then [`hill-climb`](skills/hill-climb/SKILL.md) | Evidence of what went wrong, replayable checks, and measured improvements to skills, context, models, or tools. |
 
 Ask your coding agent:
 
@@ -43,7 +43,9 @@ and where to find the relevant data. Help me save it in project instructions.
 Use $confirm-understanding to check our interpretation of [task].
 Use $build-skills to recommend skills to make or install for my work.
 Use $review-with-me to show the results of [assignment] and iterate with me.
-Use $inspect-my-traces to suggest three workflows I could delegate.
+Use $inspect-traces to suggest three workflows I could delegate.
+Use $build-eval to measure [task] with repeatable cases.
+Use $hill-climb to improve [target] against that eval within [budget].
 ```
 
 For lasting communication preferences, ask `$confirm-understanding to save communication defaults for Codex and Claude Code`. It preserves existing global instructions and checks which files each tool loads. Ordinary task clarification uses the current conversation.
@@ -61,8 +63,9 @@ Use trace inspection to diagnose or recover relevant context from earlier work. 
 | 1 | [`add-my-context`](skills/add-my-context/SKILL.md) | Check access and gather the evidence and priorities the task needs. | When project context is missing or scattered. |
 | 2 | [`product-factory`](skills/product-factory/SKILL.md) | Clarify the task, investigate the problem, explore directions, design, prototype, and review with you. | Main entry point; it coordinates the specialists. |
 | 3 | [`make-it-work`](skills/make-it-work/SKILL.md) | Implement the agreed outcome and verify the real workflow. | After design agreement; Product Factory can hand off within the authorized scope. |
-| 4 | [`inspect-my-traces`](skills/inspect-my-traces/SKILL.md) | Find mistakes and repeated corrections to improve future work. | After a task or recurring failure. |
-| 5 | [`make-an-eval`](skills/make-an-eval/SKILL.md) | Build replayable tasks and measure quality, cost, and time. | When you need repeatable evidence before comparing or optimizing agents. |
+| 4 | [`inspect-traces`](skills/inspect-traces/SKILL.md) | Find mistakes and repeated corrections to improve future work. | After a task or recurring failure. |
+| 5 | [`build-eval`](skills/build-eval/SKILL.md) | Build replayable tasks and measure quality, cost, and time. | When you need repeatable evidence before comparing or optimizing agents. |
+| 6 | [`hill-climb`](skills/hill-climb/SKILL.md) | Compare bounded changes against an eval and retain supported improvements. | When optimization is requested and there is a measurable outcome. |
 
 Usually, invoke `$product-factory` and ask it to carry the agreed work through delivery. It uses [design-mode](skills/design-mode/SKILL.md) for designs and prototypes and [review-with-me](skills/review-with-me/SKILL.md) for your judgment and revisions. Invoke those specialists directly for focused work; clarification does not require a separate skill call.
 
@@ -93,7 +96,9 @@ Pulling this repository does not update installed copies. Compare changes, prese
 | `get-to-know-me`, `connect-my-data`, `connect-your-data`, `gather-context` | [`add-my-context`](skills/add-my-context/SKILL.md), combining personal and project context |
 | `setup-communication-defaults` | [`confirm-understanding`](skills/confirm-understanding/SKILL.md), with optional global setup |
 | `turn-workflows-into-skills`, `turn-workflows-to-skills` | [`build-skills`](skills/build-skills/SKILL.md) |
-| `inspect-traces` | [`inspect-my-traces`](skills/inspect-my-traces/SKILL.md) |
+| `inspect-my-traces` | [`inspect-traces`](skills/inspect-traces/SKILL.md) |
+| `make-an-eval` | [`build-eval`](skills/build-eval/SKILL.md) |
+| `hill-climber` | [`hill-climb`](skills/hill-climb/SKILL.md) |
 | `software-factory` | [`product-factory`](skills/product-factory/SKILL.md) |
 | `artifact-review` | [`review-with-me`](skills/review-with-me/SKILL.md) |
 | `design-eval`, `ui-lint` | [`design-review`](skills/design-review/SKILL.md) |

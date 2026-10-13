@@ -1,9 +1,9 @@
 ---
-name: inspect-my-traces
+name: inspect-traces
 description: Inspect local Claude Code or Codex sessions, or user-selected trace sources to ground workflow diagnoses, recurring failures, and skill improvements in concrete examples. Use when asked to inspect traces, recover relevant prior context, or find work to delegate; not for application telemetry or publishing sessions.
 ---
 
-# Inspect my traces
+# Inspect traces
 
 Find what actually happened in prior agent work: the user's request, the assistant's consequential choice, the resulting artifact or behavior, the user's correction, and what happened next. Ground the current question in original evidence rather than diagnosing from skill wording or remembered summaries alone.
 
