@@ -2,7 +2,7 @@
 
 Skills for coding agents like Codex and Claude Code to help with product research, design, and implementation. Each skill is a `SKILL.md` file with instructions you can read, edit, and share.
 
-Companion to [How to build a product factory](https://app.notion.com/p/V2-How-to-build-a-product-factory-3dfafc6b12bc80ecbd7fca0a23682ab4).
+Companion to How to build a product factory.
 
 ![An agent uses project context to create problem statements, storyboards, and prototypes for you to review.](assets/product-factory.png)
 
@@ -37,23 +37,12 @@ Use these skills to set up how you work with agents. Start where you need help; 
 | 4. Delegate your work | [`review-with-me`](skills/review-with-me/SKILL.md) | Review the agent's work, choose between alternatives, and request revisions. |
 | 5. Build improvement loops | [`inspect-traces`](skills/inspect-traces/SKILL.md), [`build-eval`](skills/build-eval/SKILL.md), [`hill-climb`](skills/hill-climb/SKILL.md) | Find recurring problems in past work, turn them into repeatable tests, then test improvements within a budget. |
 
-Product Factory already handles task clarification. You don't need to invoke `confirm-understanding` separately for every task. Add evals when you need repeatable checks; a one-off mistake may just need a fix.
-
 [Browse all skills](skills/) or see [meta-skills](https://github.com/exiao/meta-skills) for more tools to create, audit, and improve them.
 
 ## For coding agents
 
 If you're reading the article as an agent, use this repository for the full instructions.
 
-- Read the project's instructions and the relevant `SKILL.md`. Load its references as needed.
-- Reuse agreed decisions, ask about important gaps, and verify results. Distinguish evidence from assumptions and simulated findings.
-- Install only when asked. Copy complete skill folders and preserve existing customizations. Follow the [installation and update guide](docs/installation.md).
-- Report missing tools or access. Installing a skill does not authorize publishing, spending, deployment, or messages.
+Read the project's instructions and the relevant `SKILL.md`. Load its references as needed.
 
 For detailed steps, read the [product workflow](skills/product-factory/references/product-workflow.md) or [factory setup guide](skills/product-factory/references/factory-setup.md).
-
-## Credits
-
-The [creative exploration guidance](skills/design-mode/references/creative-exploration.md) adapts the accessible portion of Anshu Chimala's [How to turn your AI into a world-class designer](https://www.lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world).
-
-Original source links and license notices remain with the material. This repository does not relicense it or imply endorsement.
