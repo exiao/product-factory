@@ -1,15 +1,15 @@
 ---
-name: turn-workflows-into-skills
+name: build-skills
 description: Recommend skills to use, install, create, or update based on the user's role, active projects, and recurring work. Use for skill planning and turning workflows into skills, with the runtime's skill creator and installer when available.
 ---
 
-# Turn workflows into skills
+# Build skills
 
 Help the user choose useful skills for their work. Reuse a suitable existing skill, install one that fits, or capture their own method in a new skill. A named workflow can go straight to the relevant step.
 
 ## Understand the work
 
-Read the user's role, goals, and active projects from the current conversation, project instructions, and supplied briefs. Ask about missing context that would change the recommendations. Use [get-to-know-me](../get-to-know-me/SKILL.md) when an introduction is requested; a clear task needs no separate interview.
+Read the user's role, goals, and active projects from the current conversation, project instructions, and supplied briefs. Ask about missing context that would change the recommendations. Use [add-my-context](../add-my-context/SKILL.md) when an introduction is requested; a clear task needs no separate interview.
 
 Look for recurring work with recognizable inputs and a useful result, such as reviewing PRDs, analyzing usage, or preparing interviews. Prioritize tasks relevant to the user's current goals and explain why each is worth capturing. Keep current project facts and priorities in project context; a skill captures the method agents can reuse.
 

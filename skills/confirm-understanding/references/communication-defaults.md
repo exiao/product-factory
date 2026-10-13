@@ -1,8 +1,3 @@
----
-name: setup-communication-defaults
-description: Set or update cross-project communication preferences for Codex and Claude Code in their global instruction files. Use when the user wants defaults for questions, assumptions, visual explanations, feedback, or decision checkpoints.
----
-
 # Set up communication defaults
 
 Help the user set how their coding agents communicate across projects. Save a short working agreement in each requested tool's global instructions. Installing this skill alone does not change those instructions.

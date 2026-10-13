@@ -7,6 +7,12 @@ description: Build an interactive site for a creator to inspect artifacts, choos
 
 Present the actual work and the judgment it needs. This skill owns the review surface and feedback handoff; the host owns research, generation, implementation, and delivery. Reuse established scope and decisions. Reviewing an artifact does not authorize publishing it or messaging other people.
 
+## Review delegated work
+
+Start from the assignment, outcome, constraints, and judgments the user needs to make. If work is already available, present it. If the user also requested generation, the host produces the authorized artifacts first and checks them before presenting the decisions that need human input. A bare request to review does not authorize new research or production.
+
+For requested variants or parallel assignments, keep the task and inputs comparable, preserve each artifact's source and version, and show what the alternatives do differently. After submitted feedback, the host applies it to the affected work and returns the revised artifact. A saved response or dispatch acknowledgment is not a completed revision. Use native delegation or scheduling tools only within the user's requested scope; this review site does not keep agents running in the background.
+
 ## Generated media in this workflow
 
 For generated-media decisions, present actual in-context keyframes, comparable visual directions, or playable excerpts using [generated media and storytelling](../design-mode/references/creative-exploration.md#generated-media-and-storytelling). Make the question about the story, visual treatment, or transition the user must choose; a prompt or production rationale is not the artifact. Include relevant start/end states and a working preview for interactive motion. Keep concept selection, execution acceptance, and readiness attached to their exact versions. Unresolved cards do not authorize dependent production on draft selections, revision requests, dispatch acknowledgments, or silence. The review shell itself does not need generated decoration.

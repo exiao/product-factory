@@ -1,9 +1,9 @@
 ---
-name: make-an-eval
+name: build-eval
 description: "Turn real work, local agent sessions, or traces.com traces into replayable evaluations, including Harbor tasks for a specified environment. Compare models, harnesses, skills, knowledge, history, and environments on quality, cost, and time. Use for eval creation and agent experiments."
 ---
 
-# Make an eval
+# Build an eval
 
 Build a local eval of an agent doing work or participating in a simulated interaction. State a focused, bounded experiment and run it without a separate confirmation step. Deliver explicit quality, cost, and time results with charts and inspectable raw data. For a focused request, apply only the steps needed for the requested preparation, case, grader, or review change.
 
@@ -118,7 +118,7 @@ Show absolute measurements and paired changes with sample counts and an appropri
 
 Use [the inspection loop's reporting procedure](references/inspection-loop.md#keep-results-visual-and-inspectable) to present quality, cost, and time with inspectable evidence and verified report controls.
 
-Save the runnable eval in the project's eval directory, with commands, versions, results, evidence paths, and limits in a compact supporting record. Briefly state what the observed quality/cost/time tradeoff supports, including when the sample is too small to choose. Creating an eval does not authorize changing the subject agent, publishing a benchmark, or optimizing a skill. When optimization is requested, use an available hill-climbing workflow; an installed `hill-climber` or `skill-improver` skill can provide that guidance. These optional skills are not bundled here. Hand off the runnable command, effective configuration, versioned cases and splits, evaluator and controls, baseline evidence, attempt semantics, and remaining budget. Keep optimizer-editable artifacts separate from evaluation inputs and grading. A set repeatedly used to select candidates is validation data, even if its transcripts stay hidden; reserve unseen cases for a final generalization claim.
+Save the runnable eval in the project's eval directory, with commands, versions, results, evidence paths, and limits in a compact supporting record. Briefly state what the observed quality/cost/time tradeoff supports, including when the sample is too small to choose. Creating an eval does not authorize changing the subject agent, publishing a benchmark, or optimizing a skill. When optimization is requested, use [hill-climb](../hill-climb/SKILL.md). For skill-specific optimization, the optional [meta-skills skill-improver](https://github.com/exiao/meta-skills/tree/main/skill-improver) provides additional guidance. Hand off the runnable command, effective configuration, versioned cases and splits, evaluator and controls, baseline evidence, attempt semantics, and remaining budget. Keep optimizer-editable artifacts separate from evaluation inputs and grading. A set repeatedly used to select candidates is validation data, even if its transcripts stay hidden; reserve unseen cases for a final generalization claim.
 
 Report packaging/schema validation, environment execution, verifier calibration, subject completion and human review separately. State which agent, oracle, no-op and artifact-transfer checks actually ran. A local RewardKit grade does not verify Harbor isolation or image builds, and an AI-authored calibration set does not establish human agreement with the rubric.
 
