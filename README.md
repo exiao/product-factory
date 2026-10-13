@@ -2,7 +2,7 @@
 
 Skills for coding agents like Codex and Claude Code to help with product research, design, and implementation. Each skill is a `SKILL.md` file with instructions you can read, edit, and share.
 
-Companion to [How to build a product factory](https://app.notion.com/p/V2-How-to-build-a-product-factory-3dfafc6b12bc80ecbd7fca0a23682ab4).
+Companion to How to build a product factory.
 
 ![An agent uses project context to create problem statements, storyboards, and prototypes for you to review.](assets/product-factory.png)
 
