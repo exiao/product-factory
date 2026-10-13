@@ -16,18 +16,14 @@ For design exploration where imagery or motion can communicate the product's cha
 Commands below are conversational operations, not shell commands or standalone skills. Infer the operation from ordinary language; users need not memorize names.
 
 - **Focused request:** run only the selected operation on the named artifact. Read its linked playbook and relevant specialist guidance. Do not launch discovery, maps, prototypes or implementation as a side effect. Review-only work reports findings without editing. A request to revise or fix authorizes the bounded change and appropriate verification.
-- **Factory setup:** use the [six-part setup workflow](references/factory-setup.md) when the user asks to establish personal or project context, clarify working agreements, capture skills, delegate to coworkers, or improve recurring agent work. Reuse completed setup; this is not another mandatory discovery sequence for every product task.
+- **Factory setup:** use the [five-step setup workflow](references/factory-setup.md) when the user asks to establish personal or project context, clarify working agreements, capture skills, delegate to coworkers, or improve recurring agent work. Reuse completed setup; this is not another mandatory discovery sequence for every product task.
 - **Delegated outcome:** use [product workflow](references/product-workflow.md) when audience, promise, behavior or direction is unresolved. Start by stating or reusing the short vision. Follow the default sequence below, reuse agreements, and continue through the authorized finish line. An intermediate focused operation does not cancel the larger assignment.
 - **Settled implementation or clear fix:** hand delivery to [$make-it-work](../make-it-work/SKILL.md); focused design or verification requests use their specialist directly. Do not reopen discovery.
 - **Advice or bare invocation:** recommend up to three context-relevant next operations and explain the leading choice. Advice does not execute them. If the surrounding conversation already supplies an actionable request, follow it rather than showing a menu.
 
 ## Clarify before dependent work
 
-Reuse the request, project instructions, accepted context, and prior decisions. Summarize the intended outcome, problem, and approach in two or three sentences, making the relevant audience, scope, exclusions, and success criteria clear. Separate supported requirements from assumptions and check consequential interpretations against the evidence; do not turn a proposed implementation detail into a requirement.
-
-Ask only about gaps that could materially change the result, scope, criteria, or authorization. Batch related questions through the runtime's asynchronous question tool when available, and continue independent authorized work while a required answer is pending. Use a small example or diagram when it helps resolve a real ambiguity.
-
-When the user corrects the interpretation, update the existing brief and affected downstream decisions. For an explicitly requested deeper unknowns interview, use [explore-unknowns](../explore-unknowns/SKILL.md); use [acceptance-criteria](../acceptance-criteria/SKILL.md) when the finish line needs clarification. This establishes what to do, not proof that the result works.
+Use [confirm-understanding](../confirm-understanding/SKILL.md) for the current task. Reuse accepted context and decisions, summarize the interpretation, and resolve consequential gaps before dependent work. Continue independent authorized work while waiting. This step does not change global instructions or require a separate skill call from the user.
 
 ## Default sequence
 
@@ -77,7 +73,7 @@ On submitted feedback, read the snapshot and apply the latest explicit response 
 | `inspect`, `critique`, `audit [flow/surface]` | Inspect / Revise | [$interaction-design](../interaction-design/SKILL.md) |
 | `sharpen`, `assess`, `define` | Revise / Evaluate | [$acceptance-criteria](../acceptance-criteria/SKILL.md) |
 | `develop [product]` | Coordinate | [Product workflow](references/product-workflow.md) |
-| `setup factory [project]` | Coordinate | Six setup steps using bundled skills and available tools; [factory setup](references/factory-setup.md) |
+| `setup factory [project]` | Coordinate | Five setup steps using bundled skills and available tools; [factory setup](references/factory-setup.md) |
 
 A lens reveals something about the current artifact; an action changes it. Choose from the user's intent. For example, “highlight hidden user work” annotates the current flow; “remove the unnecessary setup step” calls for a scoped revision. Preserve the original object and show the affected portion, a before/after excerpt, or an annotated screenshot instead of replacing whole documents unnecessarily. Keep observations separate from suggested changes.
 

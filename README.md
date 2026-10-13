@@ -23,39 +23,45 @@ Use our customer evidence and priorities. Ask about important gaps,
 and show me possible directions before building a prototype.
 ```
 
-## Set up and improve your factory
+## Follow the article's five steps
 
-![Tell your agent about you, connect agents to your data, turn workflows into skills, change how your agents communicate, delegate your work, and build improvement loops. Feedback returns to skills at step 3.](assets/build-product-factory.png)
+The [product factory article](https://app.notion.com/p/V2-How-to-build-a-product-factory-3dfafc6b12bc80ecbd7fca0a23682ab4) starts with context and builds toward delegation and improvement. Try the skills on a real project and reuse setup you have already done.
 
-| Step | Workflow or tool | What you get |
+| Step | Skill | What you get |
 | --- | --- | --- |
-| Tell your agent about you | [`get-to-know-me`](skills/get-to-know-me/SKILL.md) | A profile of your role, current work, goals, and preferences for you to review. |
-| Connect agents to your data | [`connect-my-data`](skills/connect-my-data/SKILL.md) | Checked source access, important context, and a reusable brief. |
-| Turn workflows into skills | [`turn-workflows-into-skills`](skills/turn-workflows-into-skills/SKILL.md) | Find skills that fit your role and projects, install existing ones, or capture your method in new ones. |
-| Change how your agents communicate | [`setup-communication-defaults`](skills/setup-communication-defaults/SKILL.md) | Global preferences for questions, assumptions, visual explanations, and decision checkpoints. |
-| Delegate your work | [`product-factory`](skills/product-factory/SKILL.md), [`make-it-work`](skills/make-it-work/SKILL.md), and native delegation tools | Bounded assignments and checked results. |
-| Build improvement loops | [`inspect-traces`](skills/inspect-traces/SKILL.md), [`make-an-eval`](skills/make-an-eval/SKILL.md), then an available hill-climbing workflow as needed | A diagnosed failure, replayable evaluation, and a supported change. |
+| 1. Give agents your context | [`add-my-context`](skills/add-my-context/SKILL.md) | Your role, goals, priorities, and source pointers in project instructions, with checked access and a brief where useful. |
+| 2. Confirm their understanding | [`confirm-understanding`](skills/confirm-understanding/SKILL.md) | A shared task interpretation, consequential questions, stated assumptions, and visual explanations. Save communication defaults when requested. |
+| 3. Build shareable skills | [`build-skills`](skills/build-skills/SKILL.md) | Skills that fit your role and work, using the agent's skill installer for existing skills and skill creator for new ones. |
+| 4. Delegate your work | [`review-with-me`](skills/review-with-me/SKILL.md) | Actual work and alternatives you can inspect, choose, and revise while the agent carries out the assignment. |
+| 5. Build improvement loops | [`inspect-my-traces`](skills/inspect-my-traces/SKILL.md), [`make-an-eval`](skills/make-an-eval/SKILL.md), then available hill-climbing tools | Evidence of what went wrong, replayable checks, and measured improvements to skills, context, models, or tools. |
 
-Invoke a skill with a request such as `$connect-my-data for this project`. Reuse existing context and decisions; run only the steps you need. See the [setup workflow](skills/product-factory/references/factory-setup.md) for handoffs.
+Ask your coding agent:
 
-Try `$get-to-know-me` when introducing yourself to an agent or updating your role and goals. It prepares a short addition to your project's `AGENTS.md` for your review, preserving existing instructions. You can choose another location. You do not need to repeat the interview for every task.
+```text
+Use $add-my-context for this project. Learn what I do, what matters,
+and where to find the relevant data. Help me save it in project instructions.
+Use $confirm-understanding to check our interpretation of [task].
+Use $build-skills to recommend skills to make or install for my work.
+Use $review-with-me to show the results of [assignment] and iterate with me.
+Use $inspect-my-traces to suggest three workflows I could delegate.
+```
 
-Then try `$turn-workflows-into-skills to recommend skills to make or install based on my role and projects, then help me set up the ones I choose`. It checks what you already have, uses the skill installer for existing skills, and the skill creator for new ones. For a specific workflow, try `$turn-workflows-into-skills to capture how I review PRDs`, with an example if you have one.
+For lasting communication preferences, ask `$confirm-understanding to save communication defaults for Codex and Claude Code`. It preserves existing global instructions and checks which files each tool loads. Ordinary task clarification uses the current conversation.
 
-Try `$setup-communication-defaults for Codex and Claude Code` to set communication preferences across projects. It preserves existing customizations in each tool's global instructions. Product Factory applies clarification during a task; `review-with-me` gives you an interactive place to inspect and comment on actual work.
+Give delegated work an outcome, context, boundaries, and a completion check. Product Factory coordinates product decisions, Make It Work owns delivery, and native delegation tools run workers. Review With Me presents their work and carries feedback into revisions; it does not create background workers or schedules. See the [setup workflow](skills/product-factory/references/factory-setup.md) for handoffs.
 
-Optional [meta-skills](https://github.com/exiao/meta-skills) tools cover [skill creation](https://github.com/exiao/meta-skills/tree/main/skill-creator), [audits](https://github.com/exiao/meta-skills/tree/main/skill-audit), and [evaluated optimization](https://github.com/exiao/meta-skills/tree/main/skill-improver). Use your agent's built-in creator when available; these tools are not bundled here.
+Optional [meta-skills](https://github.com/exiao/meta-skills) tools cover [skill creation](https://github.com/exiao/meta-skills/tree/main/skill-creator), [audits](https://github.com/exiao/meta-skills/tree/main/skill-audit), and [evaluated optimization](https://github.com/exiao/meta-skills/tree/main/skill-improver). These tools are not bundled here. Start with the agent's built-in creator when available.
 
-Give delegated work an outcome, context, boundaries, and completion check. Inspect traces to diagnose a failure; use `make-an-eval` to turn representative work into repeatable checks of quality, cost, and time. Use hill-climbing when optimizing against those checks. A one-off correction may need only a fix and recheck.
+Use trace inspection to diagnose or recover relevant context from earlier work. Add an eval when repeatable evidence justifies its upkeep; hill-climb against those checks within an agreed budget. A one-off correction may need only a fix and recheck. Judge the factory by the useful work it produces.
 
 ## Run a product task
 
 | Order | Invoke | What it does | When needed |
 | --- | --- | --- | --- |
-| 1 | [`connect-my-data`](skills/connect-my-data/SKILL.md) | Check access and gather the evidence and priorities the task needs. | When project context is missing or scattered. |
+| 1 | [`add-my-context`](skills/add-my-context/SKILL.md) | Check access and gather the evidence and priorities the task needs. | When project context is missing or scattered. |
 | 2 | [`product-factory`](skills/product-factory/SKILL.md) | Clarify the task, investigate the problem, explore directions, design, prototype, and review with you. | Main entry point; it coordinates the specialists. |
 | 3 | [`make-it-work`](skills/make-it-work/SKILL.md) | Implement the agreed outcome and verify the real workflow. | After design agreement; Product Factory can hand off within the authorized scope. |
-| 4 | [`inspect-traces`](skills/inspect-traces/SKILL.md) | Find mistakes and repeated corrections to improve future work. | After a task or recurring failure. |
+| 4 | [`inspect-my-traces`](skills/inspect-my-traces/SKILL.md) | Find mistakes and repeated corrections to improve future work. | After a task or recurring failure. |
 | 5 | [`make-an-eval`](skills/make-an-eval/SKILL.md) | Build replayable tasks and measure quality, cost, and time. | When you need repeatable evidence before comparing or optimizing agents. |
 
 Usually, invoke `$product-factory` and ask it to carry the agreed work through delivery. It uses [design-mode](skills/design-mode/SKILL.md) for designs and prototypes and [review-with-me](skills/review-with-me/SKILL.md) for your judgment and revisions. Invoke those specialists directly for focused work; clarification does not require a separate skill call.
@@ -80,9 +86,19 @@ Model access and tools come from your coding-agent environment. Research needs w
 
 Review With Me includes a review template and an optional Codex feedback bridge. Saved feedback is not proof of dispatch or completed revisions.
 
-Pulling this repository does not update installed copies. If you installed `impeccable`, preserve any customizations in `design-mode` and retire the old installed folder. When replacing `software-factory` with `product-factory`, preserve customizations and retire the old folder. Also retire any installed `confirm-understanding` copy after preserving customizations; its guidance now lives in `product-factory`. Replace retired `design-eval` and `ui-lint` copies with `design-review`.
+Pulling this repository does not update installed copies. Compare changes, preserve customizations, then retire replaced folders so agents do not discover competing copies.
 
-Replace `gather-context` or `connect-your-data` with `connect-my-data` and `artifact-review` with `review-with-me`, preserving customizations. Copy the complete `review-with-me` folder, including its scripts and template. Existing reviews keep their saved-feedback keys.
+| Previous name | Current skill |
+| --- | --- |
+| `get-to-know-me`, `connect-my-data`, `connect-your-data`, `gather-context` | [`add-my-context`](skills/add-my-context/SKILL.md), combining personal and project context |
+| `setup-communication-defaults` | [`confirm-understanding`](skills/confirm-understanding/SKILL.md), with optional global setup |
+| `turn-workflows-into-skills`, `turn-workflows-to-skills` | [`build-skills`](skills/build-skills/SKILL.md) |
+| `inspect-traces` | [`inspect-my-traces`](skills/inspect-my-traces/SKILL.md) |
+| `software-factory` | [`product-factory`](skills/product-factory/SKILL.md) |
+| `artifact-review` | [`review-with-me`](skills/review-with-me/SKILL.md) |
+| `design-eval`, `ui-lint` | [`design-review`](skills/design-review/SKILL.md) |
+
+If you have an older `confirm-understanding` copy, compare it with the current skill before replacing it. Copy complete folders, including references, scripts, and templates. Existing reviews retain their saved-feedback keys. The bundled design workflow uses `design-mode`; preserve personal design customizations when updating it.
 
 [CI](.github/workflows/validate.yml) checks metadata, links, and review persistence and dispatch. It does not measure downstream agent performance.
 
