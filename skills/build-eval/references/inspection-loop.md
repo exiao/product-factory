@@ -14,7 +14,7 @@ Choose agentic evaluation or simulated interaction from the task without asking 
 
 ## Produce the whole pilot
 
-Use the declared plan: one or multiple models, prompts, tools, and skills, varying only factors relevant to the question. One case or configuration is valid; add cases to exercise distinct behavior. State reasonable finite defaults and proceed within existing authorization. Preserve the actual application runtime when it is the subject; prefer subscription CLI routes for standalone work when compatible. Follow the main skill's routing and spending rules, reusing approval already given for the service and scope. Use real examples when supplied; otherwise label generated examples and their assumed audience/context. Include a successful ordinary case and meaningful failure/edge cases.
+Use the declared plan: one or multiple models, prompts, tools, and skills, varying only factors relevant to the question. One case or configuration is valid; add cases to exercise distinct behavior. State reasonable finite defaults and proceed within existing authorization, following the main skill's runtime, routing, and spending rules. Use real examples when supplied; otherwise label generated examples and their assumed audience/context. Include a successful ordinary case and meaningful failure/edge cases.
 
 Separate these responsibilities, using existing project conventions instead of imposing filenames:
 
