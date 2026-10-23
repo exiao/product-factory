@@ -14,14 +14,14 @@ Choose agentic evaluation or simulated interaction from the task without asking 
 
 ## Produce the whole pilot
 
-Use the declared plan: one or multiple models, prompts, tools, and skills, varying only factors relevant to the question. One case or configuration is valid; add cases to exercise distinct behavior. State reasonable finite defaults and run subscription CLI jobs and already authorized API jobs without a confirmation step. Follow the main skill's explicit-confirmation requirement for API spending. Use real examples when supplied; otherwise label generated examples and their assumed audience/context. Include a successful ordinary case and meaningful failure/edge cases.
+Use the declared plan: one or multiple models, prompts, tools, and skills, varying only factors relevant to the question. One case or configuration is valid; add cases to exercise distinct behavior. State reasonable finite defaults and proceed within existing authorization, following the main skill's runtime, routing, and spending rules. Use real examples when supplied; otherwise label generated examples and their assumed audience/context. Include a successful ordinary case and meaningful failure/edge cases.
 
 Separate these responsibilities, using existing project conventions instead of imposing filenames:
 
 - **Tasks/inputs:** case ID, user prompt, audience/context, source artifacts, condition, provenance, and dataset version.
 - **Answer key/rubric:** required facts/actions, acceptable alternatives, forbidden errors, subjective anchors, labels and their evidence. Exact reference wording is optional; for decisions, a defensible alternative can be valid even when it differs from a historical choice.
 - **Environment/runner:** frozen inputs, available tools, model/provider settings, fresh context/reset, bounded run configuration and errors. Use identical task inputs across models within a condition; record unavoidable adapter differences.
-- **Raw outputs:** complete response or produced artifacts and relevant tool trace, case/run/model IDs, request configuration, timing and usage when available. Never substitute summary text or fabricated samples for an executed response.
+- **Raw outputs:** complete response or produced artifacts, actual subject context, full tool arguments/results from every escalation round, durable copies of offloaded evidence, case/run/model IDs, request configuration, timing and usage when available. Never substitute summary text or fabricated samples for an executed response.
 - **Grading:** per-criterion verdict/score, evidence from output, rationale, evaluator version, and separate execution/evaluator errors. Machine checks and subjective judgments retain separate identities.
 - **Results:** quality, attributable cost, and measured time per case/run/configuration, with errors and retries visible; charts and data rows link to outputs, traces, and grading evidence.
 
@@ -33,11 +33,11 @@ Keep generation, grading, and reporting independently rerunnable. Save raw respo
 
 Lead with quality, cost, and time. Use charts or a compact table suited to the actual observations: configuration comparisons, per-case scores/cost/duration, or a single-run timeline. Show sample counts and missing measurements. Avoid unsupported rankings or distribution plots with insufficient samples. Keep quality criteria and critical failures inspectable; use only declared weights for aggregate scores.
 
-Keep subject/tool cost and execution time separate from simulator, grading, and overall experiment overhead. Include retries and failed attempts. Unknown cost is not zero; label cost calculated from usage and rates. Evaluate agreed quality/cost/time targets explicitly and otherwise show tradeoffs without invented thresholds.
+Keep recorded-evidence replay and live execution in separate comparisons; a replay success does not repair a live failure. Keep subject/tool cost and execution time separate from simulator, grading, and overall experiment overhead. Include retries and failed attempts. Unknown cost is not zero; label cost calculated from usage and rates. Evaluate agreed quality/cost/time targets explicitly and otherwise show tradeoffs without invented thresholds.
 
 Favor charts and raw data over explanatory scaffolding. Provide direct access from a point or row to the full prompt, tested model/prompt/tool/skill configuration, answer or artifact, conversation and tool trace, criterion results and rationale, usage, and timing. Offer raw JSON/CSV downloads. Add filters or sorting only when useful; a static chart with linked records is sufficient for small results. Do not force a one-case-at-a-time review or build decorative dashboards.
 
-Use the evaluator declared in the pre-run plan, preserving any explicit user selection. Identify deterministic rules separately and preserve evaluator labels and old grades with their evaluator versions. Human ratings stay unreviewed until the user responds; persist any submitted rating against its case/run/criterion/version. A configuration selector must not imply grading ran unless it actually did.
+Use the evaluator declared in the pre-run plan, preserving any explicit user selection. Identify deterministic rules separately and preserve evaluator labels and old grades with their evaluator versions. The parent assistant may provide provisional reviews when selected; disclose candidate authorship and identity visibility rather than implying independent or blind review. Human ratings stay unreviewed until the user responds; persist any submitted rating against its case/run/criterion/version. A configuration selector must not imply grading ran unless it actually did.
 
 Verify chart/table values against raw records and exercise any filtering, drill-down, persistence, or export controls provided. Keep the opening view short and make evidence easy to reach.
 
